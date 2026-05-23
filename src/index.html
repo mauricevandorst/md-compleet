@@ -4,7 +4,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MD Compleet Hoveniers</title>
+  <meta name="description"
+    content="MD Compleet Hoveniers uit de Zaanstreek voor tuinaanleg, tuinrenovatie, bestrating, schuttingen, overkappingen en grondwerk.">
+  <meta name="keywords"
+    content="hovenier zaandam, hoveniersbedrijf zaanstreek, tuinaanleg, tuinrenovatie, bestrating, schutting plaatsen, overkapping, grondwerk">
+  <meta name="author" content="MD Compleet Hoveniers">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#294830">
+
+  <!-- TODO: Controleer definitieve domein-URL (met of zonder www) en vervang in alle canonical/OG velden. -->
+  <link rel="canonical" href="https://mdcompleet.nl/">
+
+  <!-- TODO: Voeg een echte favicon toe in /assets/icons/favicon.ico. -->
+  <link rel="icon" type="image/png" href="./assets/images/logo-transparent.png">
+  <link rel="apple-touch-icon" href="./assets/images/logo-transparent.png">
+  <link rel="manifest" href="./site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="MD Compleet Hoveniers">
+  <meta property="og:title" content="MD Compleet | Hovenier in Zaandam en Zaanstreek">
+  <meta property="og:description"
+    content="Buitenruimtes met karakter. Tuinaanleg, renovatie, bestrating en meer in Zaandam en de Zaanstreek.">
+  <meta property="og:url" content="https://mdcompleet.nl/">
+  <meta property="og:image" content="https://mdcompleet.nl/assets/images/logo-transparent.png">
+  <meta property="og:image:alt" content="Logo van MD Compleet Hoveniers">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MD Compleet | Hovenier in Zaandam en Zaanstreek">
+  <meta name="twitter:description"
+    content="Buitenruimtes met karakter. Tuinaanleg, renovatie, bestrating en meer in Zaandam en de Zaanstreek.">
+  <meta name="twitter:image" content="https://mdcompleet.nl/assets/images/logo-transparent.png">
+
+  <!-- TODO: Maak een social share afbeelding (1200x630) in /assets/images/og-image.jpg en vervang OG/Twitter image URL's. -->
+  <title>MD Compleet | Hovenier in Zaandam en Zaanstreek</title>
+  <!-- TODO: Vul KvK, openingstijden en eventuele extra bedrijfsgegevens aan in JSON-LD. -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "MD Compleet Hoveniers",
+      "url": "https://mdcompleet.nl/",
+      "image": "https://mdcompleet.nl/assets/images/logo-transparent.png",
+      "telephone": "+31612345678",
+      "email": "info@mdcompleet.nl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Havenstraat 72",
+        "postalCode": "1506PL",
+        "addressLocality": "Zaandam",
+        "addressCountry": "NL"
+      },
+      "sameAs": [
+        "https://www.instagram.com/mdcompleet/",
+        "https://www.facebook.com/mdcompleet"
+      ]
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Georama:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,21 +70,23 @@
   <script src="./js/carousel.js" defer></script>
   <script src="./js/smooth-scroll.js" defer></script>
   <script src="./js/caption-more.js" defer></script>
+  <script src="./js/instagram-carousel.js" defer></script>
+  <script src="./js/page-title.js" defer></script>
 </head>
 
-<body class="bg-[#f3f0e7]">
+<body class="bg-[#ecf3e7]">
 
   <!-- Header -->
   <header id="header"
-    class="fixed top-0 left-0 w-full z-50 bg-[#f3f0e7] h-[70px] lg:h-[95px] transition-all duration-300">
-    <div class="mx-auto h-full px-4 flex items-center justify-between">
+    class="fixed top-0 left-0 w-full z-50 bg-[#ecf3e7] h-[70px] lg:h-[95px] transition-all duration-300">
+    <div class="mx-auto h-full px-4 flex items-center justify-between lg:justify-start lg:gap-8">
 
       <!-- Logo -->
       <div id="logo-container"
-        class="relative flex flex-col gap-1 items-center self-baseline transition-all duration-300 drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)] origin-top scale-75">
+        class="relative flex flex-col gap-1 items-center self-start transition-all duration-500 ease-in-out drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)] origin-top scale-75">
         <div class="flex flex-col w-full items-center bg-[#294830] px-3 py-5">
           <img src="./assets/images/logo-transparent.png" alt="MD Compleet Logo"
-            class="h-20 w-20 lg:h-16 lg:w-16 w-auto transition-opacity duration-300">
+            class="h-20 w-20 lg:h-16 lg:w-16 w-auto transition-all duration-500 ease-in-out">
           <div class="flex flex-col gap-1 justify-center items-center">
             <span
               class="text-base leading-none tracking-[0.1em] lg:text-2xl font-bold text-white uppercase font-baskervville">MD
@@ -37,48 +95,108 @@
               class="text-xs leading-none tracking-[0.2em] lg:text-base text-[#c3a967] font-almarai">Hoveniers</span>
           </div>
         </div>
-        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 167"
-          class="absolute bottom-0 left-0 w-full h-auto translate-y-full">
-          <defs>
-            <image width="1000" height="1009" id="img1"
-              href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPxAgMAAAAUFG8kAAAAAXNSR0IB2cksfwAAAAxQTFRFPTQcKUgwPTQcAAAAkI3zZAAAAAR0Uk5T//8AANMOVIYAAAfTSURBVHic7ds5ciPZFUBR0pAtOdqPltCGtDQtQYaq2+glaD/tSHYZJRLggBlIICfWudeoiKpgMHjivf8zwY5+fmJ7XvoHWK7oYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0suphM/8fSP8FiRReLLhZd7AvS//TLyx+/Pv59vhR9g97px2+PfLcvQ3/+++l//+M/d3/HL0E/59525/J/Bfrhnh93F3799MsTf+ueU792+k3w14af+ZXTB/x0gwe/avpf/zboywcO/vmfw75+xm7e9Y++/z7o+/9r0JfP2PV7/bhBS//874feiKbrvoM4xP787f7XoQm7Z+Tbbn/EP38bdkDmaeD9ttfNo3z+NsaHoJF77Klzq+eFvrqNf/R5e6P9hb6yjR/+TDvqNvsLfV0b/8gx/+gm0St9TWMf5+XypmfcK/2xX3aM2liv1bdM85W+no0f7wPFDXf3hr6Sjb//PeZE1+0b+jrGPsoF99lV05a+hkf7yPLrN9iWvoKLbmz59Xlu6ctv/Pjyq6g3+tIX3SS/K7qyy2/0Zcc+wrvryS4P9J2+6EU32e8HLw70nb7kRTfdb0Yvqt7py238VNu+6dLKf9CXuuhGfYU77sJEP+gLjX1i+aWV/6QvctFNuu2bzrM+6UtcdFPP/OkS65O+wNhnkF+4xHbos499Fvn5S2yHPvfYZ5KfHfsufd7n21zys2Pfpc/6fJtPfu4k79FnHPsUH1LPdvok79HnG/us8jNj36fPNfYZt33TybHv02ca+9zy02M/oM8y9nm3fdOpsR/Q5xj7AvKTYz+kTz/22bd904mxH9InH/sy8lNjP6JPPPaF5KfGfkSfduxLnPNtx2M/pk/5AW45+YmxH9Mn/AC32La/djTSE/TJxr6o/Pgkn6BPNfYlt/21w5Geok9z0y0tP2KdpE/xgFtefsg6SZ9g7Auf8237rNP00W+6Fcz86fASO00f+6Zbh/xgomfo4678av4nk72JnqOPedOtZOZPB2M/Rx9x5Vcz86f9ZT5LH23l1yTfW+bz9HFu+en/U+qwdgZ6nj7KcV+bfPccX6CPcNxXJ9/d5Uv0h4/7Kl7hDvqc50X6g8d9PQ+1nT6P8UX6Y/ZVXe2ffazyZfojV91K5Z8bf4V+91W3vgvuvY9Nvka/077KY/7W+8Zfpd9lX+uyb3o/xNfpw+1rfKbt9jb2G+hD7WuXv3tuoQ+zr3rZN71ddDfRBzzf13y/fbTd+Nvot77Trn7Xt20vulvpNy39+nd923aJb6ZfX/ovsevbNjt8O/3KW+1XmfimjWQI/fzkv9DAt72OfRj96dSZ/3Lup61iMP1pT/8V2a+9bvw99J+hX136y+aq9JcLW6W/bDxL//47S//xG0t/+sOlf3fp7jUX3Sy6WHSx6GLRxaKLRReLLhZdLLpYdLHoYtHFootFF4suFl0sulh0sehi0cWii0UXiy4WXSy6WHSx6GLRxaKLRReLLhZd7PnHzl/+95fFfo55+vN/d/4SfVv0n7fo26Jvi/7zFn3b/wHAGIePXSVRBwAAAABJRU5ErkJggg==" />
-          </defs>
+        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"
+          class="absolute bottom-1 left-0 w-full h-auto translate-y-full pt-[-2px]">
           <style>
+            .s0 {
+              fill: #294830
+            }
           </style>
-          <use id="Laag 2" href="#img1" x="0" y="-833" />
+          <path id="Vorm 1" fill-rule="evenodd" class="s0"
+            d="m1020-74.6c0 0-15.75-4.14-43.31-10.32-6.89-1.34-14.52-2.72-22.83-4.13-8.3-1.29-17.29-2.56-26.88-3.78-9.6-1.07-19.81-2.07-30.58-2.96-10.77-0.72-22.09-1.31-33.9-1.74q-17.73-0.38-36.85-0.22-19.12 0.45-39.44 1.49-20.32 1.33-41.65 3.27-21.33 2.2-43.5 4.98-11.07 1.47-22.32 3.08-11.25 1.65-22.65 3.43-11.4 1.82-22.93 3.74-11.52 1.97-23.15 4.02-11.63 2.08-23.34 4.24-11.71 2.17-23.48 4.4-11.77 2.25-23.57 4.52-11.81 2.29-23.62 4.58-11.81 2.29-23.62 4.58-11.8 2.27-23.57 4.52-11.77 2.23-23.48 4.4-11.71 2.16-23.34 4.24-11.63 2.05-23.15 4.02-11.53 1.92-22.93 3.74-11.4 1.78-22.65 3.43-11.25 1.61-22.32 3.08-22.17 2.78-43.5 4.98-21.33 1.94-41.65 3.27-20.32 1.04-39.44 1.49-19.12 0.16-36.85-0.22c-11.81-0.43-23.13-1.02-33.9-1.74-10.77-0.89-20.98-1.89-30.58-2.96-9.59-1.22-18.58-2.49-26.88-3.78-8.31-1.41-15.94-2.79-22.83-4.13-27.56-6.18-43.31-10.32-43.31-10.32-15.46-4.52-29.46-3.42-39.6 2.14-10.13 5.35-16.4 15.45-16.4 29.26 0 0 0 11.25 0 22.5 0 11.25 0 22.5 0 22.5 0 13.81 6.27 28.7 16.4 41.45 10.14 12.54 24.14 22.63 39.6 27.15 0 0 15.75 4.14 43.31 10.32 6.89 1.34 14.52 2.72 22.83 4.13 8.3 1.29 17.29 2.56 26.88 3.78 9.6 1.07 19.81 2.07 30.58 2.96 10.77 0.72 22.09 1.31 33.9 1.74q17.73 0.38 36.85 0.22 19.12-0.45 39.44-1.49 20.32-1.33 41.65-3.27 21.33-2.2 43.5-4.98 11.07-1.47 22.32-3.08 11.25-1.65 22.65-3.43 11.4-1.82 22.93-3.74 11.52-1.97 23.15-4.02 11.63-2.08 23.34-4.24 11.71-2.17 23.48-4.4 11.77-2.25 23.57-4.52 11.81-2.29 23.62-4.58 11.81-2.29 23.62-4.58 11.8-2.27 23.57-4.52 11.77-2.23 23.48-4.4 11.71-2.16 23.34-4.24 11.63-2.05 23.15-4.02 11.53-1.92 22.93-3.74 11.4-1.78 22.65-3.43 11.25-1.61 22.32-3.08 22.17-2.78 43.5-4.98 21.33-1.94 41.65-3.27 20.32-1.04 39.44-1.49 19.12-0.16 36.85 0.22c11.81 0.43 23.13 1.02 33.9 1.74 10.77 0.89 20.98 1.89 30.58 2.96 9.59 1.22 18.58 2.49 26.88 3.78 8.31 1.41 15.94 2.79 22.83 4.13 27.56 6.18 43.31 10.32 43.31 10.32 15.46 4.52 29.46 3.42 39.6-2.14 10.13-5.35 16.4-15.45 16.4-29.26 0 0 0-11.25 0-22.5 0-11.25 0-22.5 0-22.5 0-13.81-6.27-28.7-16.4-41.45-10.14-12.54-24.14-22.63-39.6-27.15z" />
         </svg>
       </div>
 
-      <!-- Phone icon & Hamburger menu -->
-      <div class="flex items-center gap-4">
+      <!-- Desktop Navigation (hidden on mobile) -->
+      <nav class="hidden lg:flex items-center gap-8 flex-1 justify-center">
+        <a href="#home" class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
+          Home
+        </a>
+        <div class="relative group">
+          <button
+            class="flex items-center gap-1 text-slate-700 text-xl font-bold text-georama hover:text-[#c3a967] transition-colors duration-200">
+            <span>Diensten</span>
+            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <a href="#tuinaanleg"
+              class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200 first:rounded-t-lg">
+              Tuinaanleg & tuinrenovatie
+            </a>
+            <a href="#bestrating"
+              class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200">
+              Bestrating
+            </a>
+            <a href="#schuttingen"
+              class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200">
+              Schuttingen & overkappingen
+            </a>
+            <a href="#grondwerk"
+              class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200 last:rounded-b-lg">
+              Grondwerk & sloopwerk
+            </a>
+          </div>
+        </div>
+        <a href="#ons-verhaal"
+          class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
+          Ons verhaal
+        </a>
+        <a href="#contact" class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Desktop Phone Info (hidden on mobile) -->
+      <a href="tel:0612345678"
+        class="hidden lg:flex items-center gap-3 text-slate-700 hover:text-[#c3a967] transition-colors duration-200">
+        <div class="w-8 h-8 rotate-[90deg]">
+          <svg height="100%" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502.707 502.707"
+            fill="currentColor">
+            <path d="M70.971,225.97h-40c0-107.523,87.477-195,195-195v40C140.503,70.97,70.971,140.503,70.971,225.97z" />
+            <path
+              d="M140.971,225.97h-40c0-68.925,56.075-125,125-125v40C179.102,140.97,140.971,179.101,140.971,225.97z" />
+            <path style="fill:#c8ac68;"
+              d="M331.074,182.624l-44.169-44.169L425.361,0l14.118,12.988c5.997,5.517,58.712,55.2,62.858,100.185c3.448,37.418-17.99,83.13-36.582,114.89c-25.499,43.561-61.822,89.43-105.041,132.649L256.85,256.848L331.074,182.624z" />
+            <path style="fill:#c3a967;"
+              d="M138.458,286.903l44.168,44.169l74.224-74.224l103.864,103.864c-86.254,86.253-180.157,141.989-239.229,141.995c-2.835,0-5.627-0.125-8.31-0.372c-44.985-4.148-94.669-56.862-100.186-62.858L0.002,425.358L138.458,286.903z" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xs text-slate-600">Bel met Dico</span>
+          <span class="text-sm font-semibold">06 123 456 78</span>
+        </div>
+      </a>
+
+      <!-- Mobile: Phone icon & Hamburger menu -->
+      <div class="flex lg:hidden items-center gap-4">
         <!-- Phone icon -->
-        <button class="flex w-8 h-8 items-center justify-center hover:scale-110 transition-transform duration-200"
+        <a href="tel:0612345678"
+          class="flex w-8 h-8 items-center justify-center hover:scale-110 transition-transform duration-200"
           aria-label="Bellen">
           <div class="flex w-[24px] rotate-[90deg]">
-            <svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 502.707 502.707" xml:space="preserve"
-              fill="#000000">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <g>
-                  <path style="fill:#294830;"
-                    d="M70.971,225.97h-40c0-107.523,87.477-195,195-195v40C140.503,70.97,70.971,140.503,70.971,225.97z">
-                  </path>
-                  <path style="fill:#294830;"
-                    d="M140.971,225.97h-40c0-68.925,56.075-125,125-125v40C179.102,140.97,140.971,179.101,140.971,225.97 z">
-                  </path>
-                  <path style="fill:#c8ac68;"
-                    d="M331.074,182.624l-44.169-44.169L425.361,0l14.118,12.988c5.997,5.517,58.712,55.2,62.858,100.185 c3.448,37.418-17.99,83.13-36.582,114.89c-25.499,43.561-61.822,89.43-105.041,132.649L256.85,256.848L331.074,182.624z">
-                  </path>
-                  <path style="fill:#c3a967;"
-                    d="M138.458,286.903l44.168,44.169l74.224-74.224l103.864,103.864 c-86.254,86.253-180.157,141.989-239.229,141.995c-2.835,0-5.627-0.125-8.31-0.372c-44.985-4.148-94.669-56.862-100.186-62.858 L0.002,425.358L138.458,286.903z">
-                  </path>
-                </g>
+            <svg height="200px" width="200px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 502.707 502.707" fill="#000000">
+              <g>
+                <path style="fill:#294830;"
+                  d="M70.971,225.97h-40c0-107.523,87.477-195,195-195v40C140.503,70.97,70.971,140.503,70.971,225.97z">
+                </path>
+                <path style="fill:#294830;"
+                  d="M140.971,225.97h-40c0-68.925,56.075-125,125-125v40C179.102,140.97,140.971,179.101,140.971,225.97 z">
+                </path>
+                <path style="fill:#c8ac68;"
+                  d="M331.074,182.624l-44.169-44.169L425.361,0l14.118,12.988c5.997,5.517,58.712,55.2,62.858,100.185 c3.448,37.418-17.99,83.13-36.582,114.89c-25.499,43.561-61.822,89.43-105.041,132.649L256.85,256.848L331.074,182.624z">
+                </path>
+                <path style="fill:#c3a967;"
+                  d="M138.458,286.903l44.168,44.169l74.224-74.224l103.864,103.864 c-86.254,86.253-180.157,141.989-239.229,141.995c-2.835,0-5.627-0.125-8.31-0.372c-44.985-4.148-94.669-56.862-100.186-62.858 L0.002,425.358L138.458,286.903z">
+                </path>
               </g>
             </svg>
           </div>
-        </button>
+        </a>
 
         <!-- Hamburger menu -->
         <button id="menu-toggle"
@@ -95,7 +213,7 @@
 
   <!-- Mobile Menu -->
   <nav id="mobile-menu"
-    class="fixed top-[70px] lg:top-[95px] left-0 w-full bg-[#f3f0e7] shadow-2xl transform -translate-y-full opacity-0 transition-all duration-300 z-40 overflow-hidden">
+    class="fixed top-[70px] lg:top-[95px] left-0 w-full bg-[#ecf3e7] shadow-2xl transform -translate-y-full opacity-0 transition-all duration-300 z-40 overflow-hidden">
     <ul class="container mx-auto px-4 py-6 space-y-4">
       <li>
         <a href="#home" class="block text-slate-700 text-lg hover:text-[#c5a572] transition-colors duration-200 py-2">
@@ -143,44 +261,69 @@
 
   <!-- Hero Section -->
   <section
-    class="relative min-h-[470px] h-[75vh] lg:h-[750px] flex items-end justify-center px-6 mt-[70px] lg:mt-[95px] pb-6">
+    class="relative max-w-[1344px] mx-auto min-h-[470px] h-[75vh] max-h-[550px] lg:h-[650px] lg:max-h-[750px] flex items-end justify-center px-6 mt-[70px] lg:mt-[95px] pb-6 z-[1]">
     <!-- Background Image -->
     <div class="absolute -z-10 inset-6 lg:inset-8">
       <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2832&auto=format&fit=crop"
-        alt="Tuinieren" class="w-full h-full object-cover rounded-2xl lg:rounded-3xl">
-      <div class="absolute inset-0 bg-black/30 rounded-2xl lg:rounded-3xl"></div>
-      <div class="absolute inset-0 rounded-2xl lg:rounded-3xl"
+        alt="Tuinieren" class="w-full h-full object-cover rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]">
+      <div class="absolute inset-0 bg-black/30 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"></div>
+      <div class="absolute inset-0 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"
         style="background: linear-gradient(to bottom, transparent 0%, transparent 50%, #294830 85%);"></div>
+
+      <!-- Wave Divider -->
+      <div class="absolute top-full left-0 right-0 -mt-px">
+        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200" class="w-full h-auto">
+          <style>
+            .s0 {
+              fill: #294830
+            }
+          </style>
+          <path id="Vorm 1" fill-rule="evenodd" class="s0"
+            d="m50-74.6c0 0 14.06-4.14 38.67-10.32 6.15-1.34 12.97-2.72 20.38-4.13 7.42-1.29 15.44-2.56 24.01-3.78q12.86-1.62 27.3-2.96 14.43-1.08 30.27-1.74 15.83-0.38 32.9-0.22 17.07 0.45 35.21 1.49 18.14 1.33 37.19 3.27 19.05 2.2 38.84 4.98 9.89 1.47 19.93 3.08 10.04 1.65 20.22 3.43 10.18 1.82 20.47 3.74 10.29 1.97 20.67 4.02 10.39 2.08 20.84 4.24 10.46 2.17 20.97 4.4 10.5 2.25 21.04 4.52 10.54 2.29 21.09 4.58 10.55 2.29 21.09 4.58 10.54 2.27 21.04 4.52 10.51 2.23 20.97 4.4 10.45 2.16 20.84 4.24 10.38 2.05 20.67 4.02 10.29 1.92 20.47 3.74 10.18 1.78 20.22 3.43 10.04 1.61 19.93 3.08 19.79 2.78 38.84 4.98 19.05 1.94 37.19 3.27 18.14 1.04 35.21 1.49 17.07 0.16 32.91-0.22 15.83-0.66 30.26-1.74 14.44-1.34 27.3-2.96c8.57-1.22 16.59-2.49 24.01-3.78 7.41-1.41 14.23-2.79 20.38-4.13 24.61-6.18 38.67-10.32 38.67-10.32 13.81-4.52 26.31-3.42 35.36 2.14 9.04 5.35 14.64 15.45 14.64 29.26 0 0 0 11.25 0 22.5 0 11.25 0 22.5 0 22.5 0 13.81-5.6 28.7-14.64 41.45-9.05 12.54-21.55 22.63-35.36 27.15 0 0-14.06 4.14-38.67 10.32-6.15 1.34-12.97 2.72-20.38 4.13-7.42 1.29-15.44 2.56-24.01 3.78q-12.86 1.62-27.3 2.96-14.43 1.08-30.26 1.74-15.84 0.38-32.91 0.22-17.07-0.45-35.21-1.49-18.14-1.33-37.19-3.27-19.05-2.2-38.84-4.98-9.89-1.47-19.93-3.08-10.04-1.65-20.22-3.43-10.18-1.82-20.47-3.74-10.29-1.97-20.67-4.02-10.39-2.08-20.84-4.24-10.46-2.17-20.97-4.4-10.5-2.25-21.04-4.52-10.54-2.29-21.09-4.58-10.55-2.29-21.09-4.58-10.54-2.27-21.04-4.52-10.51-2.23-20.97-4.4-10.45-2.16-20.84-4.24-10.38-2.05-20.67-4.02-10.29-1.92-20.47-3.74-10.18-1.78-20.22-3.43-10.04-1.61-19.93-3.08-19.79-2.78-38.84-4.98-19.05-1.94-37.19-3.27-18.14-1.04-35.21-1.49-17.07-0.16-32.9 0.22-15.84 0.66-30.27 1.74-14.44 1.34-27.3 2.96c-8.57 1.22-16.59 2.49-24.01 3.78-7.41 1.41-14.23 2.79-20.38 4.13-24.61 6.18-38.67 10.32-38.67 10.32-13.81 4.52-26.31 3.42-35.36-2.14-9.04-5.35-14.64-15.45-14.64-29.26 0 0 0-11.25 0-22.5 0-11.25 0-22.5 0-22.5 0-13.81 5.6-28.7 14.64-41.45 9.05-12.54 21.55-22.63 35.36-27.15z" />
+        </svg>
+      </div>
     </div>
 
     <!-- Content -->
-    <div class="container mx-auto px-6 z-10 relative pb-8 lg:pb-12">
-      <div class="max-w-3xl flex flex-col gap-2">
+    <div class="container mx-auto px-6 z-10 relative pb-8 md:px-16 lg:px-24">
+      <div class="max-w-3xl lg:max-w-5xl flex flex-col gap-2">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-none font-georama">
-          Wij realiseren buitenruimtes met karakter.
+          Buitenruimtes met karakter.
         </h1>
-        <p class="text-xl md:text-2xl lg:text-3xl text-white/90 font-light font-georama">
+        <p class="md:hidden text-xl md:text-2xl lg:text-3xl text-white/90 font-light font-georama">
           Stijlvol, praktisch en duurzaam.
+        </p>
+        <p class="hidden md:block max-w-3xl text-xl md:text-2xl lg:text-3xl text-white/90 font-light font-georama">
+          Stijlvolle, praktische en duurzame buitenruimtes die passen bij elke plek.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Lokale Introductie Section -->
-  <section class="relative pt-16 lg:pt-24 pb-24 lg:pb-28 bg-[#f3f0e7] overflow-x-hidden">
+  <section class="relative pt-16 md:pt-28 lg:pt-36 pb-24 lg:pb-28 bg-[#ecf3e7] overflow-x-hidden z-[0]">
     <div class="container mx-auto">
       <div class="ms-9 pb-3 border-b-2 border-[#c3a967]">
-        <h2 class="mx-auto text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
+        <h2
+          class="mx-auto text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama flex items-center gap-3">
           Zaanse hoveniers
+          <img src="./assets/files/windmill.svg" alt="Windmill" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
         </h2>
       </div>
       <p class="max-w-2xl mt-2 ms-9 me-6 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
-        Wij zijn een hoveniersbedrijf uit de Zaanstreek en geven al onze aandacht aan goed werk.
+        Wij zijn een hoveniersbedrijf uit de Zaanstreek en geven ons werk volledige aandacht.
       </p>
       <p class="max-w-2xl ms-9 me-6 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
-        Wij werken met klanten uit de regio en omstreken, en zorgen ervoor dat we tuinen en buiten&shy;werk
-        leveren dat goed past bij elke plek.
+        Samen met lokale partners uit de regio zorgen we voor tuinen en buiten&shy;werk dat goed past
+        bij elke plek.
       </p>
+
+      <!-- Afbeelding -->
+      <div class="ms-9 me-6 mt-8 mb-12">
+        <img
+          src="https://images.unsplash.com/photo-1588680281884-5e694f9e9e52?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+          alt="Professioneel tuinonderhoud" class="w-full max-w-3xl h-auto rounded-2xl shadow-lg object-cover">
+      </div>
     </div>
 
     <!-- Zaanstreek SVG -->
@@ -197,7 +340,7 @@
   <!-- Diensten Carousel Section -->
   <section class="py-16 lg:py-24 bg-[#39613c1f] overflow-x-hidden">
     <div class="container mx-auto">
-      <div class="w-full ms-6 pb-3 border-b-2 border-[#294830]">
+      <div class="w-full ms-6 pb-3 border-b-2 border-[#c3a967]">
         <h2
           class="max-w-[15rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
           Wat voor werk wij doen?
@@ -205,7 +348,7 @@
       </div>
       <p class="max-w-2xl mt-2 mx-6 text-lg text-[#294830]/90 mb-4 lg:mb-8 font-georama">
         Van de eerste schop in de grond tot de laatste steen op z’n plek. Wij verzorgen buitenruimtes die kloppen.
-        Van renovaties, tot bestrating en sloopwerk.
+        Van renovaties en bestrating tot grond- en sloopwerk.
       </p>
 
       <!-- Carousel Container -->
@@ -305,30 +448,32 @@
   </section>
 
   <!-- Instagram Galerij Section -->
-  <section class="relative pt-16 lg:pt-24 pb-24 lg:pb-28 overflow-x-hidden">
+  <section class="relative pt-16 lg:pt-24 pb-24 lg:pb-28 overflow-x-hidden bg-[#ecf3e7] border-b-2 border-[#c3a967]">
     <div class="container mx-auto">
       <div class="ms-6 pb-3 border-b-2 border-[#c3a967]">
         <h2
-          class="max-w-[17rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
+          class="max-w-[16rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
           Bekijk onze recente projecten
         </h2>
       </div>
       <p class="max-w-2xl mt-2 mx-6 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
-        Bekijk hieronder wat posts, en volg ons voor inspiratie en een kijkje achter de schermen.
+        Bekijk onze recente posts hieronder, en volg ons voor inspiratie en een kijkje achter de schermen.
       </p>
     </div>
 
     <!-- Instagram Gallery Grid -->
     <div class="max-w-7xl mx-auto px-4 lg:px-8">
       <div class="grid gap-4 items-start sm:grid-cols-2 lg:grid-cols-4">
-        
+
         <!-- Instagram Post Card -->
-        <article class="group overflow-hidden rounded-2xl border border-[#294830]/20 bg-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
+        <article
+          class="group overflow-hidden rounded-2xl border border-[#294830]/20 bg-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
           <!-- Post Header -->
           <div class="flex items-center gap-2 border-b border-[#294830]/15 px-3 pt-3 pb-2">
             <a href="https://www.instagram.com/mdcompleet/" target="_blank" rel="noopener noreferrer"
               aria-label="Bekijk profiel op Instagram">
-              <span class="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#294830] text-xs font-bold text-white">
+              <span
+                class="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#294830] text-xs font-bold text-white">
                 <img src="./assets/images/logo-transparent.png" alt="MD Compleet Hoveniers profiel"
                   class="h-6 w-6 object-cover" loading="lazy"
                   onerror="this.remove(); this.parentElement.textContent='MD';" />
@@ -344,9 +489,12 @@
             </div>
           </div>
 
-          <!-- Post Image -->
-          <img class="h-56 w-full object-cover transition" src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=800&auto=format&fit=crop"
-            alt="Recent hoveniers project" />
+          <!-- Post Video -->
+          <video class="h-56 w-full object-cover [overflow-clip-margin:unset] transition" autoplay loop muted
+            playsinline>
+            <source src="./assets/videos/instagram-post-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
 
           <!-- Post Actions & Caption -->
           <div class="space-y-2 px-3 py-3">
@@ -384,7 +532,8 @@
             <p class="pb-caption text-xs text-[#294830]/70 font-georama" data-caption>
               <span class="font-semibold text-[#294830]">mdcompleet</span>
               <span data-caption-text>
-                Weer een mooie tuin opgeleverd in de Zaanstreek! Van ontwerp tot realisatie, we zorgen voor een buitenruimte waar je echt van kan genieten. 🌿
+                Het oude hekwerk terug geplaatst langs het water bij een terugkerende klant ✅ Mooi project, bij ons in
+                de Zaanstreek!
               </span>
               <button type="button" class="pb-caption-more hidden" data-caption-more>... meer</button>
             </p>
@@ -392,10 +541,12 @@
         </article>
 
         <!-- Post 2 -->
-        <article class="group overflow-hidden rounded-2xl border border-[#294830]/20 bg-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
+        <article
+          class="group overflow-hidden rounded-2xl border border-[#294830]/20 bg-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
           <div class="flex items-center gap-2 border-b border-[#294830]/15 px-3 pt-3 pb-2">
             <a href="https://www.instagram.com/mdcompleet/" target="_blank" rel="noopener noreferrer">
-              <span class="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#294830] text-xs font-bold text-white">
+              <span
+                class="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#294830] text-xs font-bold text-white">
                 <img src="./assets/images/logo-transparent.png" alt="MD Compleet Hoveniers profiel"
                   class="h-6 w-6 object-cover" loading="lazy"
                   onerror="this.remove(); this.parentElement.textContent='MD';" />
@@ -408,8 +559,32 @@
                 class="block text-xs text-[#294830]/70 transition font-georama">Koog aan de Zaan</a>
             </div>
           </div>
-          <img class="h-56 w-full object-cover transition" src="https://images.unsplash.com/photo-1637531347055-4fa8aa80c111?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Bestratingsproject" />
+          <div class="relative" data-ig-carousel>
+            <div class="flex h-56 w-full overflow-hidden" data-ig-track>
+              <img class="h-56 min-w-full object-cover [overflow-clip-margin:unset] transition"
+                src="./assets/images/instagram-post-2.png" alt="Bestratingsproject foto" />
+              <video class="h-56 min-w-full object-cover [overflow-clip-margin:unset] transition" loop muted playsinline preload="metadata">
+                <source src="./assets/videos/instagram-post-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <button type="button"
+              class="absolute left-2 top-1/2 -translate-y-1/2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white transition hover:bg-black/55"
+              aria-label="Vorige slide" data-ig-prev>
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button type="button"
+              class="absolute right-2 top-1/2 -translate-y-1/2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white transition hover:bg-black/55"
+              aria-label="Volgende slide" data-ig-next>
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+          </div>
           <div class="space-y-2 px-3 py-3">
             <div class="flex justify-between">
               <div class="flex items-center gap-4 text-[#294830]">
@@ -440,7 +615,9 @@
             <p class="pb-caption text-xs text-[#294830]/70 font-georama" data-caption>
               <span class="font-semibold text-[#294830]">mdcompleet</span>
               <span data-caption-text>
-                Strakke bestrating voor deze moderne tuin. Kwaliteit die je ziet én voelt! 💪
+                Swipe voor meer ➡️ Before foto’s niet opgeslagen. De klant wilde zijn eigen tegels hergebruiken, en
+                zoals je ziet hebben we
+                dat ook gedaan 👌🏼👌🏼
               </span>
               <button type="button" class="pb-caption-more hidden" data-caption-more>... meer</button>
             </p>
@@ -448,10 +625,12 @@
         </article>
 
         <!-- Post 3 -->
-        <article class="group overflow-hidden rounded-2xl border border-[#294830]/20 bg-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
+        <article
+          class="group overflow-hidden rounded-2xl border border-[#294830]/20 bg-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
           <div class="flex items-center gap-2 border-b border-[#294830]/15 px-3 pt-3 pb-2">
             <a href="https://www.instagram.com/mdcompleet/" target="_blank" rel="noopener noreferrer">
-              <span class="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#294830] text-xs font-bold text-white">
+              <span
+                class="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#294830] text-xs font-bold text-white">
                 <img src="./assets/images/logo-transparent.png" alt="MD Compleet Hoveniers profiel"
                   class="h-6 w-6 object-cover" loading="lazy"
                   onerror="this.remove(); this.parentElement.textContent='MD';" />
@@ -464,8 +643,8 @@
                 class="block text-xs text-[#294830]/70 transition font-georama">Zaandijk</a>
             </div>
           </div>
-          <img class="h-56 w-full object-cover transition" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=800&auto=format&fit=crop"
-            alt="Schutting plaatsing" />
+          <img class="h-56 w-full object-cover [overflow-clip-margin:unset] transition"
+            src="./assets/images/instagram-post-3.png" alt="Schutting plaatsing" />
           <div class="space-y-2 px-3 py-3">
             <div class="flex justify-between">
               <div class="flex items-center gap-4 text-[#294830]">
@@ -496,7 +675,7 @@
             <p class="pb-caption text-xs text-[#294830]/70 font-georama" data-caption>
               <span class="font-semibold text-[#294830]">mdcompleet</span>
               <span data-caption-text>
-                Privacy én stijl! Deze nieuwe schutting geeft de tuin meteen een upgrade. Duurzaam hout, vakkundig geplaatst.
+                Ook met grondwerkzaamheden inzetbaar, zoals bijvoorbeeld bekisting uitgraven of tuintjes uitgraven 🚧
               </span>
               <button type="button" class="pb-caption-more hidden" data-caption-more>... meer</button>
             </p>
@@ -504,10 +683,12 @@
         </article>
 
         <!-- Post 4 -->
-        <article class="group overflow-hidden rounded-2xl border border-[#294830]/20 bg-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
+        <article
+          class="group overflow-hidden rounded-2xl border border-[#294830]/20 bg-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
           <div class="flex items-center gap-2 border-b border-[#294830]/15 px-3 pt-3 pb-2">
             <a href="https://www.instagram.com/mdcompleet/" target="_blank" rel="noopener noreferrer">
-              <span class="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#294830] text-xs font-bold text-white">
+              <span
+                class="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#294830] text-xs font-bold text-white">
                 <img src="./assets/images/logo-transparent.png" alt="MD Compleet Hoveniers profiel"
                   class="h-6 w-6 object-cover" loading="lazy"
                   onerror="this.remove(); this.parentElement.textContent='MD';" />
@@ -520,8 +701,10 @@
                 class="block text-xs text-[#294830]/70 transition font-georama">Wormerveer</a>
             </div>
           </div>
-          <img class="h-56 w-full object-cover transition" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
-            alt="Tuinonderhoud" />
+          <video class="h-56 w-full object-cover [overflow-clip-margin:unset] transition" autoplay loop muted playsinline>
+            <source src="./assets/videos/instagram-post-4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           <div class="space-y-2 px-3 py-3">
             <div class="flex justify-between">
               <div class="flex items-center gap-4 text-[#294830]">
@@ -552,7 +735,8 @@
             <p class="pb-caption text-xs text-[#294830]/70 font-georama" data-caption>
               <span class="font-semibold text-[#294830]">mdcompleet</span>
               <span data-caption-text>
-                Aan het werk! Grondwerk voor een complete tuinrenovatie. Binnenkort laten we jullie het eindresultaat zien! 🚧🌱
+                Deel 2 - we zijn begonnen met het aanleggen van de 60x60 tegels. Deel 1 nog niet gezien? Kijk me profiel
+                ff 👊🏼
               </span>
               <button type="button" class="pb-caption-more hidden" data-caption-more>... meer</button>
             </p>
@@ -566,9 +750,10 @@
         <a href="https://www.instagram.com/mdcompleet/" target="_blank" rel="noopener noreferrer"
           class="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#b89a57] to-[#c3a967] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl font-georama">
           <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
           </svg>
-          Bekijk meer op Instagram
+          Volg ons op Instagram
         </a>
       </div>
     </div>
@@ -576,10 +761,10 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="relative py-16 lg:py-24 bg-[#39613c1f]">
+  <section class="relative py-16 lg:py-24 bg-[#ecf3e7]">
     <div class="container mx-auto px-4 lg:px-8">
       <div class="max-w-3xl mx-auto relative z-10">
-        
+
         <!-- Section Header -->
         <div class="text-center mb-8 lg:mb-12">
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#294830] mb-3 font-georama">
@@ -591,25 +776,20 @@
         </div>
 
         <!-- Contact Form -->
-        <form action="https://api.web3forms.com/submit" method="POST" 
-              class="bg-[#f3f0e7] rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 space-y-6">
-          
+        <form action="https://api.web3forms.com/submit" method="POST"
+          class="bg-[#f8f6f2] rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 space-y-6">
+
           <input type="hidden" name="access_key" value="d5bfa8dd-2e7d-4bb9-903d-f6b2f31335c1">
           <input type="hidden" name="subject" value="Nieuwe aanvraag via website MD Compleet">
           <input type="hidden" name="from_name" value="MD Compleet Website">
-          
+
           <!-- Name Field -->
           <div class="space-y-2">
             <label for="name" class="block text-sm font-semibold text-[#294830] font-georama">
               Naam <span class="text-red-500">*</span>
             </label>
-            <input 
-              type="text" 
-              id="name"
-              name="name" 
-              required
-              placeholder="Volledige naam"
-              class="w-full px-4 py-3 bg-[#f3f0e7] border-2 border-[#294830]/20 rounded-lg focus:border-[#c3a967] focus:ring-2 focus:ring-[#c3a967]/20 outline-none transition-all duration-200 font-georama">
+            <input type="text" id="name" name="name" required placeholder="Volledige naam"
+              class="w-full px-4 py-3 bg-[#f8f6f2] border-2 border-[#294830]/20 rounded-lg focus:border-[#c3a967] focus:ring-2 focus:ring-[#c3a967]/20 outline-none transition-all duration-200 font-georama">
           </div>
 
           <!-- Email Field -->
@@ -617,13 +797,8 @@
             <label for="email" class="block text-sm font-semibold text-[#294830] font-georama">
               E-mailadres <span class="text-red-500">*</span>
             </label>
-            <input 
-              type="email" 
-              id="email"
-              name="email" 
-              required
-              placeholder="E-mail"
-              class="w-full px-4 py-3 bg-[#f3f0e7] border-2 border-[#294830]/20 rounded-lg focus:border-[#c3a967] focus:ring-2 focus:ring-[#c3a967]/20 outline-none transition-all duration-200 font-georama">
+            <input type="email" id="email" name="email" required placeholder="E-mail"
+              class="w-full px-4 py-3 bg-[#f8f6f2] border-2 border-[#294830]/20 rounded-lg focus:border-[#c3a967] focus:ring-2 focus:ring-[#c3a967]/20 outline-none transition-all duration-200 font-georama">
           </div>
 
           <!-- Phone Field -->
@@ -631,13 +806,8 @@
             <label for="phone" class="block text-sm font-semibold text-[#294830] font-georama">
               Telefoonnummer <span class="text-red-500">*</span>
             </label>
-            <input 
-              type="tel" 
-              id="phone"
-              name="phone" 
-              required
-              placeholder="06 12345678"
-              class="w-full px-4 py-3 bg-[#f3f0e7] border-2 border-[#294830]/20 rounded-lg focus:border-[#c3a967] focus:ring-2 focus:ring-[#c3a967]/20 outline-none transition-all duration-200 font-georama">
+            <input type="tel" id="phone" name="phone" required placeholder="06 12345678"
+              class="w-full px-4 py-3 bg-[#f8f6f2] border-2 border-[#294830]/20 rounded-lg focus:border-[#c3a967] focus:ring-2 focus:ring-[#c3a967]/20 outline-none transition-all duration-200 font-georama">
           </div>
 
           <!-- Service Type Field -->
@@ -646,11 +816,11 @@
               Waar kunnen wij mee helpen?
             </label>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              
+
               <!-- Tuinaanleg -->
               <label class="relative cursor-pointer group">
                 <input type="radio" name="service" value="tuinaanleg" class="peer sr-only">
-                <div class="px-4 py-3 bg-[#f3f0e7] border-2 border-[#294830]/20 rounded-lg transition-all duration-200 
+                <div class="px-4 py-3 bg-[#f8f6f2] border-2 border-[#294830]/20 rounded-lg transition-all duration-200 
                             peer-checked:border-[#c3a967] peer-checked:bg-[#c3a967]/10 
                             hover:border-[#c3a967]/50 hover:bg-[#294830]/5
                             flex items-center justify-center text-center">
@@ -658,16 +828,19 @@
                     Tuinaanleg & tuinrenovatie
                   </span>
                 </div>
-                <svg class="absolute top-2 right-2 w-5 h-5 text-[#c3a967] opacity-0 peer-checked:opacity-100 transition-opacity" 
-                     fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                <svg
+                  class="absolute top-2 right-2 w-5 h-5 text-[#c3a967] opacity-0 peer-checked:opacity-100 transition-opacity"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
                 </svg>
               </label>
 
               <!-- Bestrating -->
               <label class="relative cursor-pointer group">
                 <input type="radio" name="service" value="bestrating" class="peer sr-only">
-                <div class="px-4 py-3 bg-[#f3f0e7] border-2 border-[#294830]/20 rounded-lg transition-all duration-200 
+                <div class="px-4 py-3 bg-[#f8f6f2] border-2 border-[#294830]/20 rounded-lg transition-all duration-200 
                             peer-checked:border-[#c3a967] peer-checked:bg-[#c3a967]/10 
                             hover:border-[#c3a967]/50 hover:bg-[#294830]/5
                             flex items-center justify-center text-center">
@@ -675,16 +848,19 @@
                     Bestrating
                   </span>
                 </div>
-                <svg class="absolute top-2 right-2 w-5 h-5 text-[#c3a967] opacity-0 peer-checked:opacity-100 transition-opacity" 
-                     fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                <svg
+                  class="absolute top-2 right-2 w-5 h-5 text-[#c3a967] opacity-0 peer-checked:opacity-100 transition-opacity"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
                 </svg>
               </label>
 
               <!-- Schuttingen -->
               <label class="relative cursor-pointer group">
                 <input type="radio" name="service" value="schuttingen" class="peer sr-only">
-                <div class="px-4 py-3 bg-[#f3f0e7] border-2 border-[#294830]/20 rounded-lg transition-all duration-200 
+                <div class="px-4 py-3 bg-[#f8f6f2] border-2 border-[#294830]/20 rounded-lg transition-all duration-200 
                             peer-checked:border-[#c3a967] peer-checked:bg-[#c3a967]/10 
                             hover:border-[#c3a967]/50 hover:bg-[#294830]/5
                             flex items-center justify-center text-center">
@@ -692,16 +868,19 @@
                     Schuttingen & overkappingen
                   </span>
                 </div>
-                <svg class="absolute top-2 right-2 w-5 h-5 text-[#c3a967] opacity-0 peer-checked:opacity-100 transition-opacity" 
-                     fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                <svg
+                  class="absolute top-2 right-2 w-5 h-5 text-[#c3a967] opacity-0 peer-checked:opacity-100 transition-opacity"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
                 </svg>
               </label>
 
               <!-- Grondwerk -->
               <label class="relative cursor-pointer group">
                 <input type="radio" name="service" value="grondwerk" class="peer sr-only">
-                <div class="px-4 py-3 bg-[#f3f0e7] border-2 border-[#294830]/20 rounded-lg transition-all duration-200 
+                <div class="px-4 py-3 bg-[#f8f6f2] border-2 border-[#294830]/20 rounded-lg transition-all duration-200 
                             peer-checked:border-[#c3a967] peer-checked:bg-[#c3a967]/10 
                             hover:border-[#c3a967]/50 hover:bg-[#294830]/5
                             flex items-center justify-center text-center">
@@ -709,16 +888,19 @@
                     Grondwerk & sloopwerk
                   </span>
                 </div>
-                <svg class="absolute top-2 right-2 w-5 h-5 text-[#c3a967] opacity-0 peer-checked:opacity-100 transition-opacity" 
-                     fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                <svg
+                  class="absolute top-2 right-2 w-5 h-5 text-[#c3a967] opacity-0 peer-checked:opacity-100 transition-opacity"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
                 </svg>
               </label>
 
               <!-- Anders -->
               <label class="relative cursor-pointer group sm:col-span-2">
                 <input type="radio" name="service" value="anders" class="peer sr-only">
-                <div class="px-4 py-3 bg-[#f3f0e7] border-2 border-[#294830]/20 rounded-lg transition-all duration-200 
+                <div class="px-4 py-3 bg-[#f8f6f2] border-2 border-[#294830]/20 rounded-lg transition-all duration-200 
                             peer-checked:border-[#c3a967] peer-checked:bg-[#c3a967]/10 
                             hover:border-[#c3a967]/50 hover:bg-[#294830]/5
                             flex items-center justify-center text-center">
@@ -726,9 +908,12 @@
                     Anders
                   </span>
                 </div>
-                <svg class="absolute top-2 right-2 w-5 h-5 text-[#c3a967] opacity-0 peer-checked:opacity-100 transition-opacity" 
-                     fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                <svg
+                  class="absolute top-2 right-2 w-5 h-5 text-[#c3a967] opacity-0 peer-checked:opacity-100 transition-opacity"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
                 </svg>
               </label>
 
@@ -740,24 +925,20 @@
             <label for="message" class="block text-sm font-semibold text-[#294830] font-georama">
               Bericht <span class="text-red-500">*</span>
             </label>
-            <textarea 
-              id="message"
-              name="message" 
-              required
-              rows="5"
+            <textarea id="message" name="message" required rows="5"
               placeholder="Vertel ons meer over je project of vraag..."
-              class="w-full px-4 py-3 bg-[#f3f0e7] border-2 border-[#294830]/20 rounded-lg focus:border-[#c3a967] focus:ring-2 focus:ring-[#c3a967]/20 outline-none transition-all duration-200 resize-none font-georama"></textarea>
+              class="w-full px-4 py-3 bg-[#f8f6f2] border-2 border-[#294830]/20 rounded-lg focus:border-[#c3a967] focus:ring-2 focus:ring-[#c3a967]/20 outline-none transition-all duration-200 resize-none font-georama"></textarea>
           </div>
 
           <!-- Submit Button -->
-          <button 
-            type="submit"
+          <button type="submit"
             class="w-full bg-gradient-to-r from-[#294830] to-[#39613c] text-white font-semibold py-4 px-6 rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 font-georama text-lg">
             Verstuur aanvraag
           </button>
 
           <p class="text-xs text-[#294830]/60 text-center font-georama">
-            Door dit formulier te verzenden, ga je akkoord met het verwerken van je gegevens zodat wij contact kunnen opnemen.
+            Door dit formulier te verzenden, ga je akkoord met het verwerken van je gegevens zodat wij contact kunnen
+            opnemen.
           </p>
 
         </form>
@@ -766,23 +947,24 @@
     </div>
 
     <!-- Transition Bar -->
-    <div class="absolute bottom-0 left-0 right-0 h-[100px] bg-[#294830]"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-[100px] md:h-[125px] lg:h-[150px] bg-[#294830]"></div>
 
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#294830] text-[#f3f0e7] pb-12 lg:pb-16">
+  <footer class="bg-[#294830] text-[#ecf3e7] pb-12 lg:pb-16">
     <div class="container mx-auto px-6">
-      
+
       <!-- Top Section: Logo & Info -->
       <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12 mb-8">
-        
+
         <!-- Logo Container (like header) -->
         <div class="flex flex-col items-center lg:items-start">
           <div class="flex flex-col items-center bg-[#294830] px-6 pb-6">
             <img src="./assets/images/logo-transparent.png" alt="MD Compleet Logo" class="h-16 w-16 mb-3">
             <div class="flex flex-col gap-1 justify-center items-center">
-              <span class="text-xl leading-none tracking-[0.1em] font-bold text-white uppercase font-baskervville">MD Compleet</span>
+              <span class="text-xl leading-none tracking-[0.1em] font-bold text-white uppercase font-baskervville">MD
+                Compleet</span>
               <span class="text-sm leading-none tracking-[0.2em] text-[#c3a967] font-georama">Hoveniers</span>
             </div>
           </div>
@@ -790,14 +972,14 @@
 
         <!-- Address & Contact Buttons -->
         <div class="flex flex-col gap-6 lg:gap-8">
-          
+
           <!-- Address -->
           <div class="flex flex-col gap-2">
             <h3 class="text-lg font-semibold text-[#c3a967] font-georama mb-1">Bezoekadres</h3>
             <div class="text-sm font-georama space-y-1">
               <p>MD Compleet</p>
-              <p>[Straatnaam] [Huisnummer]</p>
-              <p>[Postcode] Zaandam</p>
+              <p>Havenstraat 72</p>
+              <p>1506PL Zaandam</p>
             </div>
           </div>
 
@@ -806,43 +988,42 @@
 
           <!-- Contact Buttons -->
           <div class="flex flex-wrap gap-3">
-            <a href="tel:+31612345678" 
-               class="flex items-center gap-2 px-4 py-2 bg-[#c3a967] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
-               aria-label="Bel ons">
+            <a href="tel:+31612345678"
+              class="flex items-center gap-2 px-4 py-2 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
+              aria-label="Bel ons">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
               Bellen
             </a>
-            
-            <a href="mailto:info@mdcompleet.nl" 
-               class="flex items-center gap-2 px-4 py-2 bg-[#c3a967] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
-               aria-label="Mail ons">
+
+            <a href="mailto:info@mdcompleet.nl"
+              class="flex items-center gap-2 px-4 py-2 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
+              aria-label="Mail ons">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
               Mailen
             </a>
-            
-            <a href="https://www.instagram.com/mdcompleet/" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="flex items-center gap-2 px-4 py-2 bg-[#c3a967] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
-               aria-label="Volg ons op Instagram">
+
+            <a href="https://www.instagram.com/mdcompleet/" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-2 px-4 py-2 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
+              aria-label="Volg ons op Instagram">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
               </svg>
               Instagram
             </a>
-            
-            <a href="https://www.facebook.com/mdcompleet" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="flex items-center gap-2 px-4 py-2 bg-[#c3a967] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
-               aria-label="Volg ons op Facebook">
+
+            <a href="https://www.facebook.com/mdcompleet" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-2 px-4 py-2 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
+              aria-label="Volg ons op Facebook">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
               Facebook
             </a>
@@ -902,7 +1083,7 @@
 
       <!-- Bottom Section: Design Credit & Copyright -->
       <div class="pt-6 flex flex-col md:flex-row justify-between items-start gap-1 text-xs font-georama">
-        
+
         <div class="text-center md:text-right">
           <p>MD Compleet © <span id="copyright-year">2024</span></p>
         </div>
@@ -915,12 +1096,10 @@
           <p>Disclaimer</p>
         </a>
 
-        <div class="flex items-center gap-1 italic">
-          <span>Design by</span>
-          <a href="https://www.riceweb.nl" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             class="text-[#c3a967] hover:text-[#d4b978] transition-colors duration-200 font-semibold">
+        <div class="flex items-center gap-1">
+          <span>Webdesign:</span>
+          <a href="https://www.riceweb.nl" target="_blank" rel="noopener noreferrer"
+            class="transition-colors duration-200">
             Rice Web
           </a>
         </div>

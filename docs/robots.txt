@@ -1,4 +1,5 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://oottattattoo.nl/sitemap.xml
+# TODO: Controleer definitieve domein-URL (met of zonder www).
+Sitemap: https://mdcompleet.nl/sitemap.xml

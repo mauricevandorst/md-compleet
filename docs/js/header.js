@@ -21,16 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollY = window.scrollY;
     
     if (scrollY > 10) {
-      // Scroll naar beneden - zelfde gedrag als mobile menu open
-      logoContainer.classList.remove('scale-75', 'self-baseline');
-      logoContainer.classList.add('scale-75', 'self-center');
-      logoImg.classList.add('opacity-0');
+      // Scroll naar beneden - verplaats logo omhoog met transform
+      logoContainer.style.transform = 'translateY(-40px) scale(0.75)';
+      logoImg.style.opacity = '0';
       header.classList.add('shadow-lg');
     } else {
       // Terug naar boven - herstel standaard staat
-      logoContainer.classList.remove('scale-75', 'self-center');
-      logoContainer.classList.add('scale-75', 'self-baseline');
-      logoImg.classList.remove('opacity-0');
+      logoContainer.style.transform = 'scale(0.75)';
+      logoImg.style.opacity = '1';
       header.classList.remove('shadow-lg');
     }
     
@@ -45,10 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Open menu
       mobileMenu.classList.remove('-translate-y-full', 'opacity-0');
       mobileMenu.classList.add('translate-y-0', 'opacity-100');
-      logoContainer.classList.remove('scale-75');
-      logoContainer.classList.add('scale-75', 'self-center');
-      logoContainer.classList.remove('self-baseline');
-      logoImg.classList.add('opacity-0');
+      logoContainer.style.transform = 'translateY(-40px) scale(0.75)';
+      logoImg.style.opacity = '0';
       header.classList.remove('shadow-lg');
       
       // Animeer hamburger naar X
@@ -65,16 +61,16 @@ document.addEventListener('DOMContentLoaded', () => {
       // Sluit menu
       mobileMenu.classList.add('-translate-y-full', 'opacity-0');
       mobileMenu.classList.remove('translate-y-0', 'opacity-100');
-      logoContainer.classList.remove('scale-75', 'self-center');
       
       // Herstel logo grootte en zichtbaarheid op basis van scroll positie
       if (window.scrollY > 10) {
-        logoContainer.classList.add('scale-75', 'self-center');
-        logoImg.classList.add('opacity-0');
+        logoContainer.style.transform = 'translateY(-40px) scale(0.75)';
+        logoImg.style.opacity = '0';
         header.classList.add('shadow-lg');
       } else {
-        logoContainer.classList.add('scale-75', 'self-baseline');
-        logoImg.classList.remove('opacity-0');
+        logoContainer.style.transform = 'scale(0.75)';
+        logoImg.style.opacity = '1';
+        header.classList.remove('shadow-lg');
       }
       
       // Animeer X terug naar hamburger
