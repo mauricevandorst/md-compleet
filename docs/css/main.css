@@ -776,6 +776,10 @@ video {
   display: none;
 }
 
+.aspect-\[16\/9\]{
+  aspect-ratio: 16/9;
+}
+
 .h-0\.5{
   height: 0.125rem;
 }
@@ -857,8 +861,20 @@ video {
   max-height: 550px;
 }
 
+.max-h-\[450px\]{
+  max-height: 450px;
+}
+
+.max-h-\[400px\]{
+  max-height: 400px;
+}
+
 .min-h-\[470px\]{
   min-height: 470px;
+}
+
+.min-h-\[350px\]{
+  min-height: 350px;
 }
 
 .w-10{
@@ -1162,6 +1178,10 @@ video {
 
 .rounded-lg{
   border-radius: 0.5rem;
+}
+
+.rounded-xl{
+  border-radius: 0.75rem;
 }
 
 .rounded-t-2xl{
