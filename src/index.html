@@ -63,9 +63,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Georama:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=60&w=1600&auto=format&fit=crop" fetchpriority="high">
   <link rel="stylesheet" href="./css/main.css" />
-  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js" defer></script>
   <script src="./js/header.js"></script>
   <script src="./js/carousel.js" defer></script>
   <script src="./js/smooth-scroll.js" defer></script>
@@ -79,14 +80,14 @@
   <!-- Header -->
   <header id="header"
     class="fixed top-0 left-0 w-full z-50 bg-[#ecf3e7] h-[70px] lg:h-[95px] transition-all duration-300">
-    <div class="mx-auto h-full px-4 flex items-center justify-between lg:justify-start lg:gap-8">
+    <div class="mx-auto w-full max-w-[1280px] h-full px-4 lg:px-6 flex items-center justify-between">
 
       <!-- Logo -->
       <div id="logo-container"
-        class="relative flex flex-col gap-1 items-center self-start transition-all duration-500 ease-in-out drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)] origin-top scale-75">
+        class="relative flex flex-col gap-1 items-center self-start transition-all duration-500 ease-in-out drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)] origin-top scale-75 lg:scale-90">
         <div class="flex flex-col w-full items-center bg-[#294830] px-3 py-5">
           <img src="./assets/images/logo-transparent.png" alt="MD Compleet Logo"
-            class="h-20 w-20 lg:h-16 lg:w-16 w-auto transition-all duration-500 ease-in-out">
+            class="h-20 w-20 lg:h-20 lg:w-20 w-auto transition-all duration-500 ease-in-out">
           <div class="flex flex-col gap-1 justify-center items-center">
             <span
               class="text-base leading-none tracking-[0.1em] lg:text-2xl font-bold text-white uppercase font-baskervville">MD
@@ -96,7 +97,7 @@
           </div>
         </div>
         <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"
-          class="absolute bottom-1 left-0 w-full h-auto translate-y-full pt-[-2px]">
+          class="absolute bottom-1 left-0 w-full h-auto translate-y-full pt-[-2px]">r
           <style>
             .s0 {
               fill: #294830
@@ -107,69 +108,73 @@
         </svg>
       </div>
 
-      <!-- Desktop Navigation (hidden on mobile) -->
-      <nav class="hidden lg:flex items-center gap-8 flex-1 justify-center">
-        <a href="#home" class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
-          Home
-        </a>
-        <div class="relative group">
-          <button
-            class="flex items-center gap-1 text-slate-700 text-xl font-bold text-georama hover:text-[#c3a967] transition-colors duration-200">
-            <span>Diensten</span>
-            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div
-            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-            <a href="#tuinaanleg"
-              class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200 first:rounded-t-lg">
-              Tuinaanleg & tuinrenovatie
-            </a>
-            <a href="#bestrating"
-              class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200">
-              Bestrating
-            </a>
-            <a href="#schuttingen"
-              class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200">
-              Schuttingen & overkappingen
-            </a>
-            <a href="#grondwerk"
-              class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200 last:rounded-b-lg">
-              Grondwerk & sloopwerk
-            </a>
+      <div class="hidden lg:flex items-center gap-8 ml-auto">
+        <!-- Desktop Navigation (hidden on mobile) -->
+        <nav class="flex items-center gap-8">
+          <a href="#home" class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
+            Home
+          </a>
+          <div class="relative group">
+            <button
+              class="flex items-center gap-1 text-slate-700 text-xl font-bold text-georama hover:text-[#c3a967] transition-colors duration-200">
+              <span>Diensten</span>
+              <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div
+              class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <a href="#tuinaanleg"
+                class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200 first:rounded-t-lg">
+                Tuinaanleg & tuinrenovatie
+              </a>
+              <a href="#bestrating"
+                class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200">
+                Bestrating
+              </a>
+              <a href="#schuttingen"
+                class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200">
+                Schuttingen & overkappingen
+              </a>
+              <a href="#grondwerk"
+                class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200 last:rounded-b-lg">
+                Grondwerk & sloopwerk
+              </a>
+            </div>
           </div>
-        </div>
-        <a href="#ons-verhaal"
-          class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
-          Ons verhaal
-        </a>
-        <a href="#contact" class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
-          Contact
-        </a>
-      </nav>
+          <a href="#ons-verhaal"
+            class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
+            Ons verhaal
+          </a>
+          <a href="#contact" class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
+            Contact
+          </a>
+        </nav>
 
-      <!-- Desktop Phone Info (hidden on mobile) -->
-      <a href="tel:0612345678"
-        class="hidden lg:flex items-center gap-3 text-slate-700 hover:text-[#c3a967] transition-colors duration-200">
-        <div class="w-8 h-8 rotate-[90deg]">
-          <svg height="100%" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502.707 502.707"
-            fill="currentColor">
-            <path d="M70.971,225.97h-40c0-107.523,87.477-195,195-195v40C140.503,70.97,70.971,140.503,70.971,225.97z" />
-            <path
-              d="M140.971,225.97h-40c0-68.925,56.075-125,125-125v40C179.102,140.97,140.971,179.101,140.971,225.97z" />
-            <path style="fill:#c8ac68;"
-              d="M331.074,182.624l-44.169-44.169L425.361,0l14.118,12.988c5.997,5.517,58.712,55.2,62.858,100.185c3.448,37.418-17.99,83.13-36.582,114.89c-25.499,43.561-61.822,89.43-105.041,132.649L256.85,256.848L331.074,182.624z" />
-            <path style="fill:#c3a967;"
-              d="M138.458,286.903l44.168,44.169l74.224-74.224l103.864,103.864c-86.254,86.253-180.157,141.989-239.229,141.995c-2.835,0-5.627-0.125-8.31-0.372c-44.985-4.148-94.669-56.862-100.186-62.858L0.002,425.358L138.458,286.903z" />
-          </svg>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-xs text-slate-600">Bel met Dico</span>
-          <span class="text-sm font-semibold">06 123 456 78</span>
-        </div>
-      </a>
+        <div class="h-8 w-px bg-[#294830]/20" aria-hidden="true"></div>
+
+        <!-- Desktop Phone Info (hidden on mobile) -->
+        <a href="tel:0612345678"
+          class="flex items-center gap-3 text-slate-700 hover:text-[#c3a967] transition-colors duration-200">
+          <div class="w-8 h-8 rotate-[90deg]">
+            <svg height="100%" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502.707 502.707"
+              fill="currentColor">
+              <path d="M70.971,225.97h-40c0-107.523,87.477-195,195-195v40C140.503,70.97,70.971,140.503,70.971,225.97z" />
+              <path
+                d="M140.971,225.97h-40c0-68.925,56.075-125,125-125v40C179.102,140.97,140.971,179.101,140.971,225.97z" />
+              <path style="fill:#c8ac68;"
+                d="M331.074,182.624l-44.169-44.169L425.361,0l14.118,12.988c5.997,5.517,58.712,55.2,62.858,100.185c3.448,37.418-17.99,83.13-36.582,114.89c-25.499,43.561-61.822,89.43-105.041,132.649L256.85,256.848L331.074,182.624z" />
+              <path style="fill:#c3a967;"
+                d="M138.458,286.903l44.168,44.169l74.224-74.224l103.864,103.864c-86.254,86.253-180.157,141.989-239.229,141.995c-2.835,0-5.627-0.125-8.31-0.372c-44.985-4.148-94.669-56.862-100.186-62.858L0.002,425.358L138.458,286.903z" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xs text-slate-600">Bel met Dico</span>
+            <span class="text-sm font-semibold">06 123 456 78</span>
+          </div>
+        </a>
+      </div>
 
       <!-- Mobile: Phone icon & Hamburger menu -->
       <div class="flex lg:hidden items-center gap-4">
@@ -261,11 +266,11 @@
 
   <!-- Hero Section -->
   <section
-    class="relative max-w-[1344px] mx-auto min-h-[350px] h-[75vh] max-h-[400px] lg:h-[650px] lg:max-h-[750px] flex items-end justify-center px-6 mt-[70px] lg:mt-[95px] pb-6 z-[1]">
+    class="relative max-w-[1344px] mx-auto min-h-[350px] h-[75vh] max-h-[450px] lg:h-[650px] lg:max-h-[750px] flex items-end justify-center px-6 mt-[70px] lg:mt-[95px] pb-6 z-[1]">
     <!-- Background Image -->
     <div class="absolute -z-10 inset-6 lg:inset-8">
-      <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2832&auto=format&fit=crop"
-        alt="Tuinieren" class="w-full h-full object-cover rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]">
+      <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=60&w=1600&auto=format&fit=crop"
+        alt="Tuinieren" class="w-full h-full object-cover rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]" fetchpriority="high">
       <div class="absolute inset-0 bg-black/30 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"></div>
       <div class="absolute inset-0 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"
         style="background: linear-gradient(to bottom, transparent 0%, transparent 50%, #294830 85%);"></div>
@@ -302,7 +307,7 @@
 
   <!-- Lokale Introductie Section -->
   <section class="relative pt-16 md:pt-28 lg:pt-36 pb-24 lg:pb-28 bg-[#ecf3e7] overflow-x-hidden z-[0]">
-    <div class="container mx-auto">
+    <div class="container mx-auto max-w-7xl">
       <div class="ms-9 pb-3 border-b-2 border-[#c3a967]">
         <h2
           class="mx-auto text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama flex items-center gap-3">
@@ -322,7 +327,7 @@
       <div class="ms-9 me-6 mt-8 mb-12 max-w-3xl aspect-[16/9]">
         <img
           src="https://images.unsplash.com/photo-1588680281884-5e694f9e9e52?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-          alt="Professioneel tuinonderhoud" class="w-full h-full rounded-xl shadow-lg object-cover">
+          alt="Professioneel tuinonderhoud" class="w-full h-full rounded-xl shadow-lg object-cover" loading="lazy">
       </div>
     </div>
 
@@ -339,7 +344,7 @@
 
   <!-- Diensten Carousel Section -->
   <section class="py-16 lg:py-24 bg-[#39613c1f] overflow-x-hidden">
-    <div class="container mx-auto">
+    <div class="container mx-auto max-w-7xl">
       <div class="w-full ms-6 pb-3 border-b-2 border-[#c3a967]">
         <h2
           class="max-w-[15rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
@@ -447,17 +452,71 @@
     </div>
   </section>
 
+  <!-- Ons Werk Section -->
+  <section class="relative py-20 lg:py-32 bg-gradient-to-b from-green-50 to-white overflow-hidden">
+    <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <!-- Content Side -->
+        <div class="order-2 lg:order-1 space-y-8">
+          <div class="space-y-4">
+            <div class="w-16 h-1 bg-[#c3a967] rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#294830] font-georama leading-tight">
+              Ons werk draait niet alleen om een mooie tuin
+            </h2>
+          </div>
+          
+          <div class="space-y-6 text-lg text-[#294830]/90 font-georama leading-relaxed">
+            <p>
+              Een buitenruimte moet jarenlang goed blijven liggen, praktisch zijn in gebruik en passen bij de woning. 
+              Daarom kijken wij bij ieder project verder dan alleen het eindplaatje.
+            </p>
+            <p>
+              Een terras dat verzakt omdat de ondergrond niet goed is voorbereid, bestrating die water vasthoudt of 
+              schuttingen die na een paar jaar scheef trekken. Dit zijn problemen die ontstaan wanneer er te snel 
+              gewerkt wordt of verkeerde keuzes worden gemaakt. Juist daarom besteden wij veel aandacht aan de basis 
+              van het werk.
+            </p>
+            <div class="relative pt-6 mt-8">
+              <div class="absolute top-0 left-0 w-[50%] h-0.5 bg-[#c3a967]"></div>
+              <p class="text-xl font-semibold text-[#294830]">
+                Wij weten dat goed werk onder de grond begint.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Side -->
+        <div class="order-1 lg:order-2 relative">
+          <div class="relative aspect-[10/11] lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#294830]/20 to-transparent z-10"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&h=1600&auto=format&fit=crop&q=80" 
+              alt="Professioneel hovenierswerk met focus op de ondergrond"
+              class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <!-- Decorative Element -->
+          <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-[#c3a967]/30 rounded-full blur-3xl -z-10"></div>
+          <div class="absolute -top-6 -right-6 w-40 h-40 bg-[#294830]/10 rounded-full blur-3xl -z-10"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Instagram Galerij Section -->
   <section class="relative pt-16 lg:pt-24 pb-24 lg:pb-28 overflow-x-hidden bg-[#ecf3e7] border-b-2 border-[#c3a967]">
-    <div class="container mx-auto">
+    <div class="container mx-auto max-w-7xl">
       <div class="ms-6 pb-3 border-b-2 border-[#c3a967]">
         <h2
           class="max-w-[16rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
-          Bekijk onze recente projecten
+          Bekijk onze laatste projecten
         </h2>
       </div>
       <p class="max-w-2xl mt-2 mx-6 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
-        Bekijk onze recente posts hieronder, en volg ons voor inspiratie en een kijkje achter de schermen.
+        Bekijk recente posts over onze projecten hieronder, en volg ons voor inspiratie en een kijkje achter de schermen.
       </p>
     </div>
 
@@ -491,7 +550,7 @@
 
           <!-- Post Video -->
           <video class="h-56 w-full object-cover [overflow-clip-margin:unset] transition" autoplay loop muted
-            playsinline>
+            playsinline preload="none">
             <source src="./assets/videos/instagram-post-1.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -562,7 +621,7 @@
           <div class="relative" data-ig-carousel>
             <div class="flex h-56 w-full overflow-hidden" data-ig-track>
               <img class="h-56 min-w-full object-cover [overflow-clip-margin:unset] transition"
-                src="./assets/images/instagram-post-2.png" alt="Bestratingsproject foto" />
+                src="./assets/images/instagram-post-2.png" alt="Bestratingsproject foto" loading="lazy" />
               <video class="h-56 min-w-full object-cover [overflow-clip-margin:unset] transition" loop muted playsinline preload="metadata">
                 <source src="./assets/videos/instagram-post-2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -644,7 +703,7 @@
             </div>
           </div>
           <img class="h-56 w-full object-cover [overflow-clip-margin:unset] transition"
-            src="./assets/images/instagram-post-3.png" alt="Schutting plaatsing" />
+            src="./assets/images/instagram-post-3.png" alt="Schutting plaatsing" loading="lazy" />
           <div class="space-y-2 px-3 py-3">
             <div class="flex justify-between">
               <div class="flex items-center gap-4 text-[#294830]">
@@ -701,7 +760,7 @@
                 class="block text-xs text-[#294830]/70 transition font-georama">Wormerveer</a>
             </div>
           </div>
-          <video class="h-56 w-full object-cover [overflow-clip-margin:unset] transition" autoplay loop muted playsinline>
+          <video class="h-56 w-full object-cover [overflow-clip-margin:unset] transition" autoplay loop muted playsinline preload="none">
             <source src="./assets/videos/instagram-post-4.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -961,7 +1020,7 @@
         <!-- Logo Container (like header) -->
         <div class="flex flex-col items-center lg:items-start">
           <div class="flex flex-col items-center bg-[#294830] px-6 pb-6">
-            <img src="./assets/images/logo-transparent.png" alt="MD Compleet Logo" class="h-16 w-16 mb-3">
+            <img src="./assets/images/logo-transparent.png" alt="MD Compleet Logo" class="h-16 w-16 mb-3" loading="lazy">
             <div class="flex flex-col gap-1 justify-center items-center">
               <span class="text-xl leading-none tracking-[0.1em] font-bold text-white uppercase font-baskervville">MD
                 Compleet</span>

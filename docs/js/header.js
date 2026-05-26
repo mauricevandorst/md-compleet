@@ -8,10 +8,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobile-menu');
   const dienstenToggle = document.getElementById('diensten-toggle');
   const dienstenSubmenu = document.getElementById('diensten-submenu');
+  const desktopMediaQuery = window.matchMedia('(min-width: 1024px)');
   
   let isMenuOpen = false;
   let isSubmenuOpen = false;
-  let lastScroll = 0;
+
+  const getTopScale = () => (desktopMediaQuery.matches ? 0.9 : 0.75);
+  const getHiddenScale = () => (desktopMediaQuery.matches ? 0.75 : 0.75);
+
+  const setLogoState = (hideLogo) => {
+    if (hideLogo) {
+      logoContainer.style.transform = `translateY(-40px) scale(${getHiddenScale()})`;
+      logoImg.style.opacity = '0';
+      return;
+    }
+
+    logoContainer.style.transform = `scale(${getTopScale()})`;
+    logoImg.style.opacity = '1';
+  };
 
   // Logo scroll animatie
   window.addEventListener('scroll', () => {
@@ -22,17 +36,21 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (scrollY > 10) {
       // Scroll naar beneden - verplaats logo omhoog met transform
-      logoContainer.style.transform = 'translateY(-40px) scale(0.75)';
-      logoImg.style.opacity = '0';
+      setLogoState(true);
       header.classList.add('shadow-lg');
     } else {
       // Terug naar boven - herstel standaard staat
-      logoContainer.style.transform = 'scale(0.75)';
-      logoImg.style.opacity = '1';
+      setLogoState(false);
       header.classList.remove('shadow-lg');
     }
-    
-    lastScroll = scrollY;
+  });
+
+  desktopMediaQuery.addEventListener('change', () => {
+    if (isMenuOpen || window.scrollY > 10) {
+      return;
+    }
+
+    setLogoState(false);
   });
 
   // Hamburger menu toggle
@@ -43,8 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Open menu
       mobileMenu.classList.remove('-translate-y-full', 'opacity-0');
       mobileMenu.classList.add('translate-y-0', 'opacity-100');
-      logoContainer.style.transform = 'translateY(-40px) scale(0.75)';
-      logoImg.style.opacity = '0';
+      setLogoState(true);
       header.classList.remove('shadow-lg');
       
       // Animeer hamburger naar X
@@ -64,12 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Herstel logo grootte en zichtbaarheid op basis van scroll positie
       if (window.scrollY > 10) {
-        logoContainer.style.transform = 'translateY(-40px) scale(0.75)';
-        logoImg.style.opacity = '0';
+        setLogoState(true);
         header.classList.add('shadow-lg');
       } else {
-        logoContainer.style.transform = 'scale(0.75)';
-        logoImg.style.opacity = '1';
+        setLogoState(false);
         header.classList.remove('shadow-lg');
       }
       
