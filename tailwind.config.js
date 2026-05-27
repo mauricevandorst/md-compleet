@@ -176,6 +176,9 @@ module.exports = {
         logoEdgeRight: "logoEdgeRight 16s ease-in-out infinite",
         logoMask: "logoMask 16s ease-in-out infinite",
       },
+      boxShadow: {
+        '3xl': '0 25px 50px -12px rgba(0, 0, 0, 0.35)',
+      },
     },
   },
   plugins: [],

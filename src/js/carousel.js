@@ -86,11 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update dots
     dots.forEach((dot, index) => {
       if (index === realIndex) {
-        dot.classList.remove('bg-[#c3a967]', 'w-2');
+        dot.classList.remove('bg-[#b6a162]', 'w-6');
         dot.classList.add('bg-[#294830]', 'w-8');
       } else {
         dot.classList.remove('bg-[#294830]', 'w-8');
-        dot.classList.add('bg-[#c3a967]', 'w-2');
+        dot.classList.add('bg-[#b6a162]', 'w-6');
       }
     });
   }

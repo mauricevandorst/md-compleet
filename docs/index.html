@@ -16,7 +16,7 @@
   <link rel="canonical" href="https://mdcompleet.nl/">
 
   <!-- TODO: Voeg een echte favicon toe in /assets/icons/favicon.ico. -->
-  <link rel="icon" type="image/png" href="./assets/images/logo-transparent.png">
+  <link rel="icon" type="image/png" href="./favicon.ico">
   <link rel="apple-touch-icon" href="./assets/images/logo-transparent.png">
   <link rel="manifest" href="./site.webmanifest">
 
@@ -64,7 +64,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=60&w=1600&auto=format&fit=crop" fetchpriority="high">
+  <link rel="preload" as="image"
+    href="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=60&w=1600&auto=format&fit=crop"
+    fetchpriority="high">
   <link rel="stylesheet" href="./css/main.css" />
   <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js" defer></script>
   <script src="./js/header.js"></script>
@@ -77,36 +79,35 @@
 
 <body class="bg-[#ecf3e7]">
 
+  <!-- Logo (altijd boven overlays) -->
+  <a id="logo-container" href="#home" aria-label="Ga naar boven"
+    class="fixed top-0 left-[max(1rem,calc((100vw-1280px)/2+1rem))] lg:left-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))] z-[90] flex flex-col gap-1 items-center transition-all duration-500 ease-in-out drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)] origin-top scale-75 lg:scale-90">
+    <div class="flex flex-col w-full items-center bg-[#294830] px-3 py-5">
+      <img src="./assets/images/logo-transparent.png" alt="MD Compleet Logo"
+        class="h-20 w-20 lg:h-20 lg:w-20 w-auto transition-all duration-500 ease-in-out">
+      <div class="flex flex-col gap-1 justify-center items-center">
+        <span
+          class="text-base leading-none tracking-[0.1em] lg:text-2xl font-bold text-white uppercase font-baskervville">MD
+          Compleet</span>
+        <span class="text-xs leading-none tracking-[0.2em] lg:text-base text-[#c3a967] font-almarai">Hoveniers</span>
+      </div>
+    </div>
+    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"
+      class="absolute bottom-1 left-0 w-full h-auto translate-y-full pt-[-2px]">r
+      <style>
+        .s0 {
+          fill: #294830
+        }
+      </style>
+      <path id="Vorm 1" fill-rule="evenodd" class="s0"
+        d="m1020-74.6c0 0-15.75-4.14-43.31-10.32-6.89-1.34-14.52-2.72-22.83-4.13-8.3-1.29-17.29-2.56-26.88-3.78-9.6-1.07-19.81-2.07-30.58-2.96-10.77-0.72-22.09-1.31-33.9-1.74q-17.73-0.38-36.85-0.22-19.12 0.45-39.44 1.49-20.32 1.33-41.65 3.27-21.33 2.2-43.5 4.98-11.07 1.47-22.32 3.08-11.25 1.65-22.65 3.43-11.4 1.82-22.93 3.74-11.52 1.97-23.15 4.02-11.63 2.08-23.34 4.24-11.71 2.17-23.48 4.4-11.77 2.25-23.57 4.52-11.81 2.29-23.62 4.58-11.81 2.29-23.62 4.58-11.8 2.27-23.57 4.52-11.77 2.23-23.48 4.4-11.71 2.16-23.34 4.24-11.63 2.05-23.15 4.02-11.53 1.92-22.93 3.74-11.4 1.78-22.65 3.43-11.25 1.61-22.32 3.08-22.17 2.78-43.5 4.98-21.33 1.94-41.65 3.27-20.32 1.04-39.44 1.49-19.12 0.16-36.85-0.22c-11.81-0.43-23.13-1.02-33.9-1.74-10.77-0.89-20.98-1.89-30.58-2.96-9.59-1.22-18.58-2.49-26.88-3.78-8.31-1.41-15.94-2.79-22.83-4.13-27.56-6.18-43.31-10.32-43.31-10.32-15.46-4.52-29.46-3.42-39.6 2.14-10.13 5.35-16.4 15.45-16.4 29.26 0 0 0 11.25 0 22.5 0 11.25 0 22.5 0 22.5 0 13.81 6.27 28.7 16.4 41.45 10.14 12.54 24.14 22.63 39.6 27.15 0 0 15.75 4.14 43.31 10.32 6.89 1.34 14.52 2.72 22.83 4.13 8.3 1.29 17.29 2.56 26.88 3.78 9.6 1.07 19.81 2.07 30.58 2.96 10.77 0.72 22.09 1.31 33.9 1.74q17.73 0.38 36.85 0.22 19.12-0.45 39.44-1.49 20.32-1.33 41.65-3.27 21.33-2.2 43.5-4.98 11.07-1.47 22.32-3.08 11.25-1.65 22.65-3.43 11.4-1.82 22.93-3.74 11.52-1.97 23.15-4.02 11.63-2.08 23.34-4.24 11.71-2.17 23.48-4.4 11.77-2.25 23.57-4.52 11.81-2.29 23.62-4.58 11.81-2.29 23.62-4.58 11.8-2.27 23.57-4.52 11.77-2.23 23.48-4.4 11.71-2.16 23.34-4.24 11.63-2.05 23.15-4.02 11.53-1.92 22.93-3.74 11.4-1.78 22.65-3.43 11.25-1.61 22.32-3.08 22.17-2.78 43.5-4.98 21.33-1.94 41.65-3.27 20.32-1.04 39.44-1.49 19.12-0.16 36.85 0.22c11.81 0.43 23.13 1.02 33.9 1.74 10.77 0.89 20.98 1.89 30.58 2.96 9.59 1.22 18.58 2.49 26.88 3.78 8.31 1.41 15.94 2.79 22.83 4.13 27.56 6.18 43.31 10.32 43.31 10.32 15.46 4.52 29.46 3.42 39.6-2.14 10.13-5.35 16.4-15.45 16.4-29.26 0 0 0-11.25 0-22.5 0-11.25 0-22.5 0-22.5 0-13.81-6.27-28.7-16.4-41.45-10.14-12.54-24.14-22.63-39.6-27.15z" />
+    </svg>
+  </a>
+
   <!-- Header -->
   <header id="header"
     class="fixed top-0 left-0 w-full z-50 bg-[#ecf3e7] h-[70px] lg:h-[95px] transition-all duration-300">
     <div class="mx-auto w-full max-w-[1280px] h-full px-4 lg:px-6 flex items-center justify-between">
-
-      <!-- Logo -->
-      <div id="logo-container"
-        class="relative flex flex-col gap-1 items-center self-start transition-all duration-500 ease-in-out drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)] origin-top scale-75 lg:scale-90">
-        <div class="flex flex-col w-full items-center bg-[#294830] px-3 py-5">
-          <img src="./assets/images/logo-transparent.png" alt="MD Compleet Logo"
-            class="h-20 w-20 lg:h-20 lg:w-20 w-auto transition-all duration-500 ease-in-out">
-          <div class="flex flex-col gap-1 justify-center items-center">
-            <span
-              class="text-base leading-none tracking-[0.1em] lg:text-2xl font-bold text-white uppercase font-baskervville">MD
-              Compleet</span>
-            <span
-              class="text-xs leading-none tracking-[0.2em] lg:text-base text-[#c3a967] font-almarai">Hoveniers</span>
-          </div>
-        </div>
-        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"
-          class="absolute bottom-1 left-0 w-full h-auto translate-y-full pt-[-2px]">r
-          <style>
-            .s0 {
-              fill: #294830
-            }
-          </style>
-          <path id="Vorm 1" fill-rule="evenodd" class="s0"
-            d="m1020-74.6c0 0-15.75-4.14-43.31-10.32-6.89-1.34-14.52-2.72-22.83-4.13-8.3-1.29-17.29-2.56-26.88-3.78-9.6-1.07-19.81-2.07-30.58-2.96-10.77-0.72-22.09-1.31-33.9-1.74q-17.73-0.38-36.85-0.22-19.12 0.45-39.44 1.49-20.32 1.33-41.65 3.27-21.33 2.2-43.5 4.98-11.07 1.47-22.32 3.08-11.25 1.65-22.65 3.43-11.4 1.82-22.93 3.74-11.52 1.97-23.15 4.02-11.63 2.08-23.34 4.24-11.71 2.17-23.48 4.4-11.77 2.25-23.57 4.52-11.81 2.29-23.62 4.58-11.81 2.29-23.62 4.58-11.8 2.27-23.57 4.52-11.77 2.23-23.48 4.4-11.71 2.16-23.34 4.24-11.63 2.05-23.15 4.02-11.53 1.92-22.93 3.74-11.4 1.78-22.65 3.43-11.25 1.61-22.32 3.08-22.17 2.78-43.5 4.98-21.33 1.94-41.65 3.27-20.32 1.04-39.44 1.49-19.12 0.16-36.85-0.22c-11.81-0.43-23.13-1.02-33.9-1.74-10.77-0.89-20.98-1.89-30.58-2.96-9.59-1.22-18.58-2.49-26.88-3.78-8.31-1.41-15.94-2.79-22.83-4.13-27.56-6.18-43.31-10.32-43.31-10.32-15.46-4.52-29.46-3.42-39.6 2.14-10.13 5.35-16.4 15.45-16.4 29.26 0 0 0 11.25 0 22.5 0 11.25 0 22.5 0 22.5 0 13.81 6.27 28.7 16.4 41.45 10.14 12.54 24.14 22.63 39.6 27.15 0 0 15.75 4.14 43.31 10.32 6.89 1.34 14.52 2.72 22.83 4.13 8.3 1.29 17.29 2.56 26.88 3.78 9.6 1.07 19.81 2.07 30.58 2.96 10.77 0.72 22.09 1.31 33.9 1.74q17.73 0.38 36.85 0.22 19.12-0.45 39.44-1.49 20.32-1.33 41.65-3.27 21.33-2.2 43.5-4.98 11.07-1.47 22.32-3.08 11.25-1.65 22.65-3.43 11.4-1.82 22.93-3.74 11.52-1.97 23.15-4.02 11.63-2.08 23.34-4.24 11.71-2.17 23.48-4.4 11.77-2.25 23.57-4.52 11.81-2.29 23.62-4.58 11.81-2.29 23.62-4.58 11.8-2.27 23.57-4.52 11.77-2.23 23.48-4.4 11.71-2.16 23.34-4.24 11.63-2.05 23.15-4.02 11.53-1.92 22.93-3.74 11.4-1.78 22.65-3.43 11.25-1.61 22.32-3.08 22.17-2.78 43.5-4.98 21.33-1.94 41.65-3.27 20.32-1.04 39.44-1.49 19.12-0.16 36.85 0.22c11.81 0.43 23.13 1.02 33.9 1.74 10.77 0.89 20.98 1.89 30.58 2.96 9.59 1.22 18.58 2.49 26.88 3.78 8.31 1.41 15.94 2.79 22.83 4.13 27.56 6.18 43.31 10.32 43.31 10.32 15.46 4.52 29.46 3.42 39.6-2.14 10.13-5.35 16.4-15.45 16.4-29.26 0 0 0-11.25 0-22.5 0-11.25 0-22.5 0-22.5 0-13.81-6.27-28.7-16.4-41.45-10.14-12.54-24.14-22.63-39.6-27.15z" />
-        </svg>
-      </div>
 
       <div class="hidden lg:flex items-center gap-8 ml-auto">
         <!-- Desktop Navigation (hidden on mobile) -->
@@ -147,20 +148,22 @@
             class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
             Ons verhaal
           </a>
-          <a href="#contact" class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
+          <a href="./contact"
+            class="text-slate-700 text-xl font-bold hover:text-[#c3a967] transition-colors duration-200">
             Contact
           </a>
         </nav>
 
-        <div class="h-8 w-px bg-[#294830]/20" aria-hidden="true"></div>
+        <div class="h-10 w-[2px] bg-[#c8ac68]" aria-hidden="true"></div>
 
         <!-- Desktop Phone Info (hidden on mobile) -->
         <a href="tel:0612345678"
           class="flex items-center gap-3 text-slate-700 hover:text-[#c3a967] transition-colors duration-200">
           <div class="w-8 h-8 rotate-[90deg]">
-            <svg height="100%" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502.707 502.707"
-              fill="currentColor">
-              <path d="M70.971,225.97h-40c0-107.523,87.477-195,195-195v40C140.503,70.97,70.971,140.503,70.971,225.97z" />
+            <svg height="100%" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 502.707 502.707" fill="currentColor">
+              <path
+                d="M70.971,225.97h-40c0-107.523,87.477-195,195-195v40C140.503,70.97,70.971,140.503,70.971,225.97z" />
               <path
                 d="M140.971,225.97h-40c0-68.925,56.075-125,125-125v40C179.102,140.97,140.971,179.101,140.971,225.97z" />
               <path style="fill:#c8ac68;"
@@ -170,14 +173,14 @@
             </svg>
           </div>
           <div class="flex flex-col">
-            <span class="text-xs text-slate-600">Bel met Dico</span>
+            <span class="text-xs text-slate-600">Bel met ons</span>
             <span class="text-sm font-semibold">06 123 456 78</span>
           </div>
         </a>
       </div>
 
       <!-- Mobile: Phone icon & Hamburger menu -->
-      <div class="flex lg:hidden items-center gap-4">
+      <div class="ml-auto flex lg:hidden items-center gap-4">
         <!-- Phone icon -->
         <a href="tel:0612345678"
           class="flex w-8 h-8 items-center justify-center hover:scale-110 transition-transform duration-200"
@@ -206,7 +209,7 @@
         <!-- Hamburger menu -->
         <button id="menu-toggle"
           class="relative w-10 h-10 flex flex-col justify-center items-center gap-1.5 hover:scale-110 transition-transform duration-200"
-          aria-label="Menu" aria-expanded="false">
+          aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
           <span class="block w-7 h-0.5 bg-[#294830] transition-all duration-300 menu-line-1"></span>
           <span class="block w-7 h-0.5 bg-[#294830] transition-all duration-300 menu-line-2"></span>
           <span class="block w-7 h-0.5 bg-[#294830] transition-all duration-300 menu-line-3"></span>
@@ -218,65 +221,143 @@
 
   <!-- Mobile Menu -->
   <nav id="mobile-menu"
-    class="fixed top-[70px] lg:top-[95px] left-0 w-full bg-[#ecf3e7] shadow-2xl transform -translate-y-full opacity-0 transition-all duration-300 z-40 overflow-hidden">
-    <ul class="container mx-auto px-4 py-6 space-y-4">
-      <li>
-        <a href="#home" class="block text-slate-700 text-lg hover:text-[#c5a572] transition-colors duration-200 py-2">
-          Home
-        </a>
-      </li>
-      <li>
-        <button id="diensten-toggle"
-          class="w-full flex items-center justify-between text-slate-700 text-lg hover:text-[#c5a572] transition-colors duration-200 py-2">
-          <span>Diensten</span>
-          <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    class="fixed inset-0 z-[70] bg-[#294830]/25 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+    aria-hidden="true">
+    <div id="mobile-menu-panel"
+      class="ms-auto h-[100dvh] min-h-screen w-full max-w-[26rem] overflow-y-auto px-6 pt-6 pb-10 flex flex-col bg-[#ecf3e7]/95 translate-x-[110%] rotate-[1.5deg] scale-[0.98] transition-all duration-500 ease-[cubic-bezier(0.2,0.9,0.2,1)]">
+      <div
+        class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(195,169,103,0.22),_transparent_58%)]">
+      </div>
+
+      <button id="mobile-menu-close"
+        class="ms-auto relative z-10 h-10 w-10 flex items-center justify-center text-[#294830] hover:bg-[#c3a967]/15 hover:text-[#294830] transition-colors duration-200"
+        aria-label="Sluit menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 6l12 12M18 6l-12 12" />
+        </svg>
+      </button>
+
+      <ul class="relative z-10 mt-12">
+        <li
+          class="mobile-menu-item border-b-[2px] border-[#294830]/20 opacity-0 translate-x-6 transition-all duration-500">
+          <a href="#home"
+            class="block py-4 text-xl leading-tight text-[#294830] font-georama hover:text-[#c3a967] transition-colors duration-200">
+            Home
+          </a>
+        </li>
+        <li
+          class="mobile-menu-item border-b-[2px] border-[#294830]/20 opacity-0 translate-x-6 transition-all duration-500">
+          <button id="diensten-toggle"
+            class="w-full flex items-center justify-between py-4 text-xl leading-tight text-[#294830] font-georama hover:text-[#c3a967] transition-colors duration-200">
+            <span>Diensten</span>
+            <svg class="w-7 h-7 transition-transform duration-200" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul id="diensten-submenu" class="max-h-0 overflow-hidden transition-all duration-300 pe-3 pb-0">
+            <li><a href="#tuinaanleg"
+                class="block py-2 text-lg text-[#294830]/90 hover:text-[#c3a967] transition-colors duration-200 border-t-[2px] border-[#294830]/10">Tuinaanleg
+                & tuinrenovatie</a></li>
+            <li><a href="#bestrating"
+                class="block py-2 text-lg text-[#294830]/90 hover:text-[#c3a967] transition-colors duration-200">Bestrating</a>
+            </li>
+            <li><a href="#schuttingen"
+                class="block py-2 text-lg text-[#294830]/90 hover:text-[#c3a967] transition-colors duration-200">Schuttingen
+                & overkappingen</a></li>
+            <li><a href="#grondwerk"
+                class="block py-2 text-lg text-[#294830]/90 hover:text-[#c3a967] transition-colors duration-200">Grondwerk
+                & sloopwerk</a></li>
+          </ul>
+        </li>
+        <li
+          class="mobile-menu-item border-b-[2px] border-[#294830]/20 opacity-0 translate-x-6 transition-all duration-500">
+          <a href="#ons-verhaal"
+            class="block py-4 text-xl leading-tight text-[#294830] font-georama hover:text-[#c3a967] transition-colors duration-200">
+            Ons verhaal
+          </a>
+        </li>
+        <li
+          class="mobile-menu-item border-b-[2px] border-[#294830]/20 opacity-0 translate-x-6 transition-all duration-500">
+          <a href="./contact"
+            class="block py-4 text-xl leading-tight text-[#294830] font-georama hover:text-[#c3a967] transition-colors duration-200">
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <a href="./contact"
+        class="mobile-menu-item relative w-full text-base tracking-[0.02em] z-10 mt-8 inline-flex justify-center rounded-[5px] bg-[#294830] px-4 py-2 text-white font-medium font-georama shadow-lg hover:brightness-105 transition-all duration-500 opacity-0 translate-x-6">
+        Vraag offerte aan →
+      </a>
+
+      <a href="tel:+31612345678"
+        class="mobile-menu-item relative w-full text-base tracking-[0.02em] z-10 inline-flex gap-1 mt-2 justify-center items-center rounded-[5px] border-[1px] border-[#294830] bg-transparent px-4 py-2 text-[#294830] font-medium font-georama transition-all duration-500 opacity-0 translate-x-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+          <path
+            d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z">
+          </path>
+        </svg>
+        Bel ons!
+      </a>
+
+      <div
+        class="mobile-menu-item relative z-10 mt-4 flex flex-wrap justify-start gap-3 transition-all duration-500 opacity-0 translate-x-6">
+        <a href="tel:+31612345678"
+          class="inline-flex items-center justify-center h-10 w-10 border-[1px] border-[#294830] text-[#294830] rounded-lg hover:bg-[#c3a967] hover:text-[#294830] transition-colors duration-200"
+          aria-label="Bel ons">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
           </svg>
-        </button>
-        <ul id="diensten-submenu" class="pl-4 space-y-2 max-h-0 overflow-hidden transition-all duration-300">
-          <li><a href="#tuinaanleg"
-              class="block text-slate-700 text-base hover:text-[#c5a572] transition-colors duration-200 py-2">Tuinaanleg
-              & tuinrenovatie</a>
-          </li>
-          <li><a href="#bestrating"
-              class="block text-slate-700 text-base hover:text-[#c5a572] transition-colors duration-200 py-2">Bestrating</a>
-          </li>
-          <li><a href="#schuttingen"
-              class="block text-slate-700 text-base hover:text-[#c5a572] transition-colors duration-200 py-2">Schuttingen
-              & overkappingen</a></li>
-          <li><a href="#grondwerk"
-              class="block text-slate-700 text-base hover:text-[#c5a572] transition-colors duration-200 py-2">Grondwerk
-              & sloopwerk</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#ons-verhaal"
-          class="block text-slate-700 text-lg hover:text-[#c5a572] transition-colors duration-200 py-2">
-          Ons verhaal
         </a>
-      </li>
-      <li>
-        <a href="#contact"
-          class="block text-slate-700 text-lg hover:text-[#c5a572] transition-colors duration-200 py-2">
-          Contact
+        <a href="mailto:info@mdcompleet.nl"
+          class="inline-flex items-center justify-center h-10 w-10 border-[1px] border-[#294830] text-[#294830] rounded-lg hover:bg-[#c3a967] hover:text-[#294830] transition-colors duration-200"
+          aria-label="Mail ons">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+          </svg>
         </a>
-      </li>
-    </ul>
+        <a href="https://www.instagram.com/mdcompleet/" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center h-10 w-10 border-[1px] border-[#294830] text-[#294830] rounded-lg hover:bg-[#c3a967] hover:text-[#294830] transition-colors duration-200"
+          aria-label="Volg ons op Instagram">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/mdcompleet" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center h-10 w-10 border-[1px] border-[#294830] text-[#294830] rounded-lg hover:bg-[#c3a967] hover:text-[#294830] transition-colors duration-200"
+          aria-label="Volg ons op Facebook">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+      </div>
+
+      <p id="mobile-menu-tagline"
+        class="relative z-10 mt-8 text-2xl font-medium tracking-[0.02em] font-georama text-[#294830] transition-all duration-500 opacity-0 translate-y-6">
+        <span class="text-[#c3a967]">Uw partner in</span> buitenwerken
+      </p>
+    </div>
   </nav>
 
   <!-- Hero Section -->
-  <section
-    class="relative max-w-[1344px] mx-auto min-h-[350px] h-[75vh] max-h-[450px] lg:h-[650px] lg:max-h-[750px] flex items-end justify-center px-6 mt-[70px] lg:mt-[95px] pb-6 z-[1]">
+  <section id="home"
+    class="relative max-w-[1344px] mx-auto min-h-[350px] h-[75vh] max-h-[450px] lg:h-[600px] lg:max-h-[750px] flex items-end justify-center px-6 mt-[70px] lg:mt-[95px] pb-6 z-[1]">
     <!-- Background Image -->
     <div class="absolute -z-10 inset-6 lg:inset-8">
       <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=60&w=1600&auto=format&fit=crop"
-        alt="Tuinieren" class="w-full h-full object-cover rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]" fetchpriority="high">
+        alt="Tuinieren" class="w-full h-full object-cover rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"
+        fetchpriority="high">
       <div class="absolute inset-0 bg-black/30 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"></div>
       <div class="absolute inset-0 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"
-        style="background: linear-gradient(to bottom, transparent 0%, transparent 50%, #294830 85%);"></div>
+        style="background: linear-gradient(to bottom, transparent 0%, transparent 60%, #294830 90%);"></div>
 
       <!-- Wave Divider -->
-      <div class="absolute top-full left-0 right-0 -mt-px">
+      <div class="lg:hidden absolute top-full left-0 right-0 -mt-px">
         <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200" class="w-full h-auto">
           <style>
             .s0 {
@@ -287,11 +368,25 @@
             d="m50-74.6c0 0 14.06-4.14 38.67-10.32 6.15-1.34 12.97-2.72 20.38-4.13 7.42-1.29 15.44-2.56 24.01-3.78q12.86-1.62 27.3-2.96 14.43-1.08 30.27-1.74 15.83-0.38 32.9-0.22 17.07 0.45 35.21 1.49 18.14 1.33 37.19 3.27 19.05 2.2 38.84 4.98 9.89 1.47 19.93 3.08 10.04 1.65 20.22 3.43 10.18 1.82 20.47 3.74 10.29 1.97 20.67 4.02 10.39 2.08 20.84 4.24 10.46 2.17 20.97 4.4 10.5 2.25 21.04 4.52 10.54 2.29 21.09 4.58 10.55 2.29 21.09 4.58 10.54 2.27 21.04 4.52 10.51 2.23 20.97 4.4 10.45 2.16 20.84 4.24 10.38 2.05 20.67 4.02 10.29 1.92 20.47 3.74 10.18 1.78 20.22 3.43 10.04 1.61 19.93 3.08 19.79 2.78 38.84 4.98 19.05 1.94 37.19 3.27 18.14 1.04 35.21 1.49 17.07 0.16 32.91-0.22 15.83-0.66 30.26-1.74 14.44-1.34 27.3-2.96c8.57-1.22 16.59-2.49 24.01-3.78 7.41-1.41 14.23-2.79 20.38-4.13 24.61-6.18 38.67-10.32 38.67-10.32 13.81-4.52 26.31-3.42 35.36 2.14 9.04 5.35 14.64 15.45 14.64 29.26 0 0 0 11.25 0 22.5 0 11.25 0 22.5 0 22.5 0 13.81-5.6 28.7-14.64 41.45-9.05 12.54-21.55 22.63-35.36 27.15 0 0-14.06 4.14-38.67 10.32-6.15 1.34-12.97 2.72-20.38 4.13-7.42 1.29-15.44 2.56-24.01 3.78q-12.86 1.62-27.3 2.96-14.43 1.08-30.26 1.74-15.84 0.38-32.91 0.22-17.07-0.45-35.21-1.49-18.14-1.33-37.19-3.27-19.05-2.2-38.84-4.98-9.89-1.47-19.93-3.08-10.04-1.65-20.22-3.43-10.18-1.82-20.47-3.74-10.29-1.97-20.67-4.02-10.39-2.08-20.84-4.24-10.46-2.17-20.97-4.4-10.5-2.25-21.04-4.52-10.54-2.29-21.09-4.58-10.55-2.29-21.09-4.58-10.54-2.27-21.04-4.52-10.51-2.23-20.97-4.4-10.45-2.16-20.84-4.24-10.38-2.05-20.67-4.02-10.29-1.92-20.47-3.74-10.18-1.78-20.22-3.43-10.04-1.61-19.93-3.08-19.79-2.78-38.84-4.98-19.05-1.94-37.19-3.27-18.14-1.04-35.21-1.49-17.07-0.16-32.9 0.22-15.84 0.66-30.27 1.74-14.44 1.34-27.3 2.96c-8.57 1.22-16.59 2.49-24.01 3.78-7.41 1.41-14.23 2.79-20.38 4.13-24.61 6.18-38.67 10.32-38.67 10.32-13.81 4.52-26.31 3.42-35.36-2.14-9.04-5.35-14.64-15.45-14.64-29.26 0 0 0-11.25 0-22.5 0-11.25 0-22.5 0-22.5 0-13.81 5.6-28.7 14.64-41.45 9.05-12.54 21.55-22.63 35.36-27.15z" />
         </svg>
       </div>
+
+      <!-- Wave Divider -->
+      <div class="hidden lg:block absolute top-full left-0 right-0 -mt-px">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 1280 56" w-full h-auto>
+          <defs>
+            <image width="1280" height="119" id="img1"
+              href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAAB3CAMAAABrJR0bAAAAAXNSR0IB2cksfwAAAt9QTFRFKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwAAAAKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwKUgwFVhFXwAAAPV0Uk5T//jr8uXk09WxtoqOYGQlKwDvo6dJUAPp6gV/7efh3NbQy8W/urSuqZ6Yko2HgIWPlJmfpLO4vcDHzNHX5vD1jBDz2tTOyLywnZeRi3lzbWdhW1VKRD44MiwnIRsVDwkKFBkeIjE2O0BTXXF6gqGrtb7S2bKlfVhLGAwWICkzPUNITVJXZWpveJbP2OKcypNrQTUoGg0IESQuN2ZwgZWou8TN4E/JrH5yVkc5HU5cr5B7bDASOombt+7324hoRhwOQm58uYRiLZrB3ux0WTyqwvZ3JiNMdj9aRVTo8fStY8Yq46I0L8MLX2n5+qYXUd91H6CDE4ZmAINpAAAIPElEQVR4nO3dfVTV9R3A8fu9V5MKFacoSOjA4Qptgisdk2FMwlmK6PABF3U0UXFl05NPaSdNZS45phnZQc4kWT4DiQ8pzgdklk8YakOHaKC7KIpyUkTNXe64goqlzSHwhft5v/6493d5+P0+f735wu93fygDAAildA8AALoQQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiEUAAYhFAAGIRQABiKWXVPQIAaGFkBQhALGWy6B4BALQwqUb/0T0DAGjRWD3yne4ZAECLJsrhmu4ZAECLR9VjpbpnAAAtHleOJbpnAAAtmqpml3TPAABaNFdOJZwGBiBRC6tyMl7UPQUAaNDSopwaFemeAgA0cL6hnB5RhbrHAIA656KuKifDYwW656hjJhdVxfnWN58eZocq18u2ixJrs8p9nra2/6KH2lVTAwOoBT0PGcoD6JNhD28HDsxRypahS80zAvLOd7NVqKhrRY4yAqr0LlXfiP3LTOUDlFodyx+TwlSBm1JL2wWVv/hn56SCpsX6BgNE+sNGWwAb3BIw8Ea3L7ub1EZP7yuJUeqk8fOxarHumWpC1J1MH9w6Rakvf33x6pE+q6/0PZI7WqnJ/qwogRoUM9twM4AhT0/UPcr9BWZEm7bk9fY46eaQs3aaLQ7TdY+kzRy12788jkXOyletC018Ofa1sYuVihs90XuH7tGABmfYpooAGhZF6B7lloAya9SMmYlnJqtRS5SKjE9dr3uiBmKO2X2n0/PqmNHs+U3g3PMDVnuyXgR+TFvbu4BvBtCg8VpAt0YDEuOV2txrVcTK8HoTYnvg41n60oEnI+OszSfGbE9d+NrMzKSCDaq37rGAeiFtsO2xIoCGlifq7sAu3qWWqHkfHHg2rffOwIF1d1zclGLd7v7zlX/bqC5/2GlnsUfO9WU0EQINTrM9VgbQp8/kWjyUsV3i8XP+f5kS+lyvlgft4nyFfUnc82JC8ofla8U58UcPhU94X3XTPRFQyyYuuflUGUBD4ut5NXwAo1/kmJ92mKHUR0k1vGfUvr5N+h+4Puig7whjxG8L/9jfd6pZ90RADfoqsOL5VgAN0S4P/9to1uF3zo48/EHJGYd2+fw5z87MMYcv/Pada7OmjzC6Ro+O6x7f+ne6RwKqybjw7YqN2wE0GMK/zqjm3vZNvVSy9u1OeZyylSXkCffMCWWmKZVNXMY6EQ3EsV9VblQJoCH5ep//Zx9tJq2wFM7Y4s2JDNxmWye29Uqy5LsNinZe8GZ1f6QCtSlqxa2tqgE0GIKH/88Euni/uCLqmRtxzrG1MRjsTGjyvIJhRenFsT07WS2+n3w8kssToV1T0+3NuwNoMGxyaOp1r2/JDd4a1mPCZMeUWh0M9q+vZUDmpaHhTo9mZ7+6s0z3NBDoqN+d7e8HsFyWeWTzVe0rX+QP9puQdtZr3aa6GQ3C9LN0ONrFL+XrwvYzp6Vv5IpE1Lp98aurvLpHACuM+cbJMH3qhrqYCKgUappZGO2jOkSXxR89NMnT+d+6B4K9+VPIXecs7htAoB7IPpYTsHbengLHFccu++1L+JnuedDAjV1+92sCiIak3/Dt7lt/ETnaPX3885HF56NSG3MjHDywhIzvvyuDAKKBS4n3KCzuErlnWpPsE/zSjPtrfPrJH3yMAMK+ZO++sG2I6lF4eZTDmt4eu3Je4lpE2PgtCrrHRwkg7F3K33MtYc9VrhAz2+geBxqcUztG3fMTBBCyhMz37FPWOWvxheLyJeKu5TkF2fe88BX2wm3I7lYOHe93EyoCCPFmW61HOkV8ty8t9NTE0jG+n3xc6qN7JDycLc8+02jM8Fed2wQO+PEvJIDAD0UPy05oa7udduSa8QtcuPVNQ7B3nNPqgMkrTUPP7m3/wHcdJYDAg+jvOqzF7OSwjtuWr7EtE10juJN2PfCEe9GyT/O7XzoRvKd679IlgEA1nR79Xtz1QbMSkpLPrtl10ZLKddq1LbfH0UEvbMns7rFsqYfZnF8D/w6XAAI1xseztNmQgqeuFwV87vxGzPbU5ovCPaN/v4PTLNVzvOX62OJVS3N3nbEM931q5Ny3av4QBBCofSlPj4s2LekUdK7bBqf9KeZrk8YuDn4lWPV8k9uD3RYQ08P1rFvy4G1jslYU7ftliqku7kRAAAGdQmL3t8ozOqYbM3v6H3d+Y8QrGc6Oh+NOmf3tOY2mkyNismLHzw9vMd/0m7YDpw/vvP7AOi2TEECgfgqJ3Zz8uFG5KqW8E1+44hg2PWX1t4NnLbGei+n5UdD77443njIfrKcX7GQF7u3lpV4OCPrJkS+C3moxzuNi13Zu4V992sU/ve3Q0Czd491BAIGGrL9aEKNUtjW022W3jsf/FWMd9ueqn54fOivx6jlnq/WvST6NzGnWta1beanqLy6zXj9+4R/pn51RKuGzrsG9rRHrNnbsqkYW9jNvGljoOkNtnrv/vbD2ehZz1fJfTzcvB3lowcgAAAAASUVORK5CYII=" />
+          </defs>
+          <style>
+          </style>
+          <use id="Laag 1" href="#img1" x="0" y="-67" />
+        </svg>
+      </div>
+    </div>
     </div>
 
     <!-- Content -->
     <div class="container mx-auto px-6 z-10 relative pb-8 md:px-16 lg:px-24">
-      <div class="max-w-3xl lg:max-w-5xl flex flex-col gap-2">
+      <div class="max-w-3xl lg:max-w-5xl flex flex-col gap-3">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-none font-georama">
           Buitenruimtes met karakter.
         </h1>
@@ -306,28 +401,47 @@
   </section>
 
   <!-- Lokale Introductie Section -->
-  <section class="relative pt-16 md:pt-28 lg:pt-36 pb-24 lg:pb-28 bg-[#ecf3e7] overflow-x-hidden z-[0]">
+  <section class="relative pt-16 md:pt-28 pb-24 lg:pb-28 bg-[#ecf3e7] overflow-x-hidden z-[0]">
     <div class="container mx-auto max-w-7xl">
       <div class="ms-9 pb-3 border-b-2 border-[#c3a967]">
         <h2
           class="mx-auto text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama flex items-center gap-3">
           Zaanse hoveniers
-          <img src="./assets/files/windmill.svg" alt="Windmill" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+          <img src="./assets/files/windmill.svg" alt="Windmill"
+            class="rotate-[5deg] w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
         </h2>
       </div>
-      <p class="max-w-2xl mt-2 ms-9 me-6 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
+      <p class="max-w-2xl mt-2 ms-9 me-8 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
         Wij zijn een hoveniersbedrijf uit de Zaanstreek en geven ons werk volledige aandacht.
       </p>
-      <p class="max-w-2xl ms-9 me-6 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
-        Samen met lokale partners uit de regio zorgen we voor tuinen en buiten&shy;werk dat goed past
-        bij elke plek.
+      <p class="max-w-2xl ms-9 me-8 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
+        Samen met lokale partners uit de streek zorgen we voor tuinen en buiten&shy;werk dat goed past
+        bij elke omgeving.
       </p>
 
       <!-- Afbeelding -->
-      <div class="ms-9 me-6 mt-8 mb-12 max-w-3xl aspect-[16/9]">
+      <div class="ms-9 me-9 mt-8 mb-12 max-w-3xl aspect-[16/9] relative">
         <img
           src="https://images.unsplash.com/photo-1588680281884-5e694f9e9e52?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
           alt="Professioneel tuinonderhoud" class="w-full h-full rounded-xl shadow-lg object-cover" loading="lazy">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/15 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"></div>
+        <div class="absolute inset-0 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"
+          style="background: linear-gradient(to bottom, transparent 0%, transparent 70%, #464829 100%);"></div>
+
+        <!-- Wave Divider -->
+        <div class="absolute top-full left-0 right-0 -mt-px">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 1280 69" class="w-full h-full">
+            <style>
+              .s2 {
+                fill: #464829
+              }
+            </style>
+            <path id="Vorm 1" fill-rule="evenodd" class="s2"
+              d="m58-238.8c0 0 4.55-2.17 13.07-6.07 8.53-3.71 21.03-8.8 36.94-14.69 7.96-2.69 16.77-5.5 26.36-8.33 9.59-2.62 19.97-5.2 31.05-7.68 11.08-2.21 22.88-4.26 35.31-6.09 12.43-1.52 25.5-2.77 39.14-3.71q10.24-0.51 20.88-0.77 10.65-0.12 21.68 0.04 11.03 0.3 22.42 0.88 11.4 0.73 23.12 1.76 11.73 1.16 23.76 2.62 12.03 1.6 24.34 3.49 12.31 2.01 24.87 4.32 12.56 2.42 25.35 5.1 12.79 2.79 25.78 5.83 12.98 3.13 26.14 6.48 13.16 3.42 26.46 7.03 13.3 3.67 26.72 7.49 13.42 3.86 26.93 7.83 13.51 4.01 27.09 8.08 13.57 4.09 27.18 8.2 13.61 4.12 27.24 8.22 13.62 4.09 27.22 8.13 13.61 4.02 27.17 7.95 13.56 3.88 27.06 7.66 13.49 3.72 26.9 7.29 13.4 3.52 26.68 6.86 13.28 3.27 26.42 6.35 13.13 2.99 26.1 5.78 12.96 2.69 25.73 5.16 12.77 2.37 25.31 4.5 12.55 2.03 24.85 3.81 12.29 1.68 24.31 3.1 12.02 1.31 23.74 2.36 11.72 0.94 23.11 1.63 11.39 0.57 22.42 0.9 11.04 0.21 21.69 0.19 10.65-0.14 20.9-0.49c13.65-0.7 26.74-1.67 39.2-2.87 12.45-1.48 24.27-3.15 35.38-4.97 11.1-2.07 21.5-4.24 31.12-6.45 9.62-2.42 18.45-4.83 26.43-7.16 15.96-5.12 28.5-9.61 37.06-12.9 8.55-3.49 13.11-5.43 13.11-5.43 8.03-3.57 15.68-5.61 22.63-6.23 6.95-0.75 13.21 0 18.47 2.14 5.25 2.06 9.5 5.58 12.42 10.48 2.91 4.86 4.5 11.14 4.48 18.76 0 0-0.04 9.62-0.08 24.04-0.03 7.21-0.06 15.63-0.09 24.65-0.02 9.03-0.05 18.67-0.08 28.33-0.03 9.69-0.06 19.39-0.08 28.52-0.02 9.16-0.04 17.74-0.05 25.11-0.02 14.82-0.04 24.77-0.04 24.77 0 7.9-1.47 16-4.12 23.71-2.65 7.49-6.5 14.35-11.27 20.12-4.8 5.36-10.52 9.56-16.89 12.39-6.4 2.48-13.42 3.8-20.76 3.97 0 0-4.17 0.09-11.99 0.21-7.83 0.08-19.32 0.13-33.97 0.07-7.33-0.08-15.46-0.2-24.31-0.38-8.86-0.23-18.46-0.52-28.72-0.88-10.28-0.43-21.22-0.93-32.78-1.53-11.57-0.66-23.75-1.42-36.49-2.28q-9.56-0.68-19.53-1.44-9.97-0.77-20.33-1.63-10.36-0.88-21.08-1.83-10.73-0.97-21.8-2-11.08-1.06-22.47-2.18-11.4-1.13-23.1-2.32-11.7-1.21-23.67-2.45-11.99-1.26-24.22-2.55-12.25-1.3-24.72-2.63-12.48-1.32-25.16-2.66-12.7-1.33-25.58-2.67-12.89-1.33-25.93-2.65-13.06-1.3-26.25-2.59-13.2-1.26-26.51-2.5-13.33-1.21-26.74-2.38-13.43-1.14-26.91-2.23-13.5-1.05-27.03-2.04-13.55-0.96-27.11-1.85-13.57-0.84-27.12-1.61-13.58-0.72-27.1-1.35-13.55-0.59-27.02-1.08-13.5-0.45-26.88-0.8-13.41-0.29-26.69-0.49-13.3-0.14-26.44-0.17-13.17 0.02-26.14 0.14-12.99 0.18-25.76 0.47-12.8 0.34-25.34 0.79-12.57 0.5-24.86 1.09-12.3 0.66-24.3 1.4-12.01 0.8-23.68 1.68-11.69 0.94-23 1.94-11.33 1.06-22.26 2.18-10.95 1.2-21.45 2.44-10.51 1.23-20.55 2.49c-13.41 1.81-26.17 3.63-38.19 5.45-12.06 1.91-23.36 3.79-33.84 5.6-10.5 1.89-20.16 3.7-28.91 5.39-8.77 1.77-16.61 3.39-23.44 4.83-6.83 1.43-12.65 2.68-17.38 3.71-9.47 2.15-14.53 3.32-14.53 3.32-8.92 2.1-17.42 2.5-25.16 1.42-7.76-1.02-14.77-3.51-20.67-7.25-5.91-3.67-10.71-8.6-14.02-14.6-3.32-5.93-5.15-12.98-5.15-20.98 0 0 0-10.13 0-25.32 0-7.59 0-16.45 0-25.94 0-9.49 0-19.61 0-29.74 0-10.12 0-20.25 0-29.74 0-9.49 0-18.35 0-25.94 0-15.19 0-25.31 0-25.31 0-8.01 1.64-16.67 4.59-25.46 2.94-8.8 7.18-17.69 12.42-26.14 5.24-8.38 11.48-16.24 18.42-23.04 6.93-6.67 14.56-12.23 22.57-16.18z" />
+          </svg>
+        </div>
       </div>
     </div>
 
@@ -336,145 +450,177 @@
       <img src="./assets/files/zaanstreek.svg" alt="Zaanstreek"
         class="min-w-[100vw] w-full h-auto opacity-80 md:hidden">
       <img src="./assets/files/zaanstreek-long.svg" alt="Zaanstreek"
-        class="hidden md:block lg:hidden min-w-[100vw] w-full h-auto opacity-80">
-      <img src="./assets/files/zaanstreek-extralong.svg" alt="Zaanstreek"
-        class="hidden lg:block min-w-[100vw] w-full h-auto opacity-80">
+        class="hidden md:block container mx-auto max-w-7xl w-full h-auto opacity-80">
     </div>
   </section>
 
   <!-- Diensten Carousel Section -->
   <section class="py-16 lg:py-24 bg-[#39613c1f] overflow-x-hidden">
     <div class="container mx-auto max-w-7xl">
-      <div class="w-full ms-6 pb-3 border-b-2 border-[#c3a967]">
+      <div class="w-full ms-6 md:ms-0 pb-3 border-b-2 border-[#c3a967]">
         <h2
           class="max-w-[15rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
           Wat voor werk wij doen?
         </h2>
       </div>
-      <p class="max-w-2xl mt-2 mx-6 text-lg text-[#294830]/90 mb-4 lg:mb-8 font-georama">
-        Van de eerste schop in de grond tot de laatste steen op z’n plek. Wij verzorgen buitenruimtes die kloppen.
-        Van renovaties en bestrating tot grond- en sloopwerk.
-      </p>
 
-      <!-- Carousel Container -->
-      <div class="max-w-7xl mx-auto px-4 lg:px-8">
-        <!-- Navigation Buttons -->
-        <div class="flex justify-end gap-2 mb-4">
-          <button id="prev-btn" class="text-[#294830] p-2 lg:p-3 transition-all duration-200 hover:scale-110"
-            aria-label="Vorige dienst">
-            <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button id="next-btn" class="text-[#294830] p-2 lg:p-3 transition-all duration-200 hover:scale-110"
-            aria-label="Volgende dienst">
-            <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+      <!-- Content container: tekst links, carousel rechts op grote schermen -->
+      <div class="mt-2 flex flex-col lg:items-center lg:flex-row lg:gap-8 xl:gap-12">
+        <!-- Tekst sectie -->
+        <div class="mx-6 md:mx-0 lg:w-[30%] lg:pt-6">
+          <h3 class="hidden md:block mb-2 text-2xl font-semibold text-[#294830] font-georama">
+            Wij verzorgen buitenruimtes
+          </h3>
+          <p class="max-w-2xl text-lg text-[#294830]/90 mb-4 font-georama">
+            Van de eerste schop in de grond tot de laatste steen op z'n plek.
+          </p>
+          <p class="max-w-2xl text-lg text-[#294830]/90 mb-4 font-georama">
+            Buitenruimtes die kloppen. Van renovaties en bestrating tot grond- en sloopwerk.
+          </p>
         </div>
 
-        <!-- Carousel Wrapper -->
-        <div class="overflow-visible py-4">
-          <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out gap-4 sm:gap-6 md:gap-8">
-
-            <!-- Slide 1: Tuinaanleg -->
-            <div class="carousel-slide flex-shrink-0 w-[170px] sm:w-[210px] md:w-[230px]">
-              <div
-                class="relative bg-[#c3a967] rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 h-[215px] sm:h-[260px] md:h-[290px] flex flex-col items-center justify-center p-4">
-                <svg class="w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 text-white mb-3" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-                <h3 class="text-base sm:text-lg md:text-xl font-bold text-white text-center font-georama">Tuinaanleg &
-                  tuinrenovatie</h3>
-              </div>
-            </div>
-
-            <!-- Slide 2: Bestrating -->
-            <div class="carousel-slide flex-shrink-0 w-[170px] sm:w-[210px] md:w-[230px]">
-              <div
-                class="relative bg-[#c3a967] rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 h-[215px] sm:h-[260px] md:h-[290px] flex flex-col items-center justify-center p-4">
-                <svg class="w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 text-white mb-3" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" />
-                </svg>
-                <h3 class="text-base sm:text-lg md:text-xl font-bold text-white text-center font-georama">Bestrating
-                </h3>
-              </div>
-            </div>
-
-            <!-- Slide 3: Schuttingen & overkappingen -->
-            <div class="carousel-slide flex-shrink-0 w-[170px] sm:w-[210px] md:w-[230px]">
-              <div
-                class="relative bg-[#c3a967] rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 h-[215px] sm:h-[260px] md:h-[290px] flex flex-col items-center justify-center p-4">
-                <svg class="w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 text-white mb-3" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-                <h3 class="text-base sm:text-lg md:text-xl font-bold text-white text-center font-georama">Schuttingen &
-                  overkappingen</h3>
-              </div>
-            </div>
-
-            <!-- Slide 4: Grondwerk & sloopwerk -->
-            <div class="carousel-slide flex-shrink-0 w-[170px] sm:w-[210px] md:w-[230px]">
-              <div
-                class="relative bg-[#c3a967] rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 h-[215px] sm:h-[260px] md:h-[290px] flex flex-col items-center justify-center p-4">
-                <svg class="w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 text-white mb-3" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-                <h3 class="text-base sm:text-lg md:text-xl font-bold text-white text-center font-georama">Grondwerk &
-                  sloopwerk</h3>
-              </div>
-            </div>
-
+        <!-- Carousel Container -->
+        <div class="lg:w-[70%] lg:ms-auto">
+          <!-- Navigation Buttons -->
+          <div class="mb-4 flex justify-end gap-2">
+            <button id="prev-btn" class="text-[#294830] p-2 lg:p-3 transition-all duration-200 hover:scale-110"
+              aria-label="Vorige dienst">
+              <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button id="next-btn" class="text-[#294830] p-2 lg:p-3 transition-all duration-200 hover:scale-110"
+              aria-label="Volgende dienst">
+              <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
-        </div>
 
-        <!-- Dots Indicator -->
-        <div class="flex justify-center gap-3 mt-8">
-          <button class="carousel-dot w-8 h-2 rounded-full bg-[#294830] transition-all duration-300 hover:opacity-80"
-            data-index="0" aria-label="Ga naar dienst 1"></button>
-          <button class="carousel-dot w-2 h-2 rounded-full bg-[#294830] transition-all duration-300 hover:opacity-80"
-            data-index="1" aria-label="Ga naar dienst 2"></button>
-          <button class="carousel-dot w-2 h-2 rounded-full bg-[#294830] transition-all duration-300 hover:opacity-80"
-            data-index="2" aria-label="Ga naar dienst 3"></button>
-          <button class="carousel-dot w-2 h-2 rounded-full bg-[#294830] transition-all duration-300 hover:opacity-80"
-            data-index="3" aria-label="Ga naar dienst 4"></button>
+          <!-- Carousel Wrapper -->
+          <div class="overflow-hidden py-6">
+            <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out gap-4 sm:gap-5 lg:gap-4">
+
+              <!-- Slide 1: Tuinaanleg -->
+              <a href="./diensten/tuinaanleg-tuinrenovatie/"
+                aria-label="Bekijk dienstpagina Tuinaanleg en tuinrenovatie"
+                class="carousel-slide flex-shrink-0 w-[170px] sm:w-[200px] md:w-[210px] lg:w-[170px] xl:w-[185px]">
+                <div
+                  class="relative bg-[#c3a967] rounded-2xl transition-all duration-300 hover:scale-105 h-[215px] sm:h-[250px] md:h-[255px] lg:h-[215px] xl:h-[230px] flex flex-col items-center justify-center p-4">
+                  <svg
+                    class="w-16 h-16 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px] lg:w-14 lg:h-14 xl:w-16 xl:h-16 text-white mb-3"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                  <h3
+                    class="text-base sm:text-lg lg:text-base xl:text-lg font-bold text-white text-center font-georama">
+                    Tuinaanleg &
+                    tuinrenovatie</h3>
+                </div>
+              </a>
+
+              <!-- Slide 2: Bestrating -->
+              <a href="./diensten/bestrating/" aria-label="Bekijk dienstpagina Bestrating"
+                class="carousel-slide flex-shrink-0 w-[170px] sm:w-[200px] md:w-[210px] lg:w-[170px] xl:w-[185px]">
+                <div
+                  class="relative bg-[#c3a967] rounded-2xl transition-all duration-300 hover:scale-105 h-[215px] sm:h-[250px] md:h-[255px] lg:h-[215px] xl:h-[230px] flex flex-col items-center justify-center p-4">
+                  <svg
+                    class="w-16 h-16 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px] lg:w-14 lg:h-14 xl:w-16 xl:h-16 text-white mb-3"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" />
+                  </svg>
+                  <h3
+                    class="text-base sm:text-lg lg:text-base xl:text-lg font-bold text-white text-center font-georama">
+                    Bestrating
+                  </h3>
+                </div>
+              </a>
+
+              <!-- Slide 3: Schuttingen & overkappingen -->
+              <a href="./diensten/schuttingen-overkappingen/"
+                aria-label="Bekijk dienstpagina Schuttingen en overkappingen"
+                class="carousel-slide flex-shrink-0 w-[170px] sm:w-[200px] md:w-[210px] lg:w-[170px] xl:w-[185px]">
+                <div
+                  class="relative bg-[#c3a967] rounded-2xl transition-all duration-300 hover:scale-105 h-[215px] sm:h-[250px] md:h-[255px] lg:h-[215px] xl:h-[230px] flex flex-col items-center justify-center p-4">
+                  <svg
+                    class="w-16 h-16 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px] lg:w-14 lg:h-14 xl:w-16 xl:h-16 text-white mb-3"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                  <h3
+                    class="text-base sm:text-lg lg:text-base xl:text-lg font-bold text-white text-center font-georama">
+                    Schuttingen &
+                    overkappingen</h3>
+                </div>
+              </a>
+
+              <!-- Slide 4: Grondwerk & sloopwerk -->
+              <a href="./diensten/grondwerk-sloopwerk/" aria-label="Bekijk dienstpagina Grondwerk en sloopwerk"
+                class="carousel-slide flex-shrink-0 w-[170px] sm:w-[200px] md:w-[210px] lg:w-[170px] xl:w-[185px]">
+                <div
+                  class="relative bg-[#c3a967] rounded-2xl transition-all duration-300 hover:scale-105 h-[215px] sm:h-[250px] md:h-[255px] lg:h-[215px] xl:h-[230px] flex flex-col items-center justify-center p-4">
+                  <svg
+                    class="w-16 h-16 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px] lg:w-14 lg:h-14 xl:w-16 xl:h-16 text-white mb-3"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                  <h3
+                    class="text-base sm:text-lg lg:text-base xl:text-lg font-bold text-white text-center font-georama">
+                    Grondwerk &
+                    sloopwerk</h3>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Dots Indicator -->
+          <div class="mt-6 lg:mt-7 flex justify-center gap-3">
+            <button
+              class="carousel-dot w-6 h-[3px] rounded-full bg-[#b6a162] transition-all duration-300 hover:opacity-80"
+              data-index="0" aria-label="Ga naar dienst 1"></button>
+            <button
+              class="carousel-dot w-6 h-[3px] rounded-full bg-[#b6a162] transition-all duration-300 hover:opacity-80"
+              data-index="1" aria-label="Ga naar dienst 2"></button>
+            <button
+              class="carousel-dot w-6 h-[3px] rounded-full bg-[#b6a162] transition-all duration-300 hover:opacity-80"
+              data-index="2" aria-label="Ga naar dienst 3"></button>
+            <button
+              class="carousel-dot w-6 h-[3px] rounded-full bg-[#b6a162] transition-all duration-300 hover:opacity-80"
+              data-index="3" aria-label="Ga naar dienst 4"></button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Ons Werk Section -->
-  <section class="relative py-20 lg:py-32 bg-gradient-to-b from-green-50 to-white overflow-hidden">
+  <section class="relative pb-20 lg:pb-32 bg-[#39613c1f] overflow-hidden">
     <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        
+      <div class="grid md:grid-cols-2 gap-16 sm:gap-28 md:gap-12 items-center">
+
         <!-- Content Side -->
-        <div class="order-2 lg:order-1 space-y-8">
+        <div class="relative order-2 lg:order-1 space-y-8">
           <div class="space-y-4">
             <div class="w-16 h-1 bg-[#c3a967] rounded-full"></div>
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#294830] font-georama leading-tight">
               Ons werk draait niet alleen om een mooie tuin
             </h2>
           </div>
-          
+
           <div class="space-y-6 text-lg text-[#294830]/90 font-georama leading-relaxed">
             <p>
-              Een buitenruimte moet jarenlang goed blijven liggen, praktisch zijn in gebruik en passen bij de woning. 
+              Een buitenruimte moet jarenlang goed blijven liggen, praktisch zijn in gebruik en passen bij de omgeving.
               Daarom kijken wij bij ieder project verder dan alleen het eindplaatje.
             </p>
             <p>
-              Een terras dat verzakt omdat de ondergrond niet goed is voorbereid, bestrating die water vasthoudt of 
-              schuttingen die na een paar jaar scheef trekken. Dit zijn problemen die ontstaan wanneer er te snel 
-              gewerkt wordt of verkeerde keuzes worden gemaakt. Juist daarom besteden wij veel aandacht aan de basis 
+              Een terras dat verzakt omdat de ondergrond niet goed is voorbereid, bestrating die water vasthoudt of
+              schuttingen die na een paar jaar scheef trekken. Dit zijn problemen die ontstaan wanneer er te snel
+              gewerkt wordt of verkeerde keuzes worden gemaakt. Juist daarom besteden wij veel aandacht aan de basis
               van het werk.
             </p>
             <div class="relative pt-6 mt-8">
@@ -484,25 +630,87 @@
               </p>
             </div>
           </div>
+
+          <!-- Shovel background shape bottom-right corner -->
+          <div class="absolute right-[-20px] top-[20px] lg:top-[15px]">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              id="Layer_1" viewBox="0 0 511.994 511.994" xml:space="preserve" class="w-[8rem] h-[8rem] opacity-20">
+              <path style="fill:#BCC987;"
+                d="M125.477,254.463L0.11,423.732c-0.229,38.73,15.315,72.931,15.315,72.931  s33.947,15.425,72.508,15.331l169.481-125.595L125.477,254.463z" />
+              <path style="fill:#7D9062;"
+                d="M257.767,386.755l-98.057,98.057c-20.724,20.724-47.195,27.116-71.78,27.183l65.507-65.507  c29.393-29.393,65.118-49.337,103.974-60.088L257.767,386.755z" />
+              <path style="fill:#9CAC74;"
+                d="M65.397,358.446L0.109,423.732c0.127-24.457,6.561-50.751,27.166-71.356l97.845-98.268l0.356,0.356  C114.734,293.328,94.788,329.053,65.397,358.446z" />
+              <path style="fill:#FCDB5A;"
+                d="M426.309,108.903L270.533,264.679l-28.598,5.264l5.267-28.595L402.977,85.572  c2.015,5.13,5.088,9.93,9.245,14.086S421.177,106.888,426.309,108.903z" />
+              <rect x="217.62" y="253.603" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 603.7334 290.1268)"
+                style="fill:#FEC45E;" width="48.319" height="32.995" />
+              <path style="fill:#5D734F;"
+                d="M405.869,106.012c-19.608-19.608-19.608-51.512,0-71.12l11.564-11.563l21.164,4.233l-20.029,20.029  c-12.607,12.607-12.607,33.117,0,45.724c12.607,12.607,33.117,12.607,45.724,0l20.029-20.029l4.233,21.164l-11.563,11.563  C457.381,125.62,425.477,125.62,405.869,106.012z" />
+              <polygon style="fill:#FEC45E;"
+                points="511.887,71.122 488.555,94.453 463.159,69.056 457.893,40.46 486.49,45.725 " />
+              <rect x="435.462" y="2.194" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 795.9594 -260.6357)"
+                style="fill:#FCDB5A;" width="32.995" height="64.673" />
+              <path style="fill:#9CAC74;"
+                d="M218.656,263.593l-58.701,58.701c-8.182,8.182-8.182,21.448,0,29.63  c8.182,8.182,21.448,8.182,29.63,0l58.701-58.701L218.656,263.593z" />
+            </svg>
+          </div>
         </div>
 
         <!-- Image Side -->
-        <div class="order-1 lg:order-2 relative">
-          <div class="relative aspect-[10/11] lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#294830]/20 to-transparent z-10"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&h=1600&auto=format&fit=crop&q=80" 
+        <div class="order-1 lg:order-2 relative z-[1]">
+          <div class="relative h-full w-full md:aspect-[10/11] rounded-t-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1725586660046-0c2bea151543?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Professioneel hovenierswerk met focus op de ondergrond"
-              class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-              loading="lazy"
-            />
+              class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" />
           </div>
+
+          <div class="absolute inset-0 bg-black/15 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"></div>
+          <div class="absolute inset-0 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"
+            style="background: linear-gradient(to bottom, transparent 0%, transparent 60%, #6f5530 95%);"></div>
+
+          <!-- Wave Divider -->
+          <div class="absolute top-full left-0 right-0 -mt-px">
+            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200" class="w-full h-auto">
+              <style>
+                .s1 {
+                  fill: #6f5530
+                }
+              </style>
+              <path id="Vorm 1" fill-rule="evenodd" class="s1"
+                d="m50-74.6c0 0 14.06-4.14 38.67-10.32 6.15-1.34 12.97-2.72 20.38-4.13 7.42-1.29 15.44-2.56 24.01-3.78q12.86-1.62 27.3-2.96 14.43-1.08 30.27-1.74 15.83-0.38 32.9-0.22q17.07 0.45 35.21 1.49 18.14 1.33 37.19 3.27 19.05 2.2 38.84 4.98 9.89 1.47 19.93 3.08 10.04 1.65 20.22 3.43 10.18 1.82 20.47 3.74 10.29 1.97 20.67 4.02 10.39 2.08 20.84 4.24 10.46 2.17 20.97 4.4 10.5 2.25 21.04 4.52 10.54 2.29 21.09 4.58 10.55 2.29 21.09 4.58 10.54 2.27 21.04 4.52 10.51 2.23 20.97 4.4 10.45 2.16 20.84 4.24 10.38 2.05 20.67 4.02 10.29 1.92 20.47 3.74 10.18 1.78 20.22 3.43 10.04 1.61 19.93 3.08 19.79 2.78 38.84 4.98 19.05 1.94 37.19 3.27 18.14 1.04 35.21 1.49 17.07 0.16 32.91-0.22 15.83-0.66 30.26-1.74 14.44-1.34 27.3-2.96c8.57-1.22 16.59-2.49 24.01-3.78 7.41-1.41 14.23-2.79 20.38-4.13 24.61-6.18 38.67-10.32 38.67-10.32 13.81-4.52 26.31-3.42 35.36 2.14 9.04 5.35 14.64 15.45 14.64 29.26 0 0 0 11.25 0 22.5 0 11.25 0 22.5 0 22.5 0 13.81-5.6 28.7-14.64 41.45-9.05 12.54-21.55 22.63-35.36 27.15 0 0-14.06 4.14-38.67 10.32-6.15 1.34-12.97 2.72-20.38 4.13-7.42 1.29-15.44 2.56-24.01 3.78q-12.86 1.62-27.3 2.96-14.43 1.08-30.26 1.74-15.84 0.38-32.91 0.22-17.07-0.45-35.21-1.49-18.14-1.33-37.19-3.27-19.05-2.2-38.84-4.98-9.89-1.47-19.93-3.08-10.04-1.65-20.22-3.43-10.18-1.82-20.47-3.74-10.29-1.97-20.67-4.02-10.39-2.08-20.84-4.24-10.46-2.17-20.97-4.4-10.5-2.25-21.04-4.52-10.54-2.29-21.09-4.58-10.55-2.29-21.09-4.58-10.54-2.27-21.04-4.52-10.51-2.23-20.97-4.4-10.45-2.16-20.84-4.24-10.38-2.05-20.67-4.02-10.29-1.92-20.47-3.74-10.18-1.78-20.22-3.43-10.04-1.61-19.93-3.08-19.79-2.78-38.84-4.98-19.05-1.94-37.19-3.27-18.14-1.04-35.21-1.49-17.07-0.16-32.9 0.22-15.84 0.66-30.27 1.74-14.44 1.34-27.3 2.96c-8.57 1.22-16.59 2.49-24.01 3.78-7.41 1.41-14.23 2.79-20.38 4.13-24.61 6.18-38.67 10.32-38.67 10.32-13.81 4.52-26.31 3.42-35.36-2.14-9.04-5.35-14.64-15.45-14.64-29.26 0 0 0-11.25 0-22.5 0-11.25 0-22.5 0-22.5 0-13.81 5.6-28.7 14.64-41.45 9.05-12.54 21.55-22.63 35.36-27.15z" />
+            </svg>
+          </div>
+
           <!-- Decorative Element -->
           <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-[#c3a967]/30 rounded-full blur-3xl -z-10"></div>
           <div class="absolute -top-6 -right-6 w-40 h-40 bg-[#294830]/10 rounded-full blur-3xl -z-10"></div>
         </div>
 
       </div>
+    </div>
+
+    <!-- Leaf background shape -->
+    <div class="absolute bottom-[-80px] right-[-20px] lg:right-[-80px]">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+        viewBox="0 0 512.001 512.001" xml:space="preserve"
+        class="w-[10rem] h-[10rem] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  opacity-20 z-0">
+        <g>
+          <path style="fill:#85C250;"
+            d="M103.276,408.724c115.566,27.45,234.695,1.65,316.624-80.277   c28.541-28.541,50.263-61.601,65.302-97.447l-180.554-23.645L103.276,408.724z" />
+          <path style="fill:#85C250;"
+            d="M214.85,64.835c-10.928,8.274-21.387,17.355-31.298,27.266   c-81.929,81.929-107.727,201.058-80.277,316.624l135.221-111.576L214.85,64.835z" />
+        </g>
+        <path style="fill:#C9D467;"
+          d="M370.796,164.848L347.151,7.115c-47.949,8.92-93.153,28.08-132.301,57.718v232.314L370.796,164.848z" />
+        <path style="fill:#FFCE47;"
+          d="M500.177,11.822C448.671-0.411,396.462-2.058,347.151,7.116v157.733L500.177,11.822z" />
+        <path style="fill:#C9D467;"
+          d="M500.177,11.822L281.001,230.998H485.2C513.332,163.945,518.064,87.129,500.177,11.822z" />
+        <path style="fill:#FFEBB4;"
+          d="M11.822,511.999c-3.025,0-6.052-1.155-8.36-3.463c-4.617-4.617-4.617-12.103,0-16.721L491.817,3.463  c4.617-4.616,12.103-4.616,16.721,0c4.617,4.617,4.617,12.103,0,16.721L20.182,508.537  C17.874,510.845,14.848,511.999,11.822,511.999z" />
+      </svg>
     </div>
   </section>
 
@@ -511,12 +719,13 @@
     <div class="container mx-auto max-w-7xl">
       <div class="ms-6 pb-3 border-b-2 border-[#c3a967]">
         <h2
-          class="max-w-[16rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
+          class="max-w-[17rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
           Bekijk onze laatste projecten
         </h2>
       </div>
       <p class="max-w-2xl mt-2 mx-6 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
-        Bekijk recente posts over onze projecten hieronder, en volg ons voor inspiratie en een kijkje achter de schermen.
+        Bekijk recente posts over onze projecten hieronder, en volg ons voor inspiratie en een kijkje achter de
+        schermen.
       </p>
     </div>
 
@@ -622,7 +831,8 @@
             <div class="flex h-56 w-full overflow-hidden" data-ig-track>
               <img class="h-56 min-w-full object-cover [overflow-clip-margin:unset] transition"
                 src="./assets/images/instagram-post-2.png" alt="Bestratingsproject foto" loading="lazy" />
-              <video class="h-56 min-w-full object-cover [overflow-clip-margin:unset] transition" loop muted playsinline preload="metadata">
+              <video class="h-56 min-w-full object-cover [overflow-clip-margin:unset] transition" loop muted playsinline
+                preload="metadata">
                 <source src="./assets/videos/instagram-post-2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -760,7 +970,8 @@
                 class="block text-xs text-[#294830]/70 transition font-georama">Wormerveer</a>
             </div>
           </div>
-          <video class="h-56 w-full object-cover [overflow-clip-margin:unset] transition" autoplay loop muted playsinline preload="none">
+          <video class="h-56 w-full object-cover [overflow-clip-margin:unset] transition" autoplay loop muted
+            playsinline preload="none">
             <source src="./assets/videos/instagram-post-4.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -812,7 +1023,7 @@
             <path
               d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
           </svg>
-          Volg ons op Instagram
+          Bekijk meer op Instagram
         </a>
       </div>
     </div>
@@ -820,14 +1031,14 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="relative py-16 lg:py-24 bg-[#ecf3e7]">
+  <section id="contact" class="relative py-16 lg:py-24 bg-[#ecf3e7]">
     <div class="container mx-auto px-4 lg:px-8">
       <div class="max-w-3xl mx-auto relative z-10">
 
         <!-- Section Header -->
         <div class="text-center mb-8 lg:mb-12">
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#294830] mb-3 font-georama">
-            Ben jij op zoek naar een droomtuin?
+            Ben jij op zoek naar onze hulp?
           </h2>
           <p class="text-lg text-[#294830]/80 font-georama">
             Laat je gegevens achter en we nemen zo snel mogelijk contact met je op voor een vrijblijvend gesprek.
@@ -1011,17 +1222,17 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#294830] text-[#ecf3e7] pb-12 lg:pb-16">
+  <footer class="bg-[#294830] text-[#ecf3e7] pb-12 lg:pb-4">
     <div class="container mx-auto px-6">
 
-      <!-- Top Section: Logo & Info -->
-      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12 mb-8">
+      <div class="grid gap-10 pt-4 md:grid-cols-2 xl:grid-cols-[1.1fr_1fr_1fr] xl:gap-12">
 
-        <!-- Logo Container (like header) -->
-        <div class="flex flex-col items-center lg:items-start">
-          <div class="flex flex-col items-center bg-[#294830] px-6 pb-6">
-            <img src="./assets/images/logo-transparent.png" alt="MD Compleet Logo" class="h-16 w-16 mb-3" loading="lazy">
-            <div class="flex flex-col gap-1 justify-center items-center">
+        <!-- Brand -->
+        <div class="flex flex-col items-center">
+          <div class="flex flex-col justify-center items-center">
+            <img src="./assets/images/logo-transparent.png" alt="MD Compleet Logo" class="h-16 w-16 mb-3"
+              loading="lazy">
+            <div class="flex flex-col gap-1 items-center">
               <span class="text-xl leading-none tracking-[0.1em] font-bold text-white uppercase font-baskervville">MD
                 Compleet</span>
               <span class="text-sm leading-none tracking-[0.2em] text-[#c3a967] font-georama">Hoveniers</span>
@@ -1029,140 +1240,140 @@
           </div>
         </div>
 
-        <!-- Address & Contact Buttons -->
-        <div class="flex flex-col gap-6 lg:gap-8">
+        <blockquote class="text-center text-2xl lg:text-3xl font-georama leading-tight max-w-sm">
+          <span class="text-[#c3a967]">buitenruimtes met</span><br class="md:hidden"> karakter
+        </blockquote>
 
-          <!-- Address -->
-          <div class="flex flex-col gap-2">
-            <h3 class="text-lg font-semibold text-[#c3a967] font-georama mb-1">Bezoekadres</h3>
-            <div class="text-sm font-georama space-y-1">
-              <p>MD Compleet</p>
-              <p>Havenstraat 72</p>
-              <p>1506PL Zaandam</p>
-            </div>
-          </div>
-
-          <!-- Separator -->
-          <div class="w-full h-[2px] bg-[#c3a967]"></div>
-
-          <!-- Contact Buttons -->
-          <div class="flex flex-wrap gap-3">
+        <!-- Contact & Social -->
+        <div class="flex flex-col gap-4">
+          <h3 class="text-lg font-semibold text-[#c3a967] font-georama text-left md:text-left">Contact</h3>
+          <div class="flex flex-wrap gap-3 justify-start">
             <a href="tel:+31612345678"
-              class="flex items-center gap-2 px-4 py-2 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
+              class="inline-flex items-center justify-center h-10 w-10 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200"
               aria-label="Bel ons">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
-              Bellen
             </a>
 
             <a href="mailto:info@mdcompleet.nl"
-              class="flex items-center gap-2 px-4 py-2 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
+              class="inline-flex items-center justify-center h-10 w-10 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200"
               aria-label="Mail ons">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
-              Mailen
             </a>
 
             <a href="https://www.instagram.com/mdcompleet/" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 px-4 py-2 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
+              class="inline-flex items-center justify-center h-10 w-10 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200"
               aria-label="Volg ons op Instagram">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
               </svg>
-              Instagram
             </a>
 
             <a href="https://www.facebook.com/mdcompleet" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 px-4 py-2 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200 font-georama font-semibold text-sm"
+              class="inline-flex items-center justify-center h-10 w-10 bg-[#ecf3e7] text-[#294830] rounded-lg hover:bg-[#d4b978] transition-colors duration-200"
               aria-label="Volg ons op Facebook">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
-              Facebook
             </a>
+          </div>
+
+          <div class="space-y-1 text-sm font-georama text-start md:text-left">
+            <a href="tel:+31612345678" class="block hover:text-[#c3a967] transition-colors duration-200">+31 6 123 456
+              78</a>
+            <a href="mailto:info@mdcompleet.nl"
+              class="block hover:text-[#c3a967] transition-colors duration-200">info@mdcompleet.nl</a>
           </div>
         </div>
 
         <!-- Navigation Links -->
-        <nav class="flex flex-col gap-3">
-          <h3 class="text-lg font-semibold text-[#c3a967] font-georama mb-1">Navigatie</h3>
-          <ul class="flex flex-col gap-2 text-sm font-georama">
-            <li>
-              <a href="#home" class="hover:text-[#c3a967] transition-colors duration-200">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#tuinaanleg" class="hover:text-[#c3a967] transition-colors duration-200">
-                Tuinaanleg & tuinrenovatie
-              </a>
-            </li>
-            <li>
-              <a href="#bestrating" class="hover:text-[#c3a967] transition-colors duration-200">
-                Bestrating
-              </a>
-            </li>
-            <li>
-              <a href="#schuttingen" class="hover:text-[#c3a967] transition-colors duration-200">
-                Schuttingen & overkappingen
-              </a>
-            </li>
-            <li>
-              <a href="#grondwerk" class="hover:text-[#c3a967] transition-colors duration-200">
-                Grondwerk & sloopwerk
-              </a>
-            </li>
-            <li>
-              <a href="#ons-verhaal" class="hover:text-[#c3a967] transition-colors duration-200">
-                Ons verhaal
-              </a>
-            </li>
-            <li>
-              <a href="#contact" class="hover:text-[#c3a967] transition-colors duration-200">
-                Contact
-              </a>
-            </li>
-          </ul>
+        <nav class="flex w-full flex-col gap-3">
+          <h3 class="text-lg font-semibold text-[#c3a967] font-georama text-left">Navigatie</h3>
+          <div class="flex justify-start gap-2 gap-x-4 gap-y-2 text-sm font-georama text-center md:text-left">
+            <ul class="grid grid-cols-2 gap-4 justify-start items-start">
+              <li>
+                <a href="#home" class="flex w-full text-start hover:text-[#c3a967] transition-colors duration-200">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#ons-verhaal"
+                  class="flex w-full text-start hover:text-[#c3a967] transition-colors duration-200">
+                  Ons verhaal
+                </a>
+              </li>
+              <li>
+                <a href="./contact" class="flex w-full text-start hover:text-[#c3a967] transition-colors duration-200">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="flex w-full text-start hover:text-[#c3a967] transition-colors duration-200">
+                  Tuinaanleg
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="flex w-full text-start hover:text-[#c3a967] transition-colors duration-200">
+                  Tuinrenovatie
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="flex w-full text-start hover:text-[#c3a967] transition-colors duration-200">
+                  Bestrating
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="flex w-full text-start hover:text-[#c3a967] transition-colors duration-200">
+                  Schuttingen
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="flex w-full text-start hover:text-[#c3a967] transition-colors duration-200">
+                  Overkappingen
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="flex w-full text-start hover:text-[#c3a967] transition-colors duration-200">
+                  Grondwerk
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="flex w-full text-start hover:text-[#c3a967] transition-colors duration-200">
+                  Sloopwerk
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
-
       </div>
 
-      <!-- Quote Section -->
-      <div class="pt-8 mb-8">
-        <blockquote class="text-start text-4xl lg:text-lg font-georama max-w-2xl mx-auto">
-          <span class="text-[#c3a967]">buitenruimtes met</span><br>karakter
-        </blockquote>
-      </div>
+      <div class="mt-10 h-px w-full bg-[#c3a967]/70"></div>
 
       <!-- Bottom Section: Design Credit & Copyright -->
-      <div class="pt-6 flex flex-col md:flex-row justify-between items-start gap-1 text-xs font-georama">
+      <div class="pt-6 flex flex-col gap-3 text-xs font-georama items-center justify-center">
 
-        <div class="text-center md:text-right">
+        <div class="flex items-center justify-center gap-5 md:justify-start">
+          <a href="./privacy" class="hover:text-[#c3a967] transition-colors duration-200">Privacy</a>
+          <a href="./disclaimer" class="hover:text-[#c3a967] transition-colors duration-200">Disclaimer</a>
+        </div>
+
+        <div class="text-center md:text-left text-xs font-georama">
           <p>MD Compleet © <span id="copyright-year">2024</span></p>
+          <div class="flex items-center justify-center gap-1 md:justify-end">
+            <span>Website door</span>
+            <a href="https://www.riceweb.nl" target="_blank" rel="noopener noreferrer"
+              class="hover:text-[#c3a967] transition-colors duration-200">
+              Rice Web
+            </a>
+          </div>
         </div>
-
-        <a href="./privacy" class="text-center md:text-right">
-          <p>Privacy</p>
-        </a>
-
-        <a href="./disclaimer" class="text-center md:text-right">
-          <p>Disclaimer</p>
-        </a>
-
-        <div class="flex items-center gap-1">
-          <span>Webdesign:</span>
-          <a href="https://www.riceweb.nl" target="_blank" rel="noopener noreferrer"
-            class="transition-colors duration-200">
-            Rice Web
-          </a>
-        </div>
-
       </div>
 
     </div>
