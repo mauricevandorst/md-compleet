@@ -69,6 +69,7 @@
     fetchpriority="high">
   <link rel="stylesheet" href="./css/main.css" />
   <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js" defer></script>
+  <script src="./js/loading-screen.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/carousel.js" defer></script>
   <script src="./js/smooth-scroll.js" defer></script>
@@ -78,6 +79,28 @@
 </head>
 
 <body class="bg-[#ecf3e7]">
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="fixed inset-0 z-[300] flex flex-row">
+    <div id="loading-left" class="relative h-full w-[calc(50%+1px)] bg-[#294830] overflow-hidden" style="will-change: transform;">
+      <img src="./assets/images/logo-transparent-first-half.png" alt="" class="absolute right-0 top-1/2 -translate-y-1/2 h-36 w-max object-contain pointer-events-none drop-shadow-[0_0_18px_rgba(195,169,103,0.22)]" style="opacity: 0; transform: translate3d(0, -50%, 0) scale(0.84); transform-origin: right center; filter: drop-shadow(0 0 0 rgba(195, 169, 103, 0)); will-change: transform, opacity;">
+      <div class="pointer-events-none absolute inset-y-0 left-0 z-10 flex w-screen items-center justify-center overflow-hidden" aria-hidden="true">
+        <div id="loading-brand-left" class="mt-48 flex flex-col items-center gap-2 text-center" style="opacity: 0; transform: translate3d(0, 18px, 0) scale(0.96); will-change: transform, opacity;">
+          <span class="font-baskervville text-2xl font-bold uppercase tracking-[0.22em] text-white drop-shadow-[0_0_16px_rgba(255,255,255,0.16)] sm:text-3xl">MD Compleet</span>
+          <span class="font-almarai text-base tracking-[0.5em] text-[#c3a967] drop-shadow-[0_0_14px_rgba(195,169,103,0.28)] sm:text-sm">Hoveniers</span>
+        </div>
+      </div>
+    </div>
+    <div id="loading-right" class="relative -ml-px h-full w-[calc(50%+1px)] bg-[#294830] overflow-hidden" style="will-change: transform;">
+      <img src="./assets/images/logo-transparent-second-half.png" alt="" class="absolute left-0 top-[calc(50%+1px)] -translate-y-1/2 h-36 w-max object-contain pointer-events-none drop-shadow-[0_0_18px_rgba(195,169,103,0.22)]" style="opacity: 0; transform: translate3d(0, -50%, 0) scale(0.84); transform-origin: left center; filter: drop-shadow(0 0 0 rgba(195, 169, 103, 0)); will-change: transform, opacity;">
+      <div class="pointer-events-none absolute inset-y-0 right-0 z-10 flex w-screen items-center justify-center overflow-hidden" aria-hidden="true">
+        <div id="loading-brand-right" class="mt-48 flex flex-col items-center gap-2 text-center" style="opacity: 0; transform: translate3d(0, 18px, 0) scale(0.96); will-change: transform, opacity;">
+          <span class="font-baskervville text-2xl font-bold uppercase tracking-[0.22em] text-white drop-shadow-[0_0_16px_rgba(255,255,255,0.16)] sm:text-3xl">MD Compleet</span>
+          <span class="font-almarai text-base tracking-[0.5em] text-[#c3a967] drop-shadow-[0_0_14px_rgba(195,169,103,0.28)] sm:text-sm">Hoveniers</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Logo (altijd boven overlays) -->
   <a id="logo-container" href="#home" aria-label="Ga naar boven"
