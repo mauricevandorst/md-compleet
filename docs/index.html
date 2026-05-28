@@ -130,7 +130,8 @@
         <span
           class="text-base leading-none tracking-[0.1em] lg:text-2xl font-bold text-white uppercase font-baskervville">MD
           Compleet</span>
-        <span class="text-[13px] leading-none tracking-[0.2em] lg:text-base text-[#c3a967] font-almarai">Hoveniers</span>
+        <span
+          class="text-[13px] leading-none tracking-[0.2em] lg:text-base text-[#c3a967] font-almarai">Hoveniers</span>
       </div>
     </div>
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"
@@ -426,17 +427,21 @@
     </div>
 
     <!-- Content -->
-    <div class="container mx-auto px-6 z-10 relative pb-8 md:px-16 lg:px-24">
+    <div class="container mx-auto px-6 z-10 relative pb-2 md:pb-8 md:px-16 lg:px-24">
       <div class="max-w-3xl lg:max-w-5xl flex flex-col gap-3">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-none font-georama">
-          Buitenruimtes met karakter.
+          Hoveniers met karakter.
         </h1>
         <p class="md:hidden text-xl md:text-2xl lg:text-3xl text-white/90 font-light font-georama">
-          Stijlvol, praktisch en duurzaam.
+          Stijlvol, praktisch en duurzaam buitenwerk.
         </p>
         <p class="hidden md:block max-w-3xl text-xl md:text-2xl lg:text-3xl text-white/90 font-light font-georama">
           Stijlvolle, praktische en duurzame buitenruimtes die passen bij elke plek.
         </p>
+        <a href="#contact"
+          class="w-max text-sm tracking-[0.02em] inline-flex border border-[#ddca98] text-[#ddca98] bg-transparent justify-center px-4 py-2 rounded-[5px] font-medium font-georama">
+          Offerte aanvragen →
+        </a>
       </div>
     </div>
   </section>
@@ -464,7 +469,8 @@
       <div class="ms-9 me-9 mt-8 mb-12 max-w-3xl aspect-[16/9] relative">
         <img
           src="https://images.unsplash.com/photo-1588680281884-5e694f9e9e52?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-          alt="Professioneel tuinonderhoud" class="w-full h-full rounded-xl shadow-lg object-cover" loading="lazy">
+          alt="Professioneel tuinonderhoud" class="w-full h-full rounded-t-2xl lg:rounded-t-3xl shadow-lg object-cover"
+          loading="lazy">
 
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/15 rounded-t-2xl md:rounded-t-3xl lg:rounded-t-[2rem]"></div>
@@ -498,19 +504,19 @@
   <!-- Diensten Carousel Section -->
   <section class="py-16 lg:py-24 bg-[#39613c1f] overflow-x-hidden">
     <div class="container mx-auto max-w-7xl">
-      <div class="w-full ms-6 md:ms-0 pb-3 border-b-2 border-[#c3a967]">
+      <div class="w-full ms-6 xl:ms-0 pb-3 border-b-2 border-[#c3a967]">
         <h2
-          class="max-w-[15rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
-          Wat voor werk wij doen?
+          class="max-w-[17rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
+          Wat voor werk wij uitvoeren?
         </h2>
       </div>
 
       <!-- Content container: tekst links, carousel rechts op grote schermen -->
       <div class="mt-2 flex flex-col lg:items-center lg:flex-row lg:gap-8 xl:gap-12">
         <!-- Tekst sectie -->
-        <div class="mx-6 md:mx-0 lg:w-[30%] lg:pt-6">
-          <h3 class="hidden md:block mb-2 text-2xl font-semibold text-[#294830] font-georama">
-            Wij verzorgen buitenruimtes
+        <div class="mx-6 xl:mx-0 lg:w-[30%] lg:pt-6">
+          <h3 class="hidden xl:block mb-2 text-2xl font-semibold text-[#294830] font-georama">
+            Wij verzorgen buitenruimtes.
           </h3>
           <p class="max-w-2xl text-lg text-[#294830]/90 mb-4 font-georama">
             Van de eerste schop in de grond tot de laatste steen op z'n plek.
@@ -640,12 +646,12 @@
   </section>
 
   <!-- Ons Werk Section -->
-  <section class="relative pb-20 lg:pb-32 bg-[#39613c1f] overflow-hidden">
+  <section class="relative py-20 lg:py-32 bg-[#e5ebe2] overflow-hidden">
     <div class="container mx-auto max-w-7xl px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-16 sm:gap-28 md:gap-12 items-center">
 
         <!-- Content Side -->
-        <div class="relative order-2 lg:order-1 space-y-8">
+        <div class="relative order-2 md:order-1 space-y-8">
           <div class="space-y-4">
             <div class="w-16 h-1 bg-[#c3a967] rounded-full"></div>
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#294830] font-georama leading-tight">
@@ -658,23 +664,32 @@
               Een buitenruimte moet jarenlang goed blijven liggen, praktisch zijn in gebruik en passen bij de omgeving.
               Daarom kijken wij bij ieder project verder dan alleen het eindplaatje.
             </p>
-            <p>
-              Een terras dat verzakt omdat de ondergrond niet goed is voorbereid, bestrating die water vasthoudt of
-              schuttingen die na een paar jaar scheef trekken. Dit zijn problemen die ontstaan wanneer er te snel
-              gewerkt wordt of verkeerde keuzes worden gemaakt. Juist daarom besteden wij veel aandacht aan de basis
-              van het werk.
-            </p>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl font-semibold text-[#294830] font-georama">
+                Wat wij regelmatig tegenkomen?
+              </h3>
+              <p>
+                Een terras dat verzakt omdat de ondergrond niet goed is voorbereid, bestrating die water vasthoudt of
+                schuttingen die na een paar jaar scheef trekken. Dit zijn problemen die ontstaan wanneer er te snel
+                gewerkt wordt of verkeerde keuzes worden gemaakt. Juist daarom besteden wij veel aandacht aan de basis
+                van het werk.
+              </p>
+            </div>
             <div class="relative pt-6 mt-8">
               <div class="absolute top-0 left-0 w-[50%] h-0.5 bg-[#c3a967]"></div>
               <p class="text-xl font-semibold text-[#294830]">
                 Wij weten dat goed werk onder de grond begint.
               </p>
+              <a href="#contact"
+                class="w-full sm:w-max mt-4 text-base tracking-[0.02em] inline-flex border border-[#294830] text-[#294830] bg-transparent justify-center px-4 py-2 rounded-[5px] font-medium font-georama">
+                Bekijk ons werk →
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Image Side -->
-        <div class="order-1 lg:order-2 relative z-[1]">
+        <div class="order-1 md:order-2 relative z-[1]">
           <div class="relative h-full w-full md:aspect-[10/11] rounded-t-2xl overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1725586660046-0c2bea151543?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -733,20 +748,20 @@
   <!-- Instagram Galerij Section -->
   <section class="relative pt-16 lg:pt-24 pb-24 lg:pb-28 overflow-x-hidden bg-[#ecf3e7]">
     <div class="container mx-auto max-w-7xl">
-      <div class="ms-6 pb-3 border-b-2 border-[#c3a967]">
+      <div class="ms-6 lg:ms-0 pb-3 border-b-2 border-[#c3a967]">
         <h2
           class="max-w-[17rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
-          Bekijk onze recente projecten
+          Volg onze projecten op de voet mee
         </h2>
       </div>
-      <p class="max-w-2xl mt-2 mx-6 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
+      <p class="max-w-2xl mt-2 mx-6 lg:mx-0 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
         Bekijk posts over onze projecten hieronder, en volg ons voor inspiratie en een kijkje achter de
         schermen.
       </p>
     </div>
 
     <!-- Instagram Gallery Grid -->
-    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-0">
       <div class="grid gap-4 items-start sm:grid-cols-2 lg:grid-cols-4">
 
         <!-- Instagram Post Card -->
@@ -1049,136 +1064,105 @@
   <!-- Information Section -->
   <section class="relative py-20 lg:py-32 bg-[#d6e1d2] overflow-hidden">
     <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-16 sm:gap-28 md:gap-12 items-center">
+      <div class="grid md:grid-cols-2 gap-16 sm:gap-28 md:gap-12 items-center md:items-start">
 
         <!-- Content Side -->
-        <div class="relative order-2 lg:order-1 space-y-8">
-          <div class="space-y-4">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#294830] font-georama leading-tight">
-              Onze middelen, uw droomtuin
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="inline-block h-[0.95em] w-[0.95em] align-[-0.08em]">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
-                    d="M8.10627 18.2468C5.29819 16.0833 2 13.5422 2 9.1371C2 4.27416 7.50016 0.825464 12 5.50063V20.5C11 20.5 10 19.7294 8.96173 18.9109C8.68471 18.6925 8.39814 18.4717 8.10627 18.2468Z"
-                    fill="#c3a967"></path>
-                  <path
-                    d="M15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063V20.5C13 20.5 14 19.7294 15.0383 18.9109Z"
-                    fill="#c3a967"></path>
-                </g>
-              </svg>
-            </h2>
-          </div>
-
-          <div class="space-y-6 text-lg text-[#294830]/90 font-georama">
-            <p>
-              Van eerste schets tot de laatste afwerking. Wij realiseren tuinen die mooi blijven,
-              praktisch werken en direct meer waarde geven aan uw woning.
-            </p>
-            <div class="space-y-5">
-              <div>
-                <img
-                  src="https://images.unsplash.com/photo-1588680281884-5e694f9e9e52?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0"
-                  alt="Tuinaanleg en renovatie"
-                  class="mb-3 h-[10rem] w-full object-cover [overflow-clip-margin:unset] shadow-sm sm:h-[11rem]"
-                  loading="lazy" />
-                <h3 class="text-xl font-semibold text-[#294830]">Tuinaanleg & tuinrenovatie</h3>
-                <p class="mt-1 text-base text-[#294830]/85">
-                  Wilt u een nieuwe tuin laten aanleggen of uw bestaande tuin renoveren? Wij maken een slim ontwerp,
-                  zorgen voor strakke uitvoering en leveren een buitenruimte die past bij uw woonstijl, onderhoudswensen
-                  en budget.
-                </p>
-              </div>
-              <div>
-                <img
-                  src="https://images.unsplash.com/photo-1669910462922-32b56f4998a3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Bestrating oprit en terras"
-                  class="mb-3 h-[10rem] w-full object-cover [overflow-clip-margin:unset] shadow-sm sm:h-[11rem]"
-                  loading="lazy" />
-                <h3 class="text-xl font-semibold text-[#294830]">Bestrating voor oprit, terras en tuinpad</h3>
-                <p class="mt-1 text-base text-[#294830]/85">
-                  Als specialist in bestrating in de Zaanstreek verzorgen we fundering, afschot en afwerking tot in
-                  detail. Zo krijgt u een stevige oprit of terras dat jarenlang strak blijft liggen zonder verzakkingen.
-                </p>
-              </div>
-              <div>
-                <img
-                  src="https://images.unsplash.com/photo-1696846912973-3233cc80bf86?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Schuttingen en overkappingen"
-                  class="mb-3 h-[10rem] w-full object-cover [overflow-clip-margin:unset] shadow-sm sm:h-[11rem]"
-                  loading="lazy" />
-                <h3 class="text-xl font-semibold text-[#294830]">Schuttingen & overkappingen</h3>
-                <p class="mt-1 text-base text-[#294830]/85">
-                  Meer privacy, sfeer en comfort in uw tuin? Wij plaatsen duurzame schuttingen en bouwen overkappingen
-                  op maat, zodat u in elk seizoen maximaal geniet van uw buitenruimte.
-                </p>
-              </div>
-            </div>
-            <div class="relative pt-6 mt-8">
-              <div class="absolute top-0 left-0 w-[50%] h-0.5 bg-[#c3a967]"></div>
-              <p class="text-xl font-semibold text-[#294830]">
-                Vragen? Stuur ons gerust een berichtje.
-              </p>
-              <div class="flex gap-2 mt-4">
-                <a href="#contact"
-                  class="inline-flex gap-1 items-center rounded-md border border-[#37593f] bg-white/10 px-5 py-2.5 font-georama text-sm font-semibold text-[#37593f] backdrop-blur-[1px] transition hover:bg-white/20 sm:text-base">
-                  Bericht sturen
-                  <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1"
-                    aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M20 4C21.6569 4 23 5.34315 23 7V17C23 18.6569 21.6569 20 20 20H4C2.34315 20 1 18.6569 1 17V7C1 5.34315 2.34315 4 4 4H20ZM19.2529 6H4.74718L11.3804 11.2367C11.7437 11.5236 12.2563 11.5236 12.6197 11.2367L19.2529 6ZM3 7.1688V17C3 17.5523 3.44772 18 4 18H20C20.5523 18 21 17.5523 21 17V7.16882L13.8589 12.8065C12.769 13.667 11.231 13.667 10.1411 12.8065L3 7.1688Z"
-                          fill="#37593f"></path>
-                      </g>
-                    </svg>
-                  </span>
-                </a>
-                <a href="https://wa.me/31612345678?text=Hallo%20MD%20Compleet%2C%20ik%20heb%20een%20vraag%20over%20bestrating."
-                  target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 rounded-md bg-[#c8ac68] px-5 py-2.5 font-georama text-sm font-semibold text-[#0f3d37] transition hover:brightness-95 sm:text-base"
-                  aria-label="Stuur een WhatsApp-bericht">
-                  WhatsApp
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-4 w-4" fill="currentColor"
-                    aria-hidden="true">
-                    <path
-                      d="M16.001 3C8.821 3 3 8.701 3 15.734c0 2.468.718 4.853 2.082 6.91L3.7 29l6.604-1.341a13.2 13.2 0 0 0 5.697 1.282h.005C23.184 28.94 29 23.24 29 16.206 29 9.174 23.18 3 16.001 3zm0 23.815h-.004a10.8 10.8 0 0 1-5.484-1.485l-.393-.233-3.922.797.833-3.79-.255-.387a10.62 10.62 0 0 1-1.647-5.593c0-5.85 4.85-10.608 10.872-10.608 5.996 0 10.868 4.758 10.868 10.608 0 5.85-4.872 10.69-10.868 10.69zm5.963-7.848c-.327-.161-1.932-.944-2.231-1.052-.299-.108-.517-.161-.736.161-.219.322-.847 1.052-1.038 1.268-.191.215-.382.242-.709.08-.327-.161-1.382-.5-2.632-1.594-.973-.852-1.63-1.904-1.821-2.226-.191-.322-.02-.496.143-.657.147-.145.327-.376.49-.564.163-.188.218-.322.327-.537.109-.215.054-.403-.027-.564-.082-.161-.736-1.778-1.009-2.436-.266-.639-.536-.552-.736-.562l-.627-.011c-.218 0-.573.08-.872.403-.299.322-1.145 1.12-1.145 2.732s1.172 3.17 1.336 3.39c.164.215 2.307 3.456 5.587 4.845.78.333 1.389.532 1.864.681.783.247 1.495.212 2.057.129.628-.092 1.932-.779 2.204-1.531.272-.752.272-1.397.191-1.531-.082-.134-.299-.215-.627-.376z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="space-y-4">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#294830] font-georama leading-tight">
+            Onze middelen, uw droomtuin
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="inline-block h-[0.95em] w-[0.95em] align-[-0.08em]">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.10627 18.2468C5.29819 16.0833 2 13.5422 2 9.1371C2 4.27416 7.50016 0.825464 12 5.50063V20.5C11 20.5 10 19.7294 8.96173 18.9109C8.68471 18.6925 8.39814 18.4717 8.10627 18.2468Z"
+                  fill="#c3a967"></path>
+                <path
+                  d="M15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063V20.5C13 20.5 14 19.7294 15.0383 18.9109Z"
+                  fill="#c3a967"></path>
+              </g>
+            </svg>
+          </h2>
         </div>
 
-        <!-- Image Side -->
-        <div class="order-1 lg:order-2 relative z-[1]">
-          <div class="relative w-full aspect-video rounded-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1719324923613-ff0884b031ed?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Stevige en duurzame opritbestrating"
-              class="w-full h-full rounded-2xl shadow-lg object-cover" 
-              loading="lazy" />
-
-            <!-- Overlay -->
-            <div class="absolute inset-0 bg-black/15 rounded-t-2xl"></div>
-            <div class="absolute inset-0 rounded-t-2xl"
-              style="background: linear-gradient(to bottom, transparent 0%, transparent 70%, #464829 100%);"></div>
-
-            <!-- Wave Divider -->
-            <div class="absolute top-full left-0 right-0 -mt-px">
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 1280 69" class="w-full h-full">
-                <style>
-                  .s2 {
-                    fill: #464829
-                  }
-                </style>
-                <path id="Vorm 1" fill-rule="evenodd" class="s2"
-                  d="m58-238.8c0 0 4.55-2.17 13.07-6.07 8.53-3.71 21.03-8.8 36.94-14.69 7.96-2.69 16.77-5.5 26.36-8.33 9.59-2.62 19.97-5.2 31.05-7.68 11.08-2.21 22.88-4.26 35.31-6.09 12.43-1.52 25.5-2.77 39.14-3.71q10.24-0.51 20.88-0.77 10.65-0.12 21.68 0.04 11.03 0.3 22.42 0.88 11.4 0.73 23.12 1.76 11.73 1.16 23.76 2.62 12.03 1.6 24.34 3.49 12.31 2.01 24.87 4.32 12.56 2.42 25.35 5.1 12.79 2.79 25.78 5.83 12.98 3.13 26.14 6.48 13.16 3.42 26.46 7.03 13.3 3.67 26.72 7.49 13.42 3.86 26.93 7.83 13.51 4.01 27.09 8.08 13.57 4.09 27.18 8.2 13.61 4.12 27.24 8.22 13.62 4.09 27.22 8.13 13.61 4.02 27.17 7.95 13.56 3.88 27.06 7.66 13.49 3.72 26.9 7.29 13.4 3.52 26.68 6.86 13.28 3.27 26.42 6.35 13.13 2.99 26.1 5.78 12.96 2.69 25.73 5.16 12.77 2.37 25.31 4.5 12.55 2.03 24.85 3.81 12.29 1.68 24.31 3.1 12.02 1.31 23.74 2.36 11.72 0.94 23.11 1.63 11.39 0.57 22.42 0.9 11.04 0.21 21.69 0.19 10.65-0.14 20.9-0.49c13.65-0.7 26.74-1.67 39.2-2.87 12.45-1.48 24.27-3.15 35.38-4.97 11.1-2.07 21.5-4.24 31.12-6.45 9.62-2.42 18.45-4.83 26.43-7.16 15.96-5.12 28.5-9.61 37.06-12.9 8.55-3.49 13.11-5.43 13.11-5.43 8.03-3.57 15.68-5.61 22.63-6.23 6.95-0.75 13.21 0 18.47 2.14 5.25 2.06 9.5 5.58 12.42 10.48 2.91 4.86 4.5 11.14 4.48 18.76 0 0-0.04 9.62-0.08 24.04-0.03 7.21-0.06 15.63-0.09 24.65-0.02 9.03-0.05 18.67-0.08 28.33-0.03 9.69-0.06 19.39-0.08 28.52-0.02 9.16-0.04 17.74-0.05 25.11-0.02 14.82-0.04 24.77-0.04 24.77 0 7.9-1.47 16-4.12 23.71-2.65 7.49-6.5 14.35-11.27 20.12-4.8 5.36-10.52 9.56-16.89 12.39-6.4 2.48-13.42 3.8-20.76 3.97 0 0-4.17 0.09-11.99 0.21-7.83 0.08-19.32 0.13-33.97 0.07-7.33-0.08-15.46-0.2-24.31-0.38-8.86-0.23-18.46-0.52-28.72-0.88-10.28-0.43-21.22-0.93-32.78-1.53-11.57-0.66-23.75-1.42-36.49-2.28q-9.56-0.68-19.53-1.44-9.97-0.77-20.33-1.63-10.36-0.88-21.08-1.83-10.73-0.97-21.8-2-11.08-1.06-22.47-2.18-11.4-1.13-23.1-2.32-11.7-1.21-23.67-2.45-11.99-1.26-24.22-2.55-12.25-1.3-24.72-2.63-12.48-1.32-25.16-2.66-12.7-1.33-25.58-2.67-12.89-1.33-25.93-2.65-13.06-1.3-26.25-2.59-13.2-1.26-26.51-2.5-13.33-1.21-26.74-2.38-13.43-1.14-26.91-2.23-13.5-1.05-27.03-2.04-13.55-0.96-27.11-1.85-13.57-0.84-27.12-1.61-13.58-0.72-27.1-1.35-13.55-0.59-27.02-1.08-13.5-0.45-26.88-0.8-13.41-0.29-26.69-0.49-13.3-0.14-26.44-0.17-13.17 0.02-26.14 0.14-12.99 0.18-25.76 0.47-12.8 0.34-25.34 0.79-12.57 0.5-24.86 1.09-12.3 0.66-24.3 1.4-12.01 0.8-23.68 1.68-11.69 0.94-23 1.94-11.33 1.06-22.26 2.18-10.95 1.2-21.45 2.44-10.51 1.23-20.55 2.49c-13.41 1.81-26.17 3.63-38.19 5.45-12.06 1.91-23.36 3.79-33.84 5.6-10.5 1.89-20.16 3.7-28.91 5.39-8.77 1.77-16.61 3.39-23.44 4.83-6.83 1.43-12.65 2.68-17.38 3.71-9.47 2.15-14.53 3.32-14.53 3.32-8.92 2.1-17.42 2.5-25.16 1.42-7.76-1.02-14.77-3.51-20.67-7.25-5.91-3.67-10.71-8.6-14.02-14.6-3.32-5.93-5.15-12.98-5.15-20.98 0 0 0-10.13 0-25.32 0-7.59 0-16.45 0-25.94 0-9.49 0-19.61 0-29.74 0-10.12 0-20.25 0-29.74 0-9.49 0-18.35 0-25.94 0-15.19 0-25.31 0-25.31 0-8.01 1.64-16.67 4.59-25.46 2.94-8.8 7.18-17.69 12.42-26.14 5.24-8.38 11.48-16.24 18.42-23.04 6.93-6.67 14.56-12.23 22.57-16.18z" />
-              </svg>
+        <div class="space-y-6 text-lg text-[#294830]/90 font-georama">
+          <p>
+            Van eerste schets tot de laatste afwerking. Wij realiseren tuinen die mooi blijven,
+            praktisch werken en direct meer waarde geven aan uw woning.
+          </p>
+          <div class="space-y-5">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1588680281884-5e694f9e9e52?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0"
+                alt="Tuinaanleg en renovatie"
+                class="mb-3 h-[10rem] rounded-[5px] w-full object-cover [overflow-clip-margin:unset] shadow-sm sm:h-[11rem]"
+                loading="lazy" />
+              <h3 class="text-xl font-semibold text-[#294830]">Tuinaanleg & tuinrenovatie</h3>
+              <p class="mt-1 text-base text-[#294830]/85">
+                Wilt u een nieuwe tuin laten aanleggen of uw bestaande tuin renoveren? Wij maken een slim ontwerp,
+                zorgen voor strakke uitvoering en leveren een buitenruimte die past bij uw woonstijl, onderhoudswensen
+                en budget.
+              </p>
+            </div>
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1669910462922-32b56f4998a3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Bestrating oprit en terras"
+                class="mb-3 h-[10rem] rounded-[5px] w-full object-cover [overflow-clip-margin:unset] shadow-sm sm:h-[11rem]"
+                loading="lazy" />
+              <h3 class="text-xl font-semibold text-[#294830]">Bestrating voor oprit, terras en tuinpad</h3>
+              <p class="mt-1 text-base text-[#294830]/85">
+                Als specialist in bestrating in de Zaanstreek verzorgen we fundering, afschot en afwerking tot in
+                detail. Zo krijgt u een stevige oprit of terras dat jarenlang strak blijft liggen zonder verzakkingen.
+              </p>
+            </div>
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1696846912973-3233cc80bf86?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Schuttingen en overkappingen"
+                class="mb-3 h-[10rem] rounded-[5px] w-full object-cover [overflow-clip-margin:unset] shadow-sm sm:h-[11rem]"
+                loading="lazy" />
+              <h3 class="text-xl font-semibold text-[#294830]">Schuttingen & overkappingen</h3>
+              <p class="mt-1 text-base text-[#294830]/85">
+                Meer privacy, sfeer en comfort in uw tuin? Wij plaatsen duurzame schuttingen en bouwen overkappingen
+                op maat, zodat u in elk seizoen maximaal geniet van uw buitenruimte.
+              </p>
+            </div>
+          </div>
+          <div class="relative pt-6 mt-8">
+            <div class="absolute top-0 left-0 w-[50%] h-0.5 bg-[#c3a967]"></div>
+            <p class="text-xl font-semibold text-[#294830]">
+              Vragen? Stuur ons gerust een berichtje.
+            </p>
+            <div class="flex gap-2 mt-4">
+              <a href="#contact"
+                class="inline-flex gap-1 items-center rounded-md border border-[#37593f] bg-white/10 px-5 py-2.5 font-georama text-sm font-semibold text-[#37593f] backdrop-blur-[1px] transition hover:bg-white/20 sm:text-base">
+                Bericht sturen
+                <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1"
+                  aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20 4C21.6569 4 23 5.34315 23 7V17C23 18.6569 21.6569 20 20 20H4C2.34315 20 1 18.6569 1 17V7C1 5.34315 2.34315 4 4 4H20ZM19.2529 6H4.74718L11.3804 11.2367C11.7437 11.5236 12.2563 11.5236 12.6197 11.2367L19.2529 6ZM3 7.1688V17C3 17.5523 3.44772 18 4 18H20C20.5523 18 21 17.5523 21 17V7.16882L13.8589 12.8065C12.769 13.667 11.231 13.667 10.1411 12.8065L3 7.1688Z"
+                        fill="#37593f"></path>
+                    </g>
+                  </svg>
+                </span>
+              </a>
+              <a href="https://wa.me/31612345678?text=Hallo%20MD%20Compleet%2C%20ik%20heb%20een%20vraag%20over%20bestrating."
+                target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-md bg-[#c8ac68] px-5 py-2.5 font-georama text-sm font-semibold text-[#0f3d37] transition hover:brightness-95 sm:text-base"
+                aria-label="Stuur een WhatsApp-bericht">
+                WhatsApp
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-4 w-4" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M16.001 3C8.821 3 3 8.701 3 15.734c0 2.468.718 4.853 2.082 6.91L3.7 29l6.604-1.341a13.2 13.2 0 0 0 5.697 1.282h.005C23.184 28.94 29 23.24 29 16.206 29 9.174 23.18 3 16.001 3zm0 23.815h-.004a10.8 10.8 0 0 1-5.484-1.485l-.393-.233-3.922.797.833-3.79-.255-.387a10.62 10.62 0 0 1-1.647-5.593c0-5.85 4.85-10.608 10.872-10.608 5.996 0 10.868 4.758 10.868 10.608 0 5.85-4.872 10.69-10.868 10.69zm5.963-7.848c-.327-.161-1.932-.944-2.231-1.052-.299-.108-.517-.161-.736.161-.219.322-.847 1.052-1.038 1.268-.191.215-.382.242-.709.08-.327-.161-1.382-.5-2.632-1.594-.973-.852-1.63-1.904-1.821-2.226-.191-.322-.02-.496.143-.657.147-.145.327-.376.49-.564.163-.188.218-.322.327-.537.109-.215.054-.403-.027-.564-.082-.161-.736-1.778-1.009-2.436-.266-.639-.536-.552-.736-.562l-.627-.011c-.218 0-.573.08-.872.403-.299.322-1.145 1.12-1.145 2.732s1.172 3.17 1.336 3.39c.164.215 2.307 3.456 5.587 4.845.78.333 1.389.532 1.864.681.783.247 1.495.212 2.057.129.628-.092 1.932-.779 2.204-1.531.272-.752.272-1.397.191-1.531-.082-.134-.299-.215-.627-.376z" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
