@@ -82,21 +82,39 @@
 
   <!-- Loading Screen -->
   <div id="loading-screen" class="fixed inset-0 z-[300] flex flex-row">
-    <div id="loading-left" class="relative h-full w-[calc(50%+1px)] bg-[#294830] overflow-hidden" style="will-change: transform;">
-      <img src="./assets/images/logo-transparent-first-half.png" alt="" class="absolute right-0 top-1/2 -translate-y-1/2 h-36 w-max object-contain pointer-events-none drop-shadow-[0_0_18px_rgba(195,169,103,0.22)]" style="opacity: 0; transform: translate3d(0, -50%, 0) scale(0.84); transform-origin: right center; filter: drop-shadow(0 0 0 rgba(195, 169, 103, 0)); will-change: transform, opacity;">
-      <div class="pointer-events-none absolute inset-y-0 left-0 z-10 flex w-screen items-center justify-center overflow-hidden" aria-hidden="true">
-        <div id="loading-brand-left" class="mt-48 flex flex-col items-center gap-2 text-center" style="opacity: 0; transform: translate3d(0, 18px, 0) scale(0.96); will-change: transform, opacity;">
-          <span class="font-baskervville text-2xl font-bold uppercase tracking-[0.22em] text-white drop-shadow-[0_0_16px_rgba(255,255,255,0.16)] sm:text-3xl">MD Compleet</span>
-          <span class="font-almarai text-base tracking-[0.5em] text-[#c3a967] drop-shadow-[0_0_14px_rgba(195,169,103,0.28)] sm:text-sm">Hoveniers</span>
+    <div id="loading-left" class="relative h-full w-[calc(50%+1px)] bg-[#294830] overflow-hidden"
+      style="will-change: transform;">
+      <img src="./assets/images/logo-transparent-first-half.png" alt=""
+        class="absolute right-0 top-1/2 -translate-y-1/2 h-36 w-max object-contain pointer-events-none drop-shadow-[0_0_18px_rgba(195,169,103,0.22)]"
+        style="opacity: 0; transform: translate3d(0, -50%, 0) scale(0.84); transform-origin: right center; filter: drop-shadow(0 0 0 rgba(195, 169, 103, 0)); will-change: transform, opacity;">
+      <div
+        class="pointer-events-none absolute inset-y-0 left-0 z-10 flex w-screen items-center justify-center overflow-hidden"
+        aria-hidden="true">
+        <div id="loading-brand-left" class="mt-48 flex flex-col items-center gap-2 text-center"
+          style="opacity: 0; transform: translate3d(0, 18px, 0) scale(0.96); will-change: transform, opacity;">
+          <span
+            class="font-baskervville text-2xl font-bold uppercase tracking-[0.22em] text-white drop-shadow-[0_0_16px_rgba(255,255,255,0.16)] sm:text-3xl">MD
+            Compleet</span>
+          <span
+            class="font-almarai text-base tracking-[0.5em] text-[#c3a967] drop-shadow-[0_0_14px_rgba(195,169,103,0.28)] sm:text-sm">Hoveniers</span>
         </div>
       </div>
     </div>
-    <div id="loading-right" class="relative -ml-px h-full w-[calc(50%+1px)] bg-[#294830] overflow-hidden" style="will-change: transform;">
-      <img src="./assets/images/logo-transparent-second-half.png" alt="" class="absolute left-0 top-[calc(50%+1px)] -translate-y-1/2 h-36 w-max object-contain pointer-events-none drop-shadow-[0_0_18px_rgba(195,169,103,0.22)]" style="opacity: 0; transform: translate3d(0, -50%, 0) scale(0.84); transform-origin: left center; filter: drop-shadow(0 0 0 rgba(195, 169, 103, 0)); will-change: transform, opacity;">
-      <div class="pointer-events-none absolute inset-y-0 right-0 z-10 flex w-screen items-center justify-center overflow-hidden" aria-hidden="true">
-        <div id="loading-brand-right" class="mt-48 flex flex-col items-center gap-2 text-center" style="opacity: 0; transform: translate3d(0, 18px, 0) scale(0.96); will-change: transform, opacity;">
-          <span class="font-baskervville text-2xl font-bold uppercase tracking-[0.22em] text-white drop-shadow-[0_0_16px_rgba(255,255,255,0.16)] sm:text-3xl">MD Compleet</span>
-          <span class="font-almarai text-base tracking-[0.5em] text-[#c3a967] drop-shadow-[0_0_14px_rgba(195,169,103,0.28)] sm:text-sm">Hoveniers</span>
+    <div id="loading-right" class="relative -ml-px h-full w-[calc(50%+1px)] bg-[#294830] overflow-hidden"
+      style="will-change: transform;">
+      <img src="./assets/images/logo-transparent-second-half.png" alt=""
+        class="absolute left-0 top-[calc(50%+1px)] -translate-y-1/2 h-36 w-max object-contain pointer-events-none drop-shadow-[0_0_18px_rgba(195,169,103,0.22)]"
+        style="opacity: 0; transform: translate3d(0, -50%, 0) scale(0.84); transform-origin: left center; filter: drop-shadow(0 0 0 rgba(195, 169, 103, 0)); will-change: transform, opacity;">
+      <div
+        class="pointer-events-none absolute inset-y-0 right-0 z-10 flex w-screen items-center justify-center overflow-hidden"
+        aria-hidden="true">
+        <div id="loading-brand-right" class="mt-48 flex flex-col items-center gap-2 text-center"
+          style="opacity: 0; transform: translate3d(0, 18px, 0) scale(0.96); will-change: transform, opacity;">
+          <span
+            class="font-baskervville text-2xl font-bold uppercase tracking-[0.22em] text-white drop-shadow-[0_0_16px_rgba(255,255,255,0.16)] sm:text-3xl">MD
+            Compleet</span>
+          <span
+            class="font-almarai text-base tracking-[0.5em] text-[#c3a967] drop-shadow-[0_0_14px_rgba(195,169,103,0.28)] sm:text-sm">Hoveniers</span>
         </div>
       </div>
     </div>
@@ -128,7 +146,7 @@
   </a>
 
   <!-- Header -->
-  <header id="header"
+  <header id="header" data-extra-page="true"
     class="fixed top-0 left-0 w-full z-50 bg-[#ecf3e7] h-[70px] lg:h-[95px] transition-all duration-300">
     <div class="mx-auto w-full max-w-[1280px] h-full px-4 lg:px-6 flex items-center justify-between">
 
@@ -149,19 +167,19 @@
             </button>
             <div
               class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <a href="#tuinaanleg"
+              <a href="./diensten/tuinaanleg-tuinrenovatie/"
                 class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200 first:rounded-t-lg">
                 Tuinaanleg & tuinrenovatie
               </a>
-              <a href="#bestrating"
+              <a href="./diensten/bestrating/"
                 class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200">
                 Bestrating
               </a>
-              <a href="#schuttingen"
+              <a href="./diensten/schuttingen-overkappingen/"
                 class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200">
                 Schuttingen & overkappingen
               </a>
-              <a href="#grondwerk"
+              <a href="./diensten/grondwerk-sloopwerk/"
                 class="block px-4 py-3 text-slate-700 hover:bg-[#ecf3e7] hover:text-[#c3a967] transition-colors duration-200 last:rounded-b-lg">
                 Grondwerk & sloopwerk
               </a>
@@ -231,11 +249,11 @@
 
         <!-- Hamburger menu -->
         <button id="menu-toggle"
-          class="relative w-10 h-10 flex flex-col justify-center items-center gap-1.5 hover:scale-110 transition-transform duration-200"
+          class="relative w-10 h-10 flex flex-col justify-center items-center gap-1 hover:scale-110 transition-transform duration-200"
           aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="block w-7 h-0.5 bg-[#294830] transition-all duration-300 menu-line-1"></span>
-          <span class="block w-7 h-0.5 bg-[#294830] transition-all duration-300 menu-line-2"></span>
-          <span class="block w-7 h-0.5 bg-[#294830] transition-all duration-300 menu-line-3"></span>
+          <span class="block w-6 h-0.5 bg-[#294830] transition-all duration-300 menu-line-1"></span>
+          <span class="block w-6 h-0.5 bg-[#294830] transition-all duration-300 menu-line-2"></span>
+          <span class="block w-6 h-0.5 bg-[#294830] transition-all duration-300 menu-line-3"></span>
         </button>
       </div>
 
@@ -279,16 +297,16 @@
             </svg>
           </button>
           <ul id="diensten-submenu" class="max-h-0 overflow-hidden transition-all duration-300 pe-3 pb-0">
-            <li><a href="#tuinaanleg"
+            <li><a href="./diensten/tuinaanleg-tuinrenovatie/"
                 class="block py-2 text-lg text-[#294830]/90 hover:text-[#c3a967] transition-colors duration-200 border-t-[2px] border-[#294830]/10">Tuinaanleg
                 & tuinrenovatie</a></li>
-            <li><a href="#bestrating"
+            <li><a href="./diensten/bestrating/"
                 class="block py-2 text-lg text-[#294830]/90 hover:text-[#c3a967] transition-colors duration-200">Bestrating</a>
             </li>
-            <li><a href="#schuttingen"
+            <li><a href="./diensten/schuttingen-overkappingen/"
                 class="block py-2 text-lg text-[#294830]/90 hover:text-[#c3a967] transition-colors duration-200">Schuttingen
                 & overkappingen</a></li>
-            <li><a href="#grondwerk"
+            <li><a href="./diensten/grondwerk-sloopwerk/"
                 class="block py-2 text-lg text-[#294830]/90 hover:text-[#c3a967] transition-colors duration-200">Grondwerk
                 & sloopwerk</a></li>
           </ul>
@@ -653,31 +671,6 @@
               </p>
             </div>
           </div>
-
-          <!-- Shovel background shape bottom-right corner -->
-          <div class="absolute right-[-20px] top-[20px] lg:top-[15px]">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-              id="Layer_1" viewBox="0 0 511.994 511.994" xml:space="preserve" class="w-[8rem] h-[8rem] opacity-20">
-              <path style="fill:#BCC987;"
-                d="M125.477,254.463L0.11,423.732c-0.229,38.73,15.315,72.931,15.315,72.931  s33.947,15.425,72.508,15.331l169.481-125.595L125.477,254.463z" />
-              <path style="fill:#7D9062;"
-                d="M257.767,386.755l-98.057,98.057c-20.724,20.724-47.195,27.116-71.78,27.183l65.507-65.507  c29.393-29.393,65.118-49.337,103.974-60.088L257.767,386.755z" />
-              <path style="fill:#9CAC74;"
-                d="M65.397,358.446L0.109,423.732c0.127-24.457,6.561-50.751,27.166-71.356l97.845-98.268l0.356,0.356  C114.734,293.328,94.788,329.053,65.397,358.446z" />
-              <path style="fill:#FCDB5A;"
-                d="M426.309,108.903L270.533,264.679l-28.598,5.264l5.267-28.595L402.977,85.572  c2.015,5.13,5.088,9.93,9.245,14.086S421.177,106.888,426.309,108.903z" />
-              <rect x="217.62" y="253.603" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 603.7334 290.1268)"
-                style="fill:#FEC45E;" width="48.319" height="32.995" />
-              <path style="fill:#5D734F;"
-                d="M405.869,106.012c-19.608-19.608-19.608-51.512,0-71.12l11.564-11.563l21.164,4.233l-20.029,20.029  c-12.607,12.607-12.607,33.117,0,45.724c12.607,12.607,33.117,12.607,45.724,0l20.029-20.029l4.233,21.164l-11.563,11.563  C457.381,125.62,425.477,125.62,405.869,106.012z" />
-              <polygon style="fill:#FEC45E;"
-                points="511.887,71.122 488.555,94.453 463.159,69.056 457.893,40.46 486.49,45.725 " />
-              <rect x="435.462" y="2.194" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 795.9594 -260.6357)"
-                style="fill:#FCDB5A;" width="32.995" height="64.673" />
-              <path style="fill:#9CAC74;"
-                d="M218.656,263.593l-58.701,58.701c-8.182,8.182-8.182,21.448,0,29.63  c8.182,8.182,21.448,8.182,29.63,0l58.701-58.701L218.656,263.593z" />
-            </svg>
-          </div>
         </div>
 
         <!-- Image Side -->
@@ -738,16 +731,16 @@
   </section>
 
   <!-- Instagram Galerij Section -->
-  <section class="relative pt-16 lg:pt-24 pb-24 lg:pb-28 overflow-x-hidden bg-[#ecf3e7] border-b-2 border-[#c3a967]">
+  <section class="relative pt-16 lg:pt-24 pb-24 lg:pb-28 overflow-x-hidden bg-[#ecf3e7]">
     <div class="container mx-auto max-w-7xl">
       <div class="ms-6 pb-3 border-b-2 border-[#c3a967]">
         <h2
           class="max-w-[17rem] sm:max-w-none text-3xl md:text-4xl lg:text-5xl text-start font-semibold text-[#294830] font-georama">
-          Bekijk onze laatste projecten
+          Bekijk onze recente projecten
         </h2>
       </div>
       <p class="max-w-2xl mt-2 mx-6 text-lg text-[#294830]/90 mb-8 lg:mb-12 font-georama">
-        Bekijk recente posts over onze projecten hieronder, en volg ons voor inspiratie en een kijkje achter de
+        Bekijk posts over onze projecten hieronder, en volg ons voor inspiratie en een kijkje achter de
         schermen.
       </p>
     </div>
@@ -782,8 +775,8 @@
 
           <!-- Post Video -->
           <video class="h-56 w-full object-cover [overflow-clip-margin:unset] transition" autoplay loop muted
-            playsinline preload="none">
-            <source src="./assets/videos/instagram-post-1.mp4" type="video/mp4">
+            playsinline preload="none" data-lazy-video>
+            <source data-src="./assets/videos/instagram-post-1.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
 
@@ -855,8 +848,8 @@
               <img class="h-56 min-w-full object-cover [overflow-clip-margin:unset] transition"
                 src="./assets/images/instagram-post-2.png" alt="Bestratingsproject foto" loading="lazy" />
               <video class="h-56 min-w-full object-cover [overflow-clip-margin:unset] transition" loop muted playsinline
-                preload="metadata">
-                <source src="./assets/videos/instagram-post-2.mp4" type="video/mp4">
+                preload="none" data-lazy-video>
+                <source data-src="./assets/videos/instagram-post-2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -994,8 +987,8 @@
             </div>
           </div>
           <video class="h-56 w-full object-cover [overflow-clip-margin:unset] transition" autoplay loop muted
-            playsinline preload="none">
-            <source src="./assets/videos/instagram-post-4.mp4" type="video/mp4">
+            playsinline preload="none" data-lazy-video>
+            <source data-src="./assets/videos/instagram-post-4.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <div class="space-y-2 px-3 py-3">
@@ -1053,6 +1046,190 @@
 
   </section>
 
+  <!-- Information Section -->
+  <section class="relative py-20 lg:py-32 bg-[#d6e1d2] overflow-hidden">
+    <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 sm:gap-28 md:gap-12 items-center">
+
+        <!-- Content Side -->
+        <div class="relative order-2 lg:order-1 space-y-8">
+          <div class="space-y-4">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#294830] font-georama leading-tight">
+              Onze middelen, uw droomtuin
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="inline-block h-[0.95em] w-[0.95em] align-[-0.08em]">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.10627 18.2468C5.29819 16.0833 2 13.5422 2 9.1371C2 4.27416 7.50016 0.825464 12 5.50063V20.5C11 20.5 10 19.7294 8.96173 18.9109C8.68471 18.6925 8.39814 18.4717 8.10627 18.2468Z"
+                    fill="#c3a967"></path>
+                  <path
+                    d="M15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063V20.5C13 20.5 14 19.7294 15.0383 18.9109Z"
+                    fill="#c3a967"></path>
+                </g>
+              </svg>
+            </h2>
+          </div>
+
+          <div class="space-y-6 text-lg text-[#294830]/90 font-georama">
+            <p>
+              Van eerste schets tot de laatste afwerking. Wij realiseren tuinen die mooi blijven,
+              praktisch werken en direct meer waarde geven aan uw woning.
+            </p>
+            <div class="space-y-5">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1588680281884-5e694f9e9e52?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0"
+                  alt="Tuinaanleg en renovatie"
+                  class="mb-3 h-[10rem] w-full object-cover [overflow-clip-margin:unset] shadow-sm sm:h-[11rem]"
+                  loading="lazy" />
+                <h3 class="text-xl font-semibold text-[#294830]">Tuinaanleg & tuinrenovatie</h3>
+                <p class="mt-1 text-base text-[#294830]/85">
+                  Wilt u een nieuwe tuin laten aanleggen of uw bestaande tuin renoveren? Wij maken een slim ontwerp,
+                  zorgen voor strakke uitvoering en leveren een buitenruimte die past bij uw woonstijl, onderhoudswensen
+                  en budget.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1669910462922-32b56f4998a3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Bestrating oprit en terras"
+                  class="mb-3 h-[10rem] w-full object-cover [overflow-clip-margin:unset] shadow-sm sm:h-[11rem]"
+                  loading="lazy" />
+                <h3 class="text-xl font-semibold text-[#294830]">Bestrating voor oprit, terras en tuinpad</h3>
+                <p class="mt-1 text-base text-[#294830]/85">
+                  Als specialist in bestrating in de Zaanstreek verzorgen we fundering, afschot en afwerking tot in
+                  detail. Zo krijgt u een stevige oprit of terras dat jarenlang strak blijft liggen zonder verzakkingen.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1696846912973-3233cc80bf86?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Schuttingen en overkappingen"
+                  class="mb-3 h-[10rem] w-full object-cover [overflow-clip-margin:unset] shadow-sm sm:h-[11rem]"
+                  loading="lazy" />
+                <h3 class="text-xl font-semibold text-[#294830]">Schuttingen & overkappingen</h3>
+                <p class="mt-1 text-base text-[#294830]/85">
+                  Meer privacy, sfeer en comfort in uw tuin? Wij plaatsen duurzame schuttingen en bouwen overkappingen
+                  op maat, zodat u in elk seizoen maximaal geniet van uw buitenruimte.
+                </p>
+              </div>
+            </div>
+            <div class="relative pt-6 mt-8">
+              <div class="absolute top-0 left-0 w-[50%] h-0.5 bg-[#c3a967]"></div>
+              <p class="text-xl font-semibold text-[#294830]">
+                Vragen? Stuur ons gerust een berichtje.
+              </p>
+              <div class="flex gap-2 mt-4">
+                <a href="#contact"
+                  class="inline-flex gap-1 items-center rounded-md border border-[#37593f] bg-white/10 px-5 py-2.5 font-georama text-sm font-semibold text-[#37593f] backdrop-blur-[1px] transition hover:bg-white/20 sm:text-base">
+                  Bericht sturen
+                  <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1"
+                    aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M20 4C21.6569 4 23 5.34315 23 7V17C23 18.6569 21.6569 20 20 20H4C2.34315 20 1 18.6569 1 17V7C1 5.34315 2.34315 4 4 4H20ZM19.2529 6H4.74718L11.3804 11.2367C11.7437 11.5236 12.2563 11.5236 12.6197 11.2367L19.2529 6ZM3 7.1688V17C3 17.5523 3.44772 18 4 18H20C20.5523 18 21 17.5523 21 17V7.16882L13.8589 12.8065C12.769 13.667 11.231 13.667 10.1411 12.8065L3 7.1688Z"
+                          fill="#37593f"></path>
+                      </g>
+                    </svg>
+                  </span>
+                </a>
+                <a href="https://wa.me/31612345678?text=Hallo%20MD%20Compleet%2C%20ik%20heb%20een%20vraag%20over%20bestrating."
+                  target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 rounded-md bg-[#c8ac68] px-5 py-2.5 font-georama text-sm font-semibold text-[#0f3d37] transition hover:brightness-95 sm:text-base"
+                  aria-label="Stuur een WhatsApp-bericht">
+                  WhatsApp
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-4 w-4" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M16.001 3C8.821 3 3 8.701 3 15.734c0 2.468.718 4.853 2.082 6.91L3.7 29l6.604-1.341a13.2 13.2 0 0 0 5.697 1.282h.005C23.184 28.94 29 23.24 29 16.206 29 9.174 23.18 3 16.001 3zm0 23.815h-.004a10.8 10.8 0 0 1-5.484-1.485l-.393-.233-3.922.797.833-3.79-.255-.387a10.62 10.62 0 0 1-1.647-5.593c0-5.85 4.85-10.608 10.872-10.608 5.996 0 10.868 4.758 10.868 10.608 0 5.85-4.872 10.69-10.868 10.69zm5.963-7.848c-.327-.161-1.932-.944-2.231-1.052-.299-.108-.517-.161-.736.161-.219.322-.847 1.052-1.038 1.268-.191.215-.382.242-.709.08-.327-.161-1.382-.5-2.632-1.594-.973-.852-1.63-1.904-1.821-2.226-.191-.322-.02-.496.143-.657.147-.145.327-.376.49-.564.163-.188.218-.322.327-.537.109-.215.054-.403-.027-.564-.082-.161-.736-1.778-1.009-2.436-.266-.639-.536-.552-.736-.562l-.627-.011c-.218 0-.573.08-.872.403-.299.322-1.145 1.12-1.145 2.732s1.172 3.17 1.336 3.39c.164.215 2.307 3.456 5.587 4.845.78.333 1.389.532 1.864.681.783.247 1.495.212 2.057.129.628-.092 1.932-.779 2.204-1.531.272-.752.272-1.397.191-1.531-.082-.134-.299-.215-.627-.376z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Side -->
+        <div class="order-1 lg:order-2 relative z-[1]">
+          <div class="relative w-full aspect-video rounded-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1719324923613-ff0884b031ed?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Stevige en duurzame opritbestrating"
+              class="w-full h-full rounded-2xl shadow-lg object-cover" 
+              loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/15 rounded-t-2xl"></div>
+            <div class="absolute inset-0 rounded-t-2xl"
+              style="background: linear-gradient(to bottom, transparent 0%, transparent 70%, #464829 100%);"></div>
+
+            <!-- Wave Divider -->
+            <div class="absolute top-full left-0 right-0 -mt-px">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 1280 69" class="w-full h-full">
+                <style>
+                  .s2 {
+                    fill: #464829
+                  }
+                </style>
+                <path id="Vorm 1" fill-rule="evenodd" class="s2"
+                  d="m58-238.8c0 0 4.55-2.17 13.07-6.07 8.53-3.71 21.03-8.8 36.94-14.69 7.96-2.69 16.77-5.5 26.36-8.33 9.59-2.62 19.97-5.2 31.05-7.68 11.08-2.21 22.88-4.26 35.31-6.09 12.43-1.52 25.5-2.77 39.14-3.71q10.24-0.51 20.88-0.77 10.65-0.12 21.68 0.04 11.03 0.3 22.42 0.88 11.4 0.73 23.12 1.76 11.73 1.16 23.76 2.62 12.03 1.6 24.34 3.49 12.31 2.01 24.87 4.32 12.56 2.42 25.35 5.1 12.79 2.79 25.78 5.83 12.98 3.13 26.14 6.48 13.16 3.42 26.46 7.03 13.3 3.67 26.72 7.49 13.42 3.86 26.93 7.83 13.51 4.01 27.09 8.08 13.57 4.09 27.18 8.2 13.61 4.12 27.24 8.22 13.62 4.09 27.22 8.13 13.61 4.02 27.17 7.95 13.56 3.88 27.06 7.66 13.49 3.72 26.9 7.29 13.4 3.52 26.68 6.86 13.28 3.27 26.42 6.35 13.13 2.99 26.1 5.78 12.96 2.69 25.73 5.16 12.77 2.37 25.31 4.5 12.55 2.03 24.85 3.81 12.29 1.68 24.31 3.1 12.02 1.31 23.74 2.36 11.72 0.94 23.11 1.63 11.39 0.57 22.42 0.9 11.04 0.21 21.69 0.19 10.65-0.14 20.9-0.49c13.65-0.7 26.74-1.67 39.2-2.87 12.45-1.48 24.27-3.15 35.38-4.97 11.1-2.07 21.5-4.24 31.12-6.45 9.62-2.42 18.45-4.83 26.43-7.16 15.96-5.12 28.5-9.61 37.06-12.9 8.55-3.49 13.11-5.43 13.11-5.43 8.03-3.57 15.68-5.61 22.63-6.23 6.95-0.75 13.21 0 18.47 2.14 5.25 2.06 9.5 5.58 12.42 10.48 2.91 4.86 4.5 11.14 4.48 18.76 0 0-0.04 9.62-0.08 24.04-0.03 7.21-0.06 15.63-0.09 24.65-0.02 9.03-0.05 18.67-0.08 28.33-0.03 9.69-0.06 19.39-0.08 28.52-0.02 9.16-0.04 17.74-0.05 25.11-0.02 14.82-0.04 24.77-0.04 24.77 0 7.9-1.47 16-4.12 23.71-2.65 7.49-6.5 14.35-11.27 20.12-4.8 5.36-10.52 9.56-16.89 12.39-6.4 2.48-13.42 3.8-20.76 3.97 0 0-4.17 0.09-11.99 0.21-7.83 0.08-19.32 0.13-33.97 0.07-7.33-0.08-15.46-0.2-24.31-0.38-8.86-0.23-18.46-0.52-28.72-0.88-10.28-0.43-21.22-0.93-32.78-1.53-11.57-0.66-23.75-1.42-36.49-2.28q-9.56-0.68-19.53-1.44-9.97-0.77-20.33-1.63-10.36-0.88-21.08-1.83-10.73-0.97-21.8-2-11.08-1.06-22.47-2.18-11.4-1.13-23.1-2.32-11.7-1.21-23.67-2.45-11.99-1.26-24.22-2.55-12.25-1.3-24.72-2.63-12.48-1.32-25.16-2.66-12.7-1.33-25.58-2.67-12.89-1.33-25.93-2.65-13.06-1.3-26.25-2.59-13.2-1.26-26.51-2.5-13.33-1.21-26.74-2.38-13.43-1.14-26.91-2.23-13.5-1.05-27.03-2.04-13.55-0.96-27.11-1.85-13.57-0.84-27.12-1.61-13.58-0.72-27.1-1.35-13.55-0.59-27.02-1.08-13.5-0.45-26.88-0.8-13.41-0.29-26.69-0.49-13.3-0.14-26.44-0.17-13.17 0.02-26.14 0.14-12.99 0.18-25.76 0.47-12.8 0.34-25.34 0.79-12.57 0.5-24.86 1.09-12.3 0.66-24.3 1.4-12.01 0.8-23.68 1.68-11.69 0.94-23 1.94-11.33 1.06-22.26 2.18-10.95 1.2-21.45 2.44-10.51 1.23-20.55 2.49c-13.41 1.81-26.17 3.63-38.19 5.45-12.06 1.91-23.36 3.79-33.84 5.6-10.5 1.89-20.16 3.7-28.91 5.39-8.77 1.77-16.61 3.39-23.44 4.83-6.83 1.43-12.65 2.68-17.38 3.71-9.47 2.15-14.53 3.32-14.53 3.32-8.92 2.1-17.42 2.5-25.16 1.42-7.76-1.02-14.77-3.51-20.67-7.25-5.91-3.67-10.71-8.6-14.02-14.6-3.32-5.93-5.15-12.98-5.15-20.98 0 0 0-10.13 0-25.32 0-7.59 0-16.45 0-25.94 0-9.49 0-19.61 0-29.74 0-10.12 0-20.25 0-29.74 0-9.49 0-18.35 0-25.94 0-15.19 0-25.31 0-25.31 0-8.01 1.64-16.67 4.59-25.46 2.94-8.8 7.18-17.69 12.42-26.14 5.24-8.38 11.48-16.24 18.42-23.04 6.93-6.67 14.56-12.23 22.57-16.18z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Leaf background shape -->
+    <div class="absolute top-[85%] right-[-60px] md:top-[40px] md:right-[40px]">
+      <svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+        class="w-[10rem] h-[10rem] md:h-[20rem] md:w-[20rem] opacity-10 rotate-[-15deg] z-0"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.998 511.998" xml:space="preserve" fill="#000000">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g>
+            <path style="fill:#ADDE52;"
+              d="M30.107,178.315h41.372c61.8,0,90.846-42.17,111.899-100.274 c10.913-30.119,40.664-52.891,40.664-52.891l-82.036-0.106c-61.8,0-111.899,50.099-111.899,111.899L30.107,178.315L30.107,178.315z ">
+            </path>
+            <path style="fill:#ADDE52;"
+              d="M334.128,30.697v41.372c0,61.8,42.17,90.846,100.274,111.899 c30.119,10.913,52.891,40.664,52.891,40.664l0.106-82.036c0-61.8-50.099-111.899-111.899-111.899L334.128,30.697L334.128,30.697z">
+            </path>
+            <path style="fill:#ADDE52;"
+              d="M481.889,333.684h-41.372c-61.8,0-90.846,42.17-111.899,100.274 c-10.913,30.119-40.664,52.891-40.664,52.891l82.036,0.106c61.8,0,111.899-50.099,111.899-111.899L481.889,333.684L481.889,333.684 z">
+            </path>
+            <path style="fill:#ADDE52;"
+              d="M177.868,481.302V439.93c0-61.8-42.17-90.846-100.274-111.899 c-30.119-10.913-52.891-40.664-52.891-40.664l-0.106,82.036c0,61.8,50.099,111.899,111.899,111.899L177.868,481.302 L177.868,481.302z">
+            </path>
+          </g>
+          <g>
+            <path style="fill:#c3a967;"
+              d="M129.863,88.756c2.61,0,5.219-0.995,7.21-2.987l5.203-5.202c3.983-3.982,3.983-10.439,0.001-14.422 c-3.982-3.982-10.438-3.983-14.422,0l-5.203,5.202c-3.983,3.982-3.983,10.439-0.001,14.422 C124.643,87.761,127.252,88.756,129.863,88.756z">
+            </path>
+            <path style="fill:#c3a967;"
+              d="M22.419,245.469c-6.313-27.697,3.77-46.78,11.878-56.956h37.182c31.92,0,57.59-10.262,78.479-31.373 c16.8-16.978,30.466-41.008,43.009-75.624c9.728-26.851,37.01-48.065,37.275-48.269c3.468-2.655,4.862-7.225,3.463-11.364 c-1.399-4.139-5.279-6.926-9.648-6.931l-82.05-0.106c-67.325,0-122.097,54.772-122.097,122.097v37.005 C8.715,187.171-5.964,212.712,2.535,250.001c1.078,4.729,5.28,7.933,9.934,7.933c0.75,0,1.512-0.084,2.275-0.257 C20.234,256.426,23.671,250.96,22.419,245.469z M141.993,35.241l56.539,0.073c-9.07,10.068-19.098,23.676-24.743,39.253 c-24.075,66.447-53.717,93.55-102.311,93.55H54.726l49.636-49.636c3.982-3.982,3.982-10.439,0-14.423 c-3.983-3.981-10.438-3.981-14.423,0l-49.637,49.637v-16.754C40.304,80.863,85.927,35.241,141.993,35.241z">
+            </path>
+            <path style="fill:#c3a967;"
+              d="M323.93,34.887v37.182c0,31.92,10.262,57.59,31.373,78.479c16.977,16.8,41.008,30.466,75.624,43.009 c26.85,9.729,48.064,37.011,48.268,37.275c1.967,2.57,4.985,4,8.099,4c1.089,0,2.19-0.174,3.263-0.537 c4.139-1.399,6.926-5.278,6.932-9.647l0.106-82.05c0-67.325-54.773-122.097-122.097-122.097h-37.003 C325.271,9.305,299.731-5.375,262.44,3.123c-5.491,1.252-8.928,6.717-7.676,12.209s6.712,8.93,12.21,7.677 C294.673,16.694,313.756,26.779,323.93,34.887z M477.202,142.583l-0.073,56.54c-10.067-9.07-23.676-19.098-39.253-24.742 c-66.445-24.076-93.549-53.718-93.549-102.313V55.318l49.636,49.636c1.992,1.992,4.601,2.987,7.211,2.987s5.219-0.995,7.211-2.987 c3.982-3.982,3.982-10.439,0-14.423l-49.636-49.636H375.5C431.578,40.896,477.202,86.518,477.202,142.583z">
+            </path>
+            <path style="fill:#c3a967;"
+              d="M509.463,261.997c-1.251-5.49-6.713-8.93-12.21-7.676c-5.491,1.252-8.928,6.718-7.676,12.21 c6.313,27.697-3.77,46.78-11.878,56.956h-37.182c-31.92,0-57.59,10.262-78.479,31.373c-16.8,16.978-30.466,41.008-43.009,75.624 c-9.728,26.851-37.009,48.065-37.275,48.269c-3.468,2.655-4.862,7.225-3.463,11.364c1.399,4.139,5.279,6.926,9.648,6.931 l82.05,0.106c67.325,0,122.097-54.772,122.097-122.097v-37.005C503.282,324.826,517.963,299.286,509.463,261.997z M370.003,476.758 l-56.539-0.073c9.07-10.068,19.098-23.676,24.743-39.253c24.075-66.447,53.717-93.55,102.311-93.55h16.752l-49.636,49.636 c-3.982,3.982-3.982,10.439,0,14.423c1.992,1.991,4.601,2.987,7.211,2.987s5.219-0.996,7.211-2.987l49.637-49.637v16.754 C471.693,431.135,426.068,476.758,370.003,476.758z">
+            </path>
+            <path style="fill:#c3a967;"
+              d="M245.022,488.99c-27.699,6.314-46.782-3.77-56.957-11.878V439.93 c0-31.92-10.262-57.591-31.373-78.479c-16.977-16.8-41.008-30.466-75.624-43.009c-26.85-9.729-48.064-37.01-48.268-37.275 c-2.655-3.468-7.224-4.864-11.363-3.462c-4.139,1.399-6.926,5.278-6.932,9.647l-0.106,82.05 c0,67.325,54.773,122.097,122.097,122.097H173.5c10.469,8.864,28.655,19.912,54.288,19.911c6.741,0,14.001-0.765,21.767-2.535 c5.491-1.252,8.928-6.717,7.676-12.209C255.981,491.175,250.518,487.734,245.022,488.99z M34.795,369.415l0.073-56.54 c10.067,9.07,23.676,19.098,39.253,24.742c66.445,24.076,93.549,53.718,93.549,102.313v16.752l-49.636-49.636 c-3.983-3.982-10.438-3.982-14.423,0c-3.982,3.982-3.982,10.439,0,14.423l49.636,49.636h-16.752 C80.418,471.104,34.795,425.48,34.795,369.415z">
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact" class="relative py-16 lg:py-24 bg-[#ecf3e7]">
     <div class="container mx-auto px-4 lg:px-8">
@@ -1060,8 +1237,8 @@
 
         <!-- Section Header -->
         <div class="text-center mb-8 lg:mb-12">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#294830] mb-3 font-georama">
-            Ben jij op zoek naar onze hulp?
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#294830] tracking-[0.02em] mb-3 font-georama">
+            Advies, kennismaken of een gratis offerte?
           </h2>
           <p class="text-lg text-[#294830]/80 font-georama">
             Laat je gegevens achter en we nemen zo snel mogelijk contact met je op voor een vrijblijvend gesprek.

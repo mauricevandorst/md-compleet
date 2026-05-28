@@ -1,4 +1,83 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const lazyVideos = Array.from(document.querySelectorAll('video[data-lazy-video]'));
+
+  const playVideo = (video) => {
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {});
+    }
+  };
+
+  const loadVideo = (video) => {
+    if (video.dataset.videoLoaded === 'true') {
+      return;
+    }
+
+    const sources = video.querySelectorAll('source[data-src]');
+    sources.forEach((source) => {
+      source.src = source.dataset.src;
+      source.removeAttribute('data-src');
+    });
+
+    if (sources.length > 0) {
+      video.load();
+    }
+
+    video.dataset.videoLoaded = 'true';
+  };
+
+  if ('IntersectionObserver' in window) {
+    const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        loadVideo(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, {
+      root: null,
+      rootMargin: '300px 0px',
+      threshold: 0.01
+    });
+
+    lazyVideos.forEach((video) => {
+      lazyLoadObserver.observe(video);
+    });
+
+    // Non-carousel videos only play while visible.
+    const visibilityObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (video.closest('[data-ig-carousel]')) {
+          return;
+        }
+
+        if (entry.isIntersecting) {
+          loadVideo(video);
+          playVideo(video);
+        } else {
+          video.pause();
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.35
+    });
+
+    lazyVideos.forEach((video) => {
+      visibilityObserver.observe(video);
+    });
+  } else {
+    lazyVideos.forEach((video) => {
+      loadVideo(video);
+      if (video.autoplay) {
+        playVideo(video);
+      }
+    });
+  }
+
   const carousels = document.querySelectorAll('[data-ig-carousel]');
 
   carousels.forEach((carousel) => {
@@ -17,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
     let touchStartX = 0;
+    let isCarouselVisible = false;
 
     const updateVideos = () => {
       slides.forEach((slide, index) => {
@@ -25,14 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        if (index === currentIndex) {
-          const playPromise = video.play();
-          if (playPromise && typeof playPromise.catch === 'function') {
-            playPromise.catch(() => {});
-          }
+        if (index === currentIndex && isCarouselVisible) {
+          loadVideo(video);
+          playVideo(video);
         } else {
           video.pause();
-          video.currentTime = 0;
+          if (video.dataset.videoLoaded === 'true') {
+            video.currentTime = 0;
+          }
         }
       });
     };
@@ -82,6 +162,31 @@ document.addEventListener('DOMContentLoaded', () => {
       track.scrollTo({ left: currentIndex * track.clientWidth, behavior: 'auto' });
     });
 
-    updateVideos();
+    if ('IntersectionObserver' in window) {
+      const carouselVisibilityObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          isCarouselVisible = entry.isIntersecting;
+          if (!isCarouselVisible) {
+            slides.forEach((slide) => {
+              const video = slide.tagName === 'VIDEO' ? slide : slide.querySelector('video');
+              if (video) {
+                video.pause();
+              }
+            });
+            return;
+          }
+
+          updateVideos();
+        });
+      }, {
+        root: null,
+        threshold: 0.35
+      });
+
+      carouselVisibilityObserver.observe(carousel);
+    } else {
+      isCarouselVisible = true;
+      updateVideos();
+    }
   });
 });
