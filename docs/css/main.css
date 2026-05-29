@@ -1244,10 +1244,6 @@ video {
   max-width: 32rem;
 }
 
-.max-w-sm{
-  max-width: 24rem;
-}
-
 .max-w-xl{
   max-width: 36rem;
 }
@@ -2114,10 +2110,6 @@ video {
 
 .text-\[\#294830\]\/60{
   color: rgb(41 72 48 / 0.6);
-}
-
-.text-\[\#294830\]\/70{
-  color: rgb(41 72 48 / 0.7);
 }
 
 .text-\[\#294830\]\/80{
@@ -3040,14 +3032,14 @@ video {
     padding: 0.75rem;
   }
 
-  .lg\:px-14{
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
-  }
-
   .lg\:px-24{
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .lg\:px-28{
+    padding-left: 7rem;
+    padding-right: 7rem;
   }
 
   .lg\:px-4{
@@ -3083,15 +3075,6 @@ video {
   .lg\:py-32{
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-
-  .lg\:px-28{
-    padding-left: 7rem;
-    padding-right: 7rem;
-  }
-
-  .lg\:pb-14{
-    padding-bottom: 3.5rem;
   }
 
   .lg\:pb-28{
